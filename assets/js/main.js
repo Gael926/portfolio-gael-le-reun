@@ -2,7 +2,7 @@ function loadFragment(selector, url, callback) {
   const target = document.querySelector(selector);
   if (!target) return;
 
-  fetch(url)
+  fetch(url, { cache: 'no-cache' })
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Impossible de charger ${url}`);
@@ -60,14 +60,14 @@ function initNavbar(container) {
 
   if (desktopNav) {
     markActiveLink(desktopNav.querySelectorAll('a'), {
-      activeClasses: ['text-indigo-600', 'border-indigo-600'],
+      activeClasses: ['text-blue-600', 'border-blue-600'],
       inactiveClasses: ['text-gray-700', 'border-transparent'],
     });
   }
 
   if (mobileNav) {
     markActiveLink(mobileNav.querySelectorAll('a'), {
-      activeClasses: ['text-indigo-600', 'bg-indigo-50'],
+      activeClasses: ['text-blue-600', 'bg-blue-50'],
       inactiveClasses: ['text-gray-700', 'bg-transparent'],
     });
   }
