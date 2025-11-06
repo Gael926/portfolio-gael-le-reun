@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gaël Le Reun | Ingénieur IA</title>
+  <title data-i18n="page_title_home">Gaël Le Reun | Ingénieur IA</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="assets/style/style.css" rel="stylesheet">
+  <script src="assets/js/translations.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col text-gray-700">
@@ -23,35 +24,37 @@
           <div class="flex flex-col flex-1">
             <div class="space-y-4">
               <div>
-                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Gaël Le Reun</h1>
-                <p class="mt-3 text-lg font-medium text-gray-600">Étudiant ingénieur en Informatique (ESAIP) - Spécialisation IA</p>
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="hero_name">Gaël Le Reun</h1>
+                <p class="mt-3 text-lg font-medium text-gray-600" data-i18n="hero_subtitle">Étudiant ingénieur en Informatique (ESAIP) - Spécialisation IA</p>
               </div>
-              <div class="mt-4 text-sm text-blue-700 font-medium">
-                <span class="inline-flex items-center px-2 py-1 bg-blue-100 border border-blue-200 rounded-md">
-                  Disponible dès octobre 2025 <br>
-                  Recherche contrat de professionnalisation / alternance (5ème année)
-                </span>
+              <div class="rounded-2xl border border-blue-100 bg-blue-50/80 p-4 shadow-sm space-y-1">
+                <p class="text-sm sm:text-base font-semibold text-blue-900" data-i18n="hero_availability_title">
+                  Disponible dès octobre 2025
+                </p>
+                <p class="text-sm sm:text-base font-medium text-blue-800" data-i18n="hero_availability_detail">
+                  Recherche contrat de professionnalisation / alternance (5ème année ESAIP)
+                </p>
               </div>
             </div>
             <div class="flex-1 flex items-center py-6 lg:py-8">
               <div class="space-y-4 text-base leading-relaxed text-gray-700">
-                <p>
+                <p data-i18n="hero_paragraph_1">
                   Étudiant en 4ème année d'école d'ingénieur en informatique à l'ESAIP, je développe une expertise polyvalente couvrant le développement logiciel, les architectures web et l'intégration de solutions data. Je me spécialise en Intelligence Artificielle appliquée, notamment autour du traitement de données, de l'optimisation et de la mise en production de modèles.
                 </p>
-                <p>
+                <p data-i18n="hero_paragraph_2">
                   J'accorde une importance forte au côté concret : transformer une idée en solution claire, fiable et maintenable. Qu'il s'agisse de backend, de conception d'outils ou de projets IA orientés usage, je vise toujours la simplicité, la robustesse et la lisibilité.
                 </p>
-                <p>
+                <p data-i18n="hero_paragraph_3">
                   Je suis actuellement à la recherche d'un contrat de professionnalisation / alternance pour ma 5ème et dernière année, dans un environnement où je pourrais contribuer à des projets concrets et à impact réel.
                 </p>
               </div>
             </div>
           </div>
           <div class="mt-8 lg:mt-0 flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0">
-            <a href="experiences.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-sm">
+            <a href="experiences.html" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors shadow-sm" data-i18n="button_experiences">
               Voir mes expériences
             </a>
-            <a href="assets/CV_Gael_Le_Reun.pdf" download class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-200 text-blue-700 font-medium hover:border-blue-300 hover:bg-blue-50 transition-colors">
+            <a href="assets/CV_Gael_Le_Reun.pdf" download class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-200 text-blue-700 font-medium hover:border-blue-300 hover:bg-blue-50 transition-colors" data-i18n="button_cv">
               Télécharger mon CV
             </a>
           </div>

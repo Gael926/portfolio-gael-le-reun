@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Expériences | Gaël Le Reun</title>
+  <title data-i18n="page_title_experiences">Expériences | Gaël Le Reun</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="assets/style/style.css" rel="stylesheet">
+  <script src="assets/js/translations.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </head>
 <body class="min-h-screen flex flex-col text-gray-700">
@@ -15,8 +16,8 @@
     <section class="py-16 lg:py-24">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="max-w-3xl">
-          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">Expériences professionnelles</h1>
-          <p class="mt-4 text-base text-gray-600">
+          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="experiences_heading">Expériences professionnelles</h1>
+          <p class="mt-4 text-base text-gray-600" data-i18n="experiences_intro">
             Des missions variées, de la conception d'infrastructures IA à la gestion opérationnelle de terrain, qui nourrissent ma vision pragmatique des projets.
           </p>
         </div>
@@ -24,84 +25,84 @@
         <div class="mt-12 grid gap-10">
           <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
             <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold">Stage à l'étranger</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900">Alitheia Editions - Stagiaire Développement IA &amp; Infrastructure</h2>
-              <p class="mt-2 text-sm text-gray-500">Budapest · Avril 2024 - Août 2024</p>
+              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp1_badge">Stage à l'étranger</p>
+              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp1_title">Alitheia Editions - Stagiaire Développement IA &amp; Infrastructure</h2>
+              <p class="mt-2 text-sm text-gray-500" data-i18n="exp1_date">Budapest · Avril 2024 - Août 2024</p>
             </header>
             <div class="space-y-4">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Missions principales</h3>
+              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">Missions principales</h3>
               <ul class="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
-                <li>Développement d'un pipeline Python automatisé pour traiter 40 000 pages manuscrites (préparation, structuration, OCR).</li>
-                <li>Fine-tuning de modèles IA open source (Hugging Face) et intégration dans des outils d'analyse textuelle.</li>
-                <li>Optimisation des performances de traitement et automatisation des reprises pour sécuriser les livrables.</li>
-                <li>Documentation et transfert de connaissances auprès de l'équipe technique.</li>
+                <li data-i18n="exp1_mission_1">Développement d'un pipeline Python automatisé pour traiter 40 000 pages manuscrites (préparation, structuration, OCR).</li>
+                <li data-i18n="exp1_mission_2">Fine-tuning de modèles IA open source (Hugging Face) et intégration dans des outils d'analyse textuelle.</li>
+                <li data-i18n="exp1_mission_3">Optimisation des performances de traitement et automatisation des reprises pour sécuriser les livrables.</li>
+                <li data-i18n="exp1_mission_4">Documentation et transfert de connaissances auprès de l'équipe technique.</li>
               </ul>
             </div>
             <div class="space-y-3">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Compétences développées</h3>
+              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_skills_title">Compétences développées</h3>
               <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700">
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Python</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Pipeline de données</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Hugging Face</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Fine-tuning</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Automatisation</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Optimisation</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Documentation technique</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Collaboration internationale</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_python">Python</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_data_pipeline">Pipeline de données</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_huggingface">Hugging Face</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_finetuning">Fine-tuning</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_automation">Automatisation</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_optimization">Optimisation</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_technical_docs">Documentation technique</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_international_collab">Collaboration internationale</li>
               </ul>
             </div>
           </article>
 
           <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
             <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold">Emploi étudiant</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900">Sakura - Serveur en restauration</h2>
-              <p class="mt-2 text-sm text-gray-500">Angers · 2022 - 2023</p>
+              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp2_badge">Emploi étudiant</p>
+              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp2_title">Sakura - Serveur en restauration</h2>
+              <p class="mt-2 text-sm text-gray-500" data-i18n="exp2_date">Angers · 2022 - 2023</p>
             </header>
             <div class="space-y-4">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Missions principales</h3>
+              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">Missions principales</h3>
               <ul class="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
-                <li>Gestion quotidienne de la salle et coordination avec la cuisine en période de forte affluence.</li>
-                <li>Suivi de l'expérience client, prise de commandes et encaissement.</li>
-                <li>Respect strict des standards d'hygiène et de présentation produits.</li>
+                <li data-i18n="exp2_mission_1">Gestion quotidienne de la salle et coordination avec la cuisine en période de forte affluence.</li>
+                <li data-i18n="exp2_mission_2">Suivi de l'expérience client, prise de commandes et encaissement.</li>
+                <li data-i18n="exp2_mission_3">Respect strict des standards d'hygiène et de présentation produits.</li>
               </ul>
             </div>
             <div class="space-y-3">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">Compétences développées</h3>
+              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_skills_title">Compétences développées</h3>
               <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700">
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Relation client</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Communication</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Priorisation</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Travail d'équipe</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Gestion du stress</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Organisation</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Adaptabilité</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_customer_relation">Relation client</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_communication">Communication</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_prioritization">Priorisation</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_teamwork">Travail d'équipe</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_stress_management">Gestion du stress</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_organization">Organisation</li>
+                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_adaptability">Adaptabilité</li>
               </ul>
             </div>
           </article>
 
           <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
             <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold">Job d'été</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900">Tricycle - Manutentionnaire</h2>
-              <p class="mt-2 text-sm text-gray-500">Gennevilliers · Été 2023</p>
+              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp3_badge">Job d'été</p>
+              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp3_title">Tricycle - Manutentionnaire</h2>
+              <p class="mt-2 text-sm text-gray-500" data-i18n="exp3_date">Gennevilliers · Été 2023</p>
             </header>
-            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">MISSIONS PRINCIPALES</h3>
+            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">Missions principales</h3>
             <ul class="mt-4 list-disc pl-6 space-y-2 text-gray-700">
-              <li>Tri, manutention et valorisation de matériel récupéré destiné au réemploi.</li>
-              <li>Organisation et optimisation des flux entrants et sortants pour respecter les délais de livraison.</li>
-              <li>Encadrement et formation d'une équipe de 5 stagiaires.</li>
-              <li>Contribution à la maintenance du parc matériel et au respect des règles de sécurité.</li>
+              <li data-i18n="exp3_mission_1">Tri, manutention et valorisation de matériel récupéré destiné au réemploi.</li>
+              <li data-i18n="exp3_mission_2">Organisation et optimisation des flux entrants et sortants pour respecter les délais de livraison.</li>
+              <li data-i18n="exp3_mission_3">Encadrement et formation d'une équipe de 5 stagiaires.</li>
+              <li data-i18n="exp3_mission_4">Contribution à la maintenance du parc matériel et au respect des règles de sécurité.</li>
             </ul>
 
-            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide">COMPÉTENCES DÉVELOPPÉES</h3>
-              <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700">
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Gestion d'équipe</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Transmission</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Rigueur</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Sécurité</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Responsabilité</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700">Organisation</li>
+            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mt-6" data-i18n="exp_skills_title">Compétences développées</h3>
+              <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700 mt-3">
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_team_management">Gestion d'équipe</li>
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_transmission">Transmission</li>
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_rigor">Rigueur</li>
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_safety">Sécurité</li>
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_responsibility">Responsabilité</li>
+              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_organization">Organisation</li>
             </ul>
           </article>
         </div>
