@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="page_title_projects">Projets | Gaël Le Reun</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="assets/style/style.css" rel="stylesheet">
+  <script src="assets/js/translations.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/projects.js" defer></script>
+</head>
+<body class="min-h-screen flex flex-col text-gray-700">
+  <div id="navbar-placeholder"></div>
+
+  <main class="flex-1">
+    <section class="py-16 lg:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="projects_heading">Mes projets GitHub</h1>
+          <p class="mt-4 text-base text-gray-600" data-i18n="projects_intro">
+            Voici une liste de mes projets publics sur GitHub, triés par date de mise à jour.
+          </p>
+        </div>
+
+        <div id="projects-container" class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Projects will be loaded here -->
+            <div class="col-span-full text-center py-12">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <p class="mt-2 text-gray-500">Chargement des projets...</p>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

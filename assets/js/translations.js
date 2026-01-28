@@ -1,11 +1,13 @@
 const translations = {
   fr: {
     page_title_home: 'Gaël Le Reun | Ingénieur IA',
+    page_title_projects: 'Projets | Gaël Le Reun',
     page_title_experiences: 'Expériences | Gaël Le Reun',
     page_title_skills: 'Compétences | Gaël Le Reun',
     page_title_volunteering: 'Engagements bénévoles | Gaël Le Reun',
     nav_brand: 'Gaël Le Reun',
     nav_home: 'Accueil',
+    nav_projects: 'Projets',
     nav_experiences: 'Expériences',
     nav_skills: 'Compétences',
     nav_volunteering: 'Engagement',
@@ -22,6 +24,12 @@ const translations = {
       "J'accorde une importance forte au côté concret : transformer une idée en solution claire, fiable et maintenable. Qu'il s'agisse de backend, de conception d'outils ou de projets IA orientés usage, je vise toujours la simplicité, la robustesse et la lisibilité.",
     hero_paragraph_3:
       "Je suis actuellement à la recherche d'un contrat de professionnalisation / alternance pour ma 5ème et dernière année, dans un environnement où je pourrais contribuer à des projets concrets et à impact réel.",
+    projects_heading: 'Mes projets GitHub',
+    projects_intro:
+      'Voici une liste de mes projets publics sur GitHub, triés par date de mise à jour.',
+    project_view: 'Voir le projet',
+    project_no_description: 'Pas de description disponible.',
+    projects_error: 'Impossible de charger les projets pour le moment.',
     button_experiences: 'Voir mes expériences',
     button_cv: 'Télécharger mon CV',
     experiences_heading: 'Expériences professionnelles',
@@ -121,11 +129,13 @@ const translations = {
   },
   en: {
     page_title_home: 'Gaël Le Reun | AI Engineer',
+    page_title_projects: 'Projects | Gaël Le Reun',
     page_title_experiences: 'Experiences | Gaël Le Reun',
     page_title_skills: 'Skills | Gaël Le Reun',
     page_title_volunteering: 'Volunteering | Gaël Le Reun',
     nav_brand: 'Gaël Le Reun',
     nav_home: 'Home',
+    nav_projects: 'Projects',
     nav_experiences: 'Experiences',
     nav_skills: 'Skills',
     nav_volunteering: 'Volunteering',
@@ -142,6 +152,12 @@ const translations = {
       'I strongly value tangible outcomes: turning an idea into a clear, reliable, and maintainable solution. Whether it is backend work, tool building, or user-focused AI projects, I aim for simplicity, robustness, and readability.',
     hero_paragraph_3:
       "I am looking for a professional apprenticeship for my fifth and final year, within a team where I can contribute to concrete, high-impact projects.",
+    projects_heading: 'My GitHub Projects',
+    projects_intro:
+      'Here is a list of my public GitHub projects, sorted by last update.',
+    project_view: 'View project',
+    project_no_description: 'No description available.',
+    projects_error: 'Unable to load projects at the moment.',
     button_experiences: 'View my experiences',
     button_cv: 'Download my resume',
     experiences_heading: 'Professional experience',
