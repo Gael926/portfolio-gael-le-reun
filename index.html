@@ -53,7 +53,7 @@
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 animate-fade-in delay-300">
-        <a href="contact.html"
+        <a href="#contact"
           class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-full transition-all shadow-lg hover:shadow-blue-200 hover:-translate-y-0.5"
           data-i18n="button_contact">
           Me contacter
@@ -273,6 +273,64 @@
           <img src="assets/img/cop1.jpeg" alt="Association COP1" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" data-i18n="contact_heading">Contactez-moi</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n="contact_intro">
+          Je suis actuellement à la recherche d'un contrat de professionnalisation. N'hésitez pas à me contacter pour
+          échanger sur mon profil.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Email -->
+        <a href="mailto:lereungael@gmail.com"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col items-center text-center">
+          <div class="p-3 bg-blue-50 text-blue-600 rounded-xl mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="mail" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1" data-i18n="contact_email_label">Email</h3>
+          <p class="text-xs text-gray-500 truncate w-full group-hover:text-blue-600 transition-colors">
+            lereungael@gmail.com</p>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+33615075866"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col items-center text-center">
+          <div class="p-3 bg-green-50 text-green-600 rounded-xl mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="phone" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1" data-i18n="contact_phone_label">Téléphone</h3>
+          <p class="text-xs text-gray-500 group-hover:text-green-600 transition-colors">+33 6 15 07 58 66</p>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/gael-le-reun-16374525a/" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col items-center text-center">
+          <div class="p-3 bg-blue-50 text-blue-700 rounded-xl mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="linkedin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1" data-i18n="contact_linkedin_label">LinkedIn</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-700 transition-colors"
+            data-i18n="contact_linkedin_view">Voir mon profil</p>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Gael926/" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col items-center text-center">
+          <div class="p-3 bg-gray-50 text-gray-900 rounded-xl mb-4 group-hover:scale-110 transition-transform">
+            <i data-lucide="github" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-1" data-i18n="contact_github_label">GitHub</h3>
+          <p class="text-xs text-gray-500 group-hover:text-gray-900 transition-colors" data-i18n="contact_github_view">
+            Voir mes projets</p>
+        </a>
       </div>
     </div>
   </section>
