@@ -1,30 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Smooth Scrolling for Anchor Links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
+  // Handle anchor clicks for closing mobile menu
+  document.addEventListener('click', function (e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
 
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
+    // Close mobile menu if open
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+    }
+    // Let the browser handle the smooth scroll via CSS
   });
 
-  // Navbar Scroll Effect
+  // Navbar Scroll Effect - Always visible with enhanced shadow on scroll
   const navbar = document.getElementById('navbar');
   if (navbar) {
+    // Always apply nav-glass for visibility
+    navbar.classList.add('nav-glass');
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        navbar.classList.add('nav-glass', 'shadow-lg');
-        navbar.classList.remove('bg-transparent');
+        navbar.classList.add('shadow-lg', 'nav-scrolled');
       } else {
-        navbar.classList.remove('nav-glass', 'shadow-lg');
-        navbar.classList.add('bg-transparent');
+        navbar.classList.remove('shadow-lg', 'nav-scrolled');
       }
     });
   }

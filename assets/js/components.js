@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 navbarPlaceholder.outerHTML = html;
                 // Re-initialize mobile menu after loading navbar
                 initMobileMenu();
+                // Initialize navbar scroll effect
+                initNavbarScrollEffect();
                 // Re-initialize Lucide icons for navbar
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -66,6 +68,23 @@ function initMobileMenu() {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+    }
+}
+
+/**
+ * Initialize navbar scroll effect
+ * Called after navbar is dynamically loaded
+ */
+function initNavbarScrollEffect() {
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'nav-scrolled');
+            } else {
+                navbar.classList.remove('shadow-lg', 'nav-scrolled');
+            }
         });
     }
 }

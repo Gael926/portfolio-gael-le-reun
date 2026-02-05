@@ -14,6 +14,13 @@
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  /* Account for fixed navbar height */
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: #f8fafc;
@@ -36,14 +43,17 @@ body {
   box-shadow: var(--glass-shadow);
 }
 
-/* Navbar specific glass to ensure visibility */
+/* Navbar specific - fully opaque for readability */
 .nav-glass {
-  background: rgba(255, 255, 255, 0.9);
-  /* Light background for navbar */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+  /* Solid white background */
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Enhanced shadow when scrolled */
+.nav-scrolled {
+  box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card {
