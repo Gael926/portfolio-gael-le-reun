@@ -4,100 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gaël Le Reun | Ingénieur IA</title>
+  <title data-i18n="page_title_home">Gaël Le Reun | Ingénieur IA</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="assets/style/style.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="assets/js/translations.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
 </head>
 
 <body class="antialiased selection:bg-indigo-500 selection:text-white">
 
-  <!-- Navigation -->
-  <nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <div class="flex-shrink-0">
-          <a href="#" class="text-2xl font-bold text-gray-900 tracking-tighter">
-            Gaël <span class="text-blue-600">LE REUN</span>
-          </a>
-        </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-baseline space-x-8">
-            <a href="#home"
-              class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
-            <a href="#skills"
-              class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Compétences</a>
-            <a href="#experience"
-              class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Expérience</a>
-            <a href="#volunteering"
-              class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Bénévolat</a>
-          </div>
-        </div>
-        <div class="-mr-2 flex md:hidden">
-          <button type="button" id="mobileMenuButton"
-            class="bg-white p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none shadow-sm border border-gray-200">
-            <span class="sr-only">Ouvrir le menu</span>
-            <i data-lucide="menu" class="h-6 w-6"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div class="md:hidden hidden nav-glass" id="mobileMenu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a href="#home"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
-        <a href="#skills"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Compétences</a>
-        <a href="#experience"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Expérience</a>
-        <a href="#volunteering"
-          class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Bénévolat</a>
-      </div>
-    </div>
-  </nav>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
 
   <section id="home" class="min-h-screen flex flex-col justify-center pt-32 pb-16 relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 
-      <span
-        class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-bold mb-6 animate-fade-in">
-        Recherche Contrat de Professionnalisation - Octobre 2025
-      </span>
+      <div class="mb-20 animate-fade-in delay-100">
+        <div class="relative w-40 h-40 mx-auto">
+          <!-- Main Profile Image -->
+          <div class="absolute inset-0 bg-blue-600 rounded-full blur opacity-10 animate-pulse"></div>
+          <img src="assets/img/photo_profil.jpeg" alt="Gaël Le Reun"
+            class="relative w-full h-full object-cover rounded-full border-4 border-white shadow-2xl">
+
+          <!-- Modern Status Overlay (Centered & Lowered) -->
+          <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-20">
+            <div
+              class="bg-white px-5 py-3 rounded-2xl shadow-xl border border-blue-50 flex items-center gap-3 animate-bounce-subtle">
+              <span class="pulse-dot"></span>
+              <div class="flex flex-col items-start leading-tight">
+                <span class="text-[10px] md:text-xs font-black text-blue-900 tracking-tight uppercase whitespace-nowrap"
+                  data-i18n="hero_availability_title">Recherche Alternance 5e année</span>
+                <span class="text-[9px] md:text-[10px] font-bold text-blue-600 tracking-tight whitespace-nowrap"
+                  data-i18n="hero_availability_subtitle">Octobre 2026 - Octobre 2027</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 animate-fade-in delay-100">
         Gaël <span class="text-blue-600">Le Reun</span>
       </h1>
 
-      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in delay-200">
-        Ingénieur IA & Data passionné par le développement de solutions intelligentes et éthiques.
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in delay-200" data-i18n="hero_subtitle">
+        Étudiant ingénieur en Informatique (ESAIP) - Spécialisation IA
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16 animate-fade-in delay-300">
         <a href="contact.html"
-          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-colors duration-200">
+          class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-full transition-all shadow-lg hover:shadow-blue-200 hover:-translate-y-0.5"
+          data-i18n="button_contact">
           Me contacter
         </a>
 
-        <a href="#experience"
-          class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-full transition-colors duration-200">
-          Mon parcours
+        <a href="CV_Gael_Le_Reun.pdf" target="_blank"
+          class="bg-white text-gray-900 border-2 border-blue-600 hover:border-blue-700 hover:text-blue-700 font-bold py-3.5 px-10 rounded-full transition-all shadow-sm hover:shadow-md"
+          data-i18n="button_cv">
+          Télécharger mon CV
         </a>
       </div>
 
       <div class="w-16 h-1 bg-gray-300 rounded-full mx-auto mb-12"></div>
 
       <div class="animate-fade-in delay-400">
-        <!-- <h2 class="text-2xl font-bold text-gray-900 mb-6">À propos</h2> -->
-        <p class="text-lg text-gray-700 leading-relaxed mb-4">
-          Actuellement en 4ème année d'école d'ingénieur, je combine expertise technique et sensibilité aux enjeux
-          éthiques de l'IA.
+        <p class="text-lg text-gray-700 leading-relaxed mb-4" data-i18n="hero_paragraph_1">
+          Étudiant en 4ème année d'école d'ingénieur en informatique à l'ESAIP, je développe une expertise polyvalente
+          couvrant le développement logiciel, les architectures web et l'intégration de solutions data. Je me spécialise
+          en Intelligence Artificielle appliquée, notamment autour du traitement de données, de l'optimisation et de la
+          mise en production de modèles.
         </p>
-        <p class="text-lg text-gray-700 leading-relaxed">
-          Je développe une expertise polyvalente couvrant le développement logiciel, les architectures web et
-          l'intégration de solutions data.
+        <p class="text-lg text-gray-700 leading-relaxed" data-i18n="hero_paragraph_2">
+          J'accorde une importance forte au côté concret : transformer une idée en solution claire, fiable et
+          maintenable. Qu'il s'agisse de backend, de conception d'outils ou de projets IA orientés usage, je vise
+          toujours la simplicité, la robustesse et la lisibilité.
         </p>
       </div>
 
@@ -107,7 +88,7 @@
   <!-- Skills Section -->
   <section id="skills" class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Compétences</h2>
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-i18n="skills_heading">Compétences clés</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Python -->
         <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -115,12 +96,12 @@
             <div class="p-3 bg-blue-50 rounded-lg text-blue-600">
               <i data-lucide="code-2" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-bold text-gray-900">Langages</h3>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
           </div>
           <ul class="space-y-2 text-gray-600 text-sm">
-            <li>Python</li>
-            <li>JavaScript</li>
-            <li>Java</li>
+            <li data-i18n="skills_languages_python">Python</li>
+            <li data-i18n="skills_languages_js">JavaScript</li>
+            <li data-i18n="skills_languages_java">Java</li>
           </ul>
         </div>
         <!-- AI & Data -->
@@ -129,7 +110,7 @@
             <div class="p-3 bg-purple-50 rounded-lg text-purple-600">
               <i data-lucide="brain-circuit" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-bold text-gray-900">IA & Data</h3>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">IA & Data</h3>
           </div>
           <ul class="space-y-2 text-gray-600 text-sm">
             <li>Machine Learning</li>
@@ -143,11 +124,11 @@
             <div class="p-3 bg-green-50 rounded-lg text-green-600">
               <i data-lucide="globe" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-bold text-gray-900">Web</h3>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_web_title">Web</h3>
           </div>
           <ul class="space-y-2 text-gray-600 text-sm">
-            <li>HTML / CSS</li>
-            <li>Node.js</li>
+            <li data-i18n="skills_web_front">HTML / CSS / JavaScript</li>
+            <li data-i18n="skills_web_node">Node.js / Express</li>
             <li>React / Vue</li>
           </ul>
         </div>
@@ -157,12 +138,12 @@
             <div class="p-3 bg-orange-50 rounded-lg text-orange-600">
               <i data-lucide="wrench" class="w-6 h-6"></i>
             </div>
-            <h3 class="font-bold text-gray-900">Outils</h3>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_tools_title">Outils</h3>
           </div>
           <ul class="space-y-2 text-gray-600 text-sm">
-            <li>Git / GitHub</li>
+            <li data-i18n="skills_tools_git">Git</li>
             <li>Docker</li>
-            <li>Linux</li>
+            <li data-i18n="skills_tools_linux">Linux</li>
           </ul>
         </div>
       </div>
@@ -172,7 +153,8 @@
   <!-- Experience Section -->
   <section id="experience" class="py-24">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">Expérience</h2>
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-16" data-i18n="experiences_heading">Expériences
+        professionnelles</h2>
       <div class="relative">
         <!-- Vertical Line -->
         <div class="absolute left-0 sm:left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
@@ -186,17 +168,23 @@
           <div class="flex-1 ml-6 sm:ml-16">
             <div class="mb-2">
               <h3 class="text-xl font-bold text-gray-900">Alitheia Editions</h3>
-              <p class="text-blue-600 font-medium">Développeur IA Full Stack (Alternance)</p>
-              <p class="text-sm text-gray-500">Avril 2024 - Août 2024 · Budapest</p>
+              <p class="text-blue-600 font-medium" data-i18n="exp1_title">Alitheia Editions - Stagiaire Développement IA
+                & Infrastructure</p>
+              <p class="text-sm text-gray-500" data-i18n="exp1_date">Budapest · Avril 2024 - Août 2024</p>
             </div>
             <ul class="space-y-2 text-gray-700 mb-4">
-              <li>• Développement d'un pipeline Python automatisé pour traiter 40 000 pages.</li>
-              <li>• Fine-tuning de modèles IA open source (Hugging Face).</li>
-              <li>• Optimisation des performances de traitement.</li>
+              <li data-i18n="exp1_mission_1">• Développement d'un pipeline Python automatisé pour traiter 40 000 pages
+                manuscrites (préparation, structuration, OCR).</li>
+              <li data-i18n="exp1_mission_2">• Fine-tuning de modèles IA open source (Hugging Face) et intégration dans
+                des outils d'analyse textuelle.</li>
+              <li data-i18n="exp1_mission_3">• Optimisation des performances de traitement et automatisation des
+                reprises pour sécuriser les livrables.</li>
             </ul>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded">Python</span>
-              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded">Hugging Face</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
+                data-i18n="tag_python">Python</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
+                data-i18n="tag_huggingface">Hugging Face</span>
               <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded">RAG</span>
             </div>
           </div>
@@ -211,16 +199,19 @@
           <div class="flex-1 ml-6 sm:ml-16">
             <div class="mb-2">
               <h3 class="text-xl font-bold text-gray-900">Sakura</h3>
-              <p class="text-purple-600 font-medium">Serveur en restauration</p>
-              <p class="text-sm text-gray-500">2022 - 2023 · Angers</p>
+              <p class="text-purple-600 font-medium" data-i18n="exp2_title">Sakura - Serveur en restauration</p>
+              <p class="text-sm text-gray-500" data-i18n="exp2_date">Angers · 2022 - 2023</p>
             </div>
             <ul class="space-y-2 text-gray-700 mb-4">
-              <li>• Gestion quotidienne de la salle et coordination avec la cuisine.</li>
-              <li>• Suivi de l'expérience client, prise de commandes.</li>
+              <li data-i18n="exp2_mission_1">• Gestion quotidienne de la salle et coordination avec la cuisine en
+                période de forte affluence.</li>
+              <li data-i18n="exp2_mission_2">• Suivi de l'expérience client, prise de commandes et encaissement.</li>
             </ul>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded">Relation client</span>
-              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded">Travail d'équipe</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
+                data-i18n="tag_customer_relation">Relation client</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
+                data-i18n="tag_teamwork">Travail d'équipe</span>
             </div>
           </div>
         </div>
@@ -234,16 +225,20 @@
           <div class="flex-1 ml-6 sm:ml-16">
             <div class="mb-2">
               <h3 class="text-xl font-bold text-gray-900">Tricycle</h3>
-              <p class="text-green-600 font-medium">Manutentionnaire</p>
-              <p class="text-sm text-gray-500">Été 2023 · Gennevilliers</p>
+              <p class="text-green-600 font-medium" data-i18n="exp3_title">Tricycle - Manutentionnaire</p>
+              <p class="text-sm text-gray-500" data-i18n="exp3_date">Gennevilliers · Été 2023</p>
             </div>
             <ul class="space-y-2 text-gray-700 mb-4">
-              <li>• Tri, manutention et valorisation de matériel récupéré.</li>
-              <li>• Organisation et optimisation des flux entrants et sortants.</li>
+              <li data-i18n="exp3_mission_1">• Tri, manutention et valorisation de matériel récupéré destiné au
+                réemploi.</li>
+              <li data-i18n="exp3_mission_2">• Organisation et optimisation des flux entrants et sortants pour respecter
+                les délais de livraison.</li>
             </ul>
             <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded">Logistique</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded">Sécurité</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
+                data-i18n="tag_organization">Organisation</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
+                data-i18n="tag_safety">Sécurité</span>
             </div>
           </div>
         </div>
@@ -256,16 +251,22 @@
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="flex-1">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6">Bénévolat chez COP1</h2>
-          <p class="text-gray-700 leading-relaxed mb-6">
-            Membre actif de l'association <strong>COP1</strong> durant mes 3ème et 4ème années d'école d'ingénieur.
-            Chaque semaine, nous organisions des distributions gratuites de nourriture et de produits essentiels pour
-            les étudiants en situation de précarité.
+          <h2 class="text-3xl font-bold text-gray-900 mb-6" data-i18n="volunteer_heading">Engagements bénévoles</h2>
+          <p class="text-gray-700 leading-relaxed mb-6" data-i18n="volunteer_paragraph">
+            Lors de mes 3ème et 4ème années d'école d'ingénieur, j'ai rejoint l'association COP1 à Angers. Chaque jeudi,
+            nous organisions une distribution gratuite de nourriture et de produits de première nécessité pour des
+            étudiants et des personnes en situation de précarité. Cet engagement m'a permis de développer un sens fort
+            du collectif, de l'écoute et de la solidarité, ainsi qu'une forte sensibilité aux réalités sociales
+            auxquelles de nombreux jeunes et particulièrement les étudiants font face. Il a également renforcé ma
+            conviction qu'un ingénieur doit rester connecté à l'humain et à l'impact social de ses actions.
           </p>
           <div class="flex items-center gap-4">
-            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold">Solidarité</span>
-            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold">Collectif</span>
-            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold">Organisation</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold"
+              data-i18n="tag_solidarity">Solidarité</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold"
+              data-i18n="tag_collective">Collectif</span>
+            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-bold"
+              data-i18n="tag_organization">Organisation</span>
           </div>
         </div>
         <div class="flex-1 relative h-64 w-full md:w-auto rounded-2xl overflow-hidden shadow-lg">
@@ -276,28 +277,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-12 border-t border-white/10 bg-black/40 backdrop-blur-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="text-center md:text-left">
-        <p class="text-gray-400 font-bold text-lg">Gaël Le Reun</p>
-        <p class="text-gray-400 text-sm">Ingénieur IA & Data</p>
-      </div>
-      <div class="flex gap-6">
-        <a href="mailto:glereun.ing2027@esaip.org" class="text-gray-400 hover:text-white transition-colors">
-          <i data-lucide="mail" class="w-6 h-6"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/gael-le-reun-16374525a/"
-          class="text-gray-400 hover:text-white transition-colors">
-          <i data-lucide="linkedin" class="w-6 h-6"></i>
-        </a>
-        <a href="https://github.com/Gael926/" class="text-gray-400 hover:text-white transition-colors">
-          <i data-lucide="github" class="w-6 h-6"></i>
-        </a>
-      </div>
-      <p class="text-gray-500 text-sm">© 2025 Gaël Le Reun. Tous droits réservés.</p>
-    </div>
-  </footer>
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
 
   <script>
     // Initialize Lucide icons

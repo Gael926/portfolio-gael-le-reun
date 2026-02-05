@@ -1,44 +1,83 @@
-<header class="bg-white shadow-sm">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="text-lg font-semibold text-gray-900" data-i18n="nav_brand">Gaël Le Reun</a>
-      <div class="flex items-center gap-4">
-        <nav data-nav="desktop" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-          <a href="index.html" class="pb-1 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-i18n="nav_home">Accueil</a>
-          <a href="experiences.html" class="pb-1 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-i18n="nav_experiences">Expériences</a>
-          <a href="competences.html" class="pb-1 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-i18n="nav_skills">Compétences</a>
-          <a href="benevolat.html" class="pb-1 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-i18n="nav_volunteering">Engagement</a>
-          <button type="button" class="p-2 rounded-full text-gray-500 hover:text-blue-600 hover:bg-blue-50 transition-colors" data-lang-toggle>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3a14.9 14.9 0 010 18M12 3a14.9 14.9 0 000 18"/>
-            </svg>
-            <span class="sr-only" data-i18n="nav_language_toggle_label">Changer de langue</span>
-          </button>
-          <a href="assets/CV_Gael_Le_Reun.pdf" download class="inline-flex items-center gap-1 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded-md shadow-sm transition-colors" data-i18n="nav_cv_short">CV</a>
-        </nav>
-        <button id="mobileMenuButton" class="md:hidden p-2 rounded-md border border-gray-200 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Ouvrir le menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+<!-- Navigation -->
+<nav class="fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <!-- Left: Logo -->
+      <div class="flex-shrink-0 flex items-center gap-4">
+        <a href="index.html" class="text-2xl font-bold text-gray-900 tracking-tighter">
+          Gaël <span class="text-blue-600">LE REUN</span>
+        </a>
+      </div>
+
+      <!-- Center: Main Links -->
+      <div class="hidden md:flex items-center justify-center flex-1 ml-10">
+        <div class="flex items-baseline space-x-8">
+          <a href="index.html#home"
+            class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            data-i18n="nav_home">Accueil</a>
+          <a href="index.html#skills"
+            class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            data-i18n="nav_skills">Compétences</a>
+          <a href="index.html#experience"
+            class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            data-i18n="nav_experiences">Expérience</a>
+          <a href="index.html#volunteering"
+            class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            data-i18n="nav_volunteering">Bénévolat</a>
+        </div>
+      </div>
+
+      <!-- Right: Action Buttons (CV + Language Switch) -->
+      <div class="hidden md:flex items-center space-x-4">
+        <!-- Language Switch -->
+        <button id="langToggle" onclick="toggleLanguage()"
+          class="flex items-center gap-2 bg-gray-100 text-gray-700 hover:bg-white px-3 py-1.5 rounded-lg text-xs font-bold border-2 border-gray-300 hover:border-blue-500 transition-all"
+          title="Switch language">
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          <span id="langLabel">EN</span>
+        </button>
+
+        <!-- Prominent CV Button -->
+        <a href="CV_Gael_Le_Reun.pdf" target="_blank"
+          class="bg-blue-600 hover:bg-blue-700 text-white border-2 border-blue-600 px-6 py-2.5 rounded-full text-sm font-black transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 transform"
+          data-i18n="nav_cv_short">CV</a>
+      </div>
+
+      <!-- Mobile Controls -->
+      <div class="-mr-2 flex md:hidden items-center gap-3">
+        <!-- Language Toggle - Mobile -->
+        <button id="mobileLangToggle" onclick="toggleLanguage()"
+          class="flex items-center gap-1.5 bg-white text-gray-700 px-3 py-1.5 rounded-full text-xs font-bold border-2 border-gray-200 shadow-sm">
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          <span id="mobileLangLabel">EN</span>
+        </button>
+
+        <button type="button" id="mobileMenuButton"
+          class="bg-white p-2 rounded-md text-gray-600 hover:text-blue-600 focus:outline-none shadow-sm border border-gray-200">
+          <span class="sr-only">Ouvrir le menu</span>
+          <i data-lucide="menu" class="h-6 w-6"></i>
         </button>
       </div>
     </div>
-    <nav id="mobileMenu" data-nav="mobile" class="md:hidden hidden pb-4">
-      <div class="flex flex-col space-y-2 text-sm font-medium">
-        <a href="index.html" class="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" data-i18n="nav_home">Accueil</a>
-        <a href="experiences.html" class="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" data-i18n="nav_experiences">Expériences</a>
-        <a href="competences.html" class="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" data-i18n="nav_skills">Compétences</a>
-        <a href="benevolat.html" class="px-3 py-2 rounded-md hover:bg-gray-100 transition-colors" data-i18n="nav_volunteering">Engagement</a>
-        <button type="button" class="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors text-left text-gray-700" data-lang-toggle>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h18M12 3a14.9 14.9 0 010 18M12 3a14.9 14.9 0 000 18"/>
-          </svg>
-          <span data-i18n="nav_language_toggle_label">Changer de langue</span>
-        </button>
-        <a href="assets/CV_Gael_Le_Reun.pdf" download class="px-3 py-2 rounded-md bg-blue-600 text-white text-center hover:bg-blue-700 transition-colors" data-i18n="nav_cv_download">Télécharger le CV</a>
-      </div>
-    </nav>
   </div>
-</header>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden nav-glass" id="mobileMenu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="index.html#home"
+        class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+        data-i18n="nav_home">Accueil</a>
+      <a href="index.html#skills"
+        class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+        data-i18n="nav_skills">Compétences</a>
+      <a href="index.html#experience"
+        class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+        data-i18n="nav_experiences">Expérience</a>
+      <a href="index.html#volunteering"
+        class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+        data-i18n="nav_volunteering">Bénévolat</a>
+      <a href="CV_Gael_Le_Reun.pdf" target="_blank" class="text-blue-600 font-bold block px-3 py-2 rounded-md text-base"
+        data-i18n="nav_cv_short">CV</a>
+    </div>
+  </div>
+</nav>

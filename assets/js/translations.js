@@ -21,7 +21,10 @@ const translations = {
     hero_paragraph_2:
       "J'accorde une importance forte au côté concret : transformer une idée en solution claire, fiable et maintenable. Qu'il s'agisse de backend, de conception d'outils ou de projets IA orientés usage, je vise toujours la simplicité, la robustesse et la lisibilité.",
     hero_paragraph_3:
-      "Je suis actuellement à la recherche d'un contrat de professionnalisation / alternance pour ma 5ème et dernière année, dans un environnement où je pourrais contribuer à des projets concrets et à impact réel.",
+      "Je suis actuellement à la recherche d'un contrat de professionnalisation / alternance pour ma 5ème et dernière année (octobre 2026 - octobre 2027), dans un environnement où je pourrais contribuer à des projets concrets et à impact réel.",
+    hero_availability_title: 'Recherche Alternance 5e année',
+    hero_availability_subtitle: 'Octobre 2026 - Octobre 2027',
+    button_contact: 'Me contacter',
     button_experiences: 'Voir mes expériences',
     button_cv: 'Télécharger mon CV',
     experiences_heading: 'Expériences professionnelles',
@@ -118,6 +121,8 @@ const translations = {
     footer_github: 'GitHub',
     footer_linkedin: 'LinkedIn',
     footer_signature: 'Gaël Le Reun. Tous droits réservés.',
+    tag_solidarity: 'Solidarité',
+    tag_collective: 'Collectif',
   },
   en: {
     page_title_home: 'Gaël Le Reun | AI Engineer',
@@ -141,7 +146,10 @@ const translations = {
     hero_paragraph_2:
       'I strongly value tangible outcomes: turning an idea into a clear, reliable, and maintainable solution. Whether it is backend work, tool building, or user-focused AI projects, I aim for simplicity, robustness, and readability.',
     hero_paragraph_3:
-      "I am looking for a professional apprenticeship for my fifth and final year, within a team where I can contribute to concrete, high-impact projects.",
+      "I am currently looking for a professional apprenticeship for my 5th and final year (October 2026 - October 2027), within a team where I can contribute to concrete, high-impact projects.",
+    hero_availability_title: 'Seeking 5th Year Apprenticeship',
+    hero_availability_subtitle: 'October 2026 - October 2027',
+    button_contact: 'Contact me',
     button_experiences: 'View my experiences',
     button_cv: 'Download my resume',
     experiences_heading: 'Professional experience',
@@ -236,5 +244,7 @@ const translations = {
     footer_github: 'GitHub',
     footer_linkedin: 'LinkedIn',
     footer_signature: 'Gaël Le Reun. All rights reserved.',
+    tag_solidarity: 'Solidarity',
+    tag_collective: 'Teamwork',
   },
 };
