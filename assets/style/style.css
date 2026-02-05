@@ -14,11 +14,12 @@
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
 }
 
-/* Smooth scrolling for anchor navigation */
+/* Base Layout & Scrolling */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-  /* Account for fixed navbar height */
+  scroll-behavior: auto !important;
+  /* Let JS handle the smooth scroll animation */
+  scroll-padding-top: 64px;
+  /* Matches new compact navbar height */
 }
 
 body {

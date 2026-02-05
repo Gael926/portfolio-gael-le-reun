@@ -1,15 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Handle anchor clicks for closing mobile menu
+  // --- 1. Robust Smooth Scroll Implementation ---
+
+  /**
+   * Custom Smooth Scroll function using requestAnimationFrame
+   * Guarantees smooth behavior even if CSS is conflicting
+   */
+  const smoothScrollTo = (targetY, duration = 800) => {
+    const startY = window.pageYOffset;
+    const diff = targetY - startY;
+    let startTime = null;
+
+    const easeInOutCubic = (t) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const easedProgress = easeInOutCubic(progress);
+
+      window.scrollTo(0, startY + diff * easedProgress);
+
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  // Delegated Click Handler for all Anchor Links
   document.addEventListener('click', function (e) {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
 
-    // Close mobile menu if open
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
+    const targetId = anchor.getAttribute('href');
+    if (targetId === '#') return;
+    if (!targetId.startsWith('#')) return;
+
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      e.preventDefault();
+
+      // Calculate precise position accounting for dynamic navbar height
+      const navbar = document.getElementById('navbar');
+      const navbarHeight = navbar ? navbar.offsetHeight : 0;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+      // Execute custom smooth scroll
+      smoothScrollTo(targetPosition);
+
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
     }
-    // Let the browser handle the smooth scroll via CSS
   });
 
   // Navbar Scroll Effect - Always visible with enhanced shadow on scroll
