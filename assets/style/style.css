@@ -44,16 +44,20 @@ body {
   box-shadow: var(--glass-shadow);
 }
 
-/* Navbar specific - fully opaque for readability */
+/* Navbar specific - transparent by default, glass effect on scroll */
 .nav-glass {
-  background: #ffffff;
-  /* Solid white background */
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  background: transparent !important;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced shadow when scrolled */
+/* Enhanced shadow and glass effect when scrolled */
 .nav-scrolled {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
   box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.08);
 }
 
@@ -182,7 +186,7 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    opacity: 0.6;
+    opacity: 0.15;
   }
 
   100% {
