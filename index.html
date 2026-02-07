@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n="page_title_home">Gaël Le Reun | Ingénieur IA</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="assets/style/style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="assets/js/translations.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/components.js" defer></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/components.js" defer></script>
 </head>
 
 <body class="antialiased selection:bg-indigo-500 selection:text-white">
@@ -84,283 +85,8 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-i18n="skills_heading">Compétences clés</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Python -->
-        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="p-3 bg-blue-50 rounded-lg text-blue-600">
-              <i data-lucide="code-2" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
-          </div>
-          <ul class="space-y-2 text-gray-600 text-sm">
-            <li data-i18n="skills_languages_python">Python</li>
-            <li data-i18n="skills_languages_js">JavaScript</li>
-            <li data-i18n="skills_languages_java">Java</li>
-          </ul>
-        </div>
-        <!-- AI & Data -->
-        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="p-3 bg-purple-50 rounded-lg text-purple-600">
-              <i data-lucide="brain-circuit" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">IA & Data</h3>
-          </div>
-          <ul class="space-y-2 text-gray-600 text-sm">
-            <li>Machine Learning</li>
-            <li>Deep Learning</li>
-            <li>RAG & LLM</li>
-          </ul>
-        </div>
-        <!-- Web -->
-        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="p-3 bg-green-50 rounded-lg text-green-600">
-              <i data-lucide="globe" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_web_title">Web</h3>
-          </div>
-          <ul class="space-y-2 text-gray-600 text-sm">
-            <li data-i18n="skills_web_front">HTML / CSS / JavaScript</li>
-            <li data-i18n="skills_web_node">Node.js / Express</li>
-            <li>React / Vue</li>
-          </ul>
-        </div>
-        <!-- Tools -->
-        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex items-center gap-4 mb-4">
-            <div class="p-3 bg-orange-50 rounded-lg text-orange-600">
-              <i data-lucide="wrench" class="w-6 h-6"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_tools_title">Outils</h3>
-          </div>
-          <ul class="space-y-2 text-gray-600 text-sm">
-            <li data-i18n="skills_tools_git">Git</li>
-            <li>Docker</li>
-            <li data-i18n="skills_tools_linux">Linux</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="projects_heading">Mes Projets</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n="projects_intro">
-          Découvrez mes réalisations en Machine Learning, Data Science et développement.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project 1: Credit Scoring -->
-        <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="line-chart" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_1_title">Credit Scoring Pipeline</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_1_desc">
-            Pipeline ML sur données Home Credit (30M+ lignes). Feature engineering, optimisation coût métier, SHAP et
-            dashboard Streamlit.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ML</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 2: Fraud Detection -->
-        <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="shield-alert" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_2_title">Détection Fraude Bancaire</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_2_desc">
-            Détection de fraudes par carte de crédit avec LogReg, RandomForest et XGBoost.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">XGBoost</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Scikit-learn</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 3: House Prices -->
-        <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="home" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_3_title">Prédiction Prix Immobilier</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_3_desc">
-            Pipeline complet de régression ML pour prédire les prix immobiliers.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RandomForest</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Jupyter</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 4: Portfolio Optimization -->
-        <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="pie-chart" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_4_title">Optimisation Portefeuille</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_4_desc">
-            Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II et dashboard Streamlit.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">NSGA-II</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 5: Course Completion -->
-        <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_5_title">Prédiction Complétion Cours</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_5_desc">
-            Modèle Deep Learning pour prédire la complétion de cours en ligne.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">TensorFlow</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Deep Learning</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 6: Hackathon SIVAL -->
-        <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-orange-50 text-orange-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="sprout" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Tomates</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_6_desc">
-            Prédiction de rendement de tomates sous serre avec ML (ElasticNet) et modèle physiologique TOMSIM.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ElasticNet</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Hackathon</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-
-        <!-- Project 7: Retail Segmentation -->
-        <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-cyan-50 text-cyan-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="users" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_7_title">Segmentation Client Retail</h3>
-          </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_7_desc">
-            Pipeline non-supervisé (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Formation Section -->
-  <section id="formation" class="py-24 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-center text-gray-900 mb-16" data-i18n="formation_heading">Formations</h2>
-      <div class="relative">
-        <!-- Vertical Line -->
-        <div class="absolute left-0 sm:left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
-
-        <!-- Item 1: Cycle Ingénieur ESAIP -->
-        <div
-          class="relative flex flex-col sm:flex-row gap-8 mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
-          <div
-            class="absolute left-0 sm:left-8 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow transform -translate-x-1/2 mt-1.5 z-10">
-          </div>
-          <div class="flex-1 ml-6 sm:ml-16">
-            <div class="mb-2">
-              <h3 class="text-xl font-bold text-gray-900" data-i18n="formation_esaip_title">Cycle Ingénieur Informatique
-                - Majeure IA</h3>
-              <p class="text-blue-600 font-medium" data-i18n="formation_esaip_school">ESAIP, Angers</p>
-              <p class="text-sm text-gray-500" data-i18n="formation_esaip_date">Depuis 2022 - Actuellement en 4ème année
-              </p>
-            </div>
-            <p class="text-gray-700 mb-4" data-i18n="formation_esaip_desc">Machine Learning, Deep Learning, Data
-              Engineering, Optimisation multicritères, Traitement d'images, Cybersécurité, DevOps, Développement
-              Backend, Réseaux, Admin Windows, Gestion de projets agiles</p>
-          </div>
-        </div>
-
-        <!-- Item 2: Erasmus -->
-        <div
-          class="relative flex flex-col sm:flex-row gap-8 mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100">
-          <div
-            class="absolute left-0 sm:left-8 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow transform -translate-x-1/2 mt-1.5 z-10">
-          </div>
-          <div class="flex-1 ml-6 sm:ml-16">
-            <div class="mb-2">
-              <h3 class="text-xl font-bold text-gray-900" data-i18n="formation_erasmus_title">Semestre Erasmus</h3>
-              <p class="text-purple-600 font-medium" data-i18n="formation_erasmus_school">Obuda University, Budapest</p>
-              <p class="text-sm text-gray-500" data-i18n="formation_erasmus_date">Février 2025 - Juin 2025</p>
-            </div>
-            <p class="text-gray-700 mb-4" data-i18n="formation_erasmus_desc">Databases, Cloud services and security
-              (AWS), SAP Analytics, Entrepreneurship, Business projects</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Experience Section -->
-  <section id="experience" class="py-24">
+  <section id="experience" class="py-24 bg-gray-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-16" data-i18n="experiences_heading">Expériences
         professionnelles</h2>
@@ -456,6 +182,281 @@
               <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
                 data-i18n="tag_teamwork">Travail d'équipe</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4" data-i18n="projects_heading">Mes Projets</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-i18n="projects_intro">
+          Découvrez mes réalisations en Machine Learning, Data Science et développement.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: Credit Scoring (FLAGSHIP) -->
+        <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="line-chart" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_1_title">Credit Scoring Pipeline</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_1_desc">
+            Pipeline ML sur données Home Credit (30M+ lignes). Feature engineering, optimisation coût métier, SHAP et
+            dashboard Streamlit.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ML</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 2: Retail Segmentation (Unsupervised) -->
+        <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-cyan-50 text-cyan-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_7_title">Segmentation Client Retail</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_7_desc">
+            Pipeline non-supervisé (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 3: Portfolio Optimization (NSGA-II) -->
+        <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="pie-chart" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_4_title">Optimisation Portefeuille</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_4_desc">
+            Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II et dashboard Streamlit.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">NSGA-II</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 4: Hackathon SIVAL (Real-world context) -->
+        <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-orange-50 text-orange-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="sprout" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Tomates</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_6_desc">
+            Prédiction de rendement de tomates sous serre avec ML (ElasticNet) et modèle physiologique TOMSIM.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ElasticNet</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Hackathon</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 5: Fraud Detection -->
+        <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_2_title">Détection Fraude Bancaire</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_2_desc">
+            Détection de fraudes par carte de crédit avec LogReg, RandomForest et XGBoost.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">XGBoost</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Scikit-learn</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 6: Course Completion (Deep Learning) -->
+        <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_5_title">Prédiction Complétion Cours</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_5_desc">
+            Modèle Deep Learning pour prédire la complétion de cours en ligne.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">TensorFlow</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Deep Learning</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+
+        <!-- Project 7: House Prices (Basic) -->
+        <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
+          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="project_3_title">Prédiction Prix Immobilier</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_3_desc">
+            Pipeline complet de régression ML pour prédire les prix immobiliers.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RandomForest</span>
+            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Jupyter</span>
+          </div>
+          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
+            sur GitHub →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-i18n="skills_heading">Compétences clés</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Python -->
+        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-blue-50 rounded-lg text-blue-600">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li data-i18n="skills_languages_python">Python</li>
+            <li data-i18n="skills_languages_js">JavaScript</li>
+            <li data-i18n="skills_languages_java">Java</li>
+          </ul>
+        </div>
+        <!-- AI & Data -->
+        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-purple-50 rounded-lg text-purple-600">
+              <i data-lucide="brain-circuit" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">IA & Data</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>RAG & LLM</li>
+          </ul>
+        </div>
+        <!-- Web -->
+        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-green-50 rounded-lg text-green-600">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_web_title">Web</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li data-i18n="skills_web_front">HTML / CSS / JavaScript</li>
+            <li data-i18n="skills_web_node">Node.js / Express</li>
+            <li>React / Vue</li>
+          </ul>
+        </div>
+        <!-- Tools -->
+        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="p-3 bg-orange-50 rounded-lg text-orange-600">
+              <i data-lucide="wrench" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_tools_title">Outils</h3>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li data-i18n="skills_tools_git">Git</li>
+            <li>Docker</li>
+            <li data-i18n="skills_tools_linux">Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formation Section -->
+  <section id="formation" class="py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-16" data-i18n="formation_heading">Formations</h2>
+      <div class="relative">
+        <!-- Vertical Line -->
+        <div class="absolute left-0 sm:left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+
+        <!-- Item 1: Cycle Ingénieur ESAIP -->
+        <div
+          class="relative flex flex-col sm:flex-row gap-8 mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700">
+          <div
+            class="absolute left-0 sm:left-8 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow transform -translate-x-1/2 mt-1.5 z-10">
+          </div>
+          <div class="flex-1 ml-6 sm:ml-16">
+            <div class="mb-2">
+              <h3 class="text-xl font-bold text-gray-900" data-i18n="formation_esaip_title">Cycle Ingénieur Informatique
+                - Majeure IA</h3>
+              <p class="text-blue-600 font-medium" data-i18n="formation_esaip_school">ESAIP, Angers</p>
+              <p class="text-sm text-gray-500" data-i18n="formation_esaip_date">Depuis 2022 - Actuellement en 4ème année
+              </p>
+            </div>
+            <p class="text-gray-700 mb-4" data-i18n="formation_esaip_desc">Machine Learning, Deep Learning, Data
+              Engineering, Optimisation multicritères, Traitement d'images, Cybersécurité, DevOps, Développement
+              Backend, Réseaux, Admin Windows, Gestion de projets agiles</p>
+          </div>
+        </div>
+
+        <!-- Item 2: Erasmus -->
+        <div
+          class="relative flex flex-col sm:flex-row gap-8 mb-12 animate-on-scroll opacity-0 translate-y-8 transition-all duration-700 delay-100">
+          <div
+            class="absolute left-0 sm:left-8 w-4 h-4 bg-purple-600 rounded-full border-4 border-white shadow transform -translate-x-1/2 mt-1.5 z-10">
+          </div>
+          <div class="flex-1 ml-6 sm:ml-16">
+            <div class="mb-2">
+              <h3 class="text-xl font-bold text-gray-900" data-i18n="formation_erasmus_title">Semestre Erasmus</h3>
+              <p class="text-purple-600 font-medium" data-i18n="formation_erasmus_school">Obuda University, Budapest</p>
+              <p class="text-sm text-gray-500" data-i18n="formation_erasmus_date">Février 2025 - Juin 2025</p>
+            </div>
+            <p class="text-gray-700 mb-4" data-i18n="formation_erasmus_desc">Databases, Cloud services and security
+              (AWS), SAP Analytics, Entrepreneurship, Business projects</p>
           </div>
         </div>
       </div>
