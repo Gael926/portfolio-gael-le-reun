@@ -200,152 +200,256 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Project 1: Credit Scoring (FLAGSHIP) -->
-        <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="line-chart" class="w-5 h-5"></i>
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="line-chart" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_1_title">Credit Scoring Pipeline</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_1_title">Credit Scoring Pipeline</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_1_desc">
+              Pipeline ML complet (30M+ lignes, 10 fichiers). Feature engineering avancé, optimisation coût métier, SHAP
+              explainability et dashboard interactif.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="database" class="w-3 h-3"></i> 30M+ rows</span>
+              <span class="flex items-center gap-1"><i data-lucide="layers" class="w-3 h-3"></i> MLOps</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">LightGBM</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">SHAP</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">MLflow</span>
+            </div>
+            <!-- Dual CTA -->
+            <div class="flex gap-2 mt-auto">
+              <a href="https://credit-scoring-analysis-pipeline.streamlit.app/" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-purple-100 border border-gray-300 text-purple-700 hover:bg-purple-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_1_desc">
-            Pipeline ML sur données Home Credit (30M+ lignes). Feature engineering, optimisation coût métier, SHAP et
-            dashboard Streamlit.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ML</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
-        <!-- Project 2: Retail Segmentation (Unsupervised) -->
-        <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-cyan-50 text-cyan-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="users" class="w-5 h-5"></i>
+        <!-- Project 2: Hackathon SIVAL -->
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="sprout" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Tomates</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_7_title">Segmentation Client Retail</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_6_desc">
+              Prédiction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + modèle physiologique
+              TOMSIM. Projet réel avec le CTIFL.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="trophy" class="w-3 h-3 text-green-600"></i>
+                Hackathon</span>
+              <span class="flex items-center gap-1"><i data-lucide="building" class="w-3 h-3 text-green-600"></i>
+                CTIFL</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">ElasticNet</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">TOMSIM</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Streamlit</span>
+            </div>
+            <!-- Dual CTA -->
+            <div class="flex gap-2 mt-auto">
+              <a href="https://hackaton-sival-agreen-ctilf.streamlit.app/" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-green-100 border border-gray-300 text-green-700 hover:bg-green-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_7_desc">
-            Pipeline non-supervisé (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
-        <!-- Project 3: Portfolio Optimization (NSGA-II) -->
-        <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="pie-chart" class="w-5 h-5"></i>
+        <!-- Project 3: Portfolio Optimization -->
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="pie-chart" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_4_title">Optimisation Portefeuille</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_4_title">Optimisation Portefeuille</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_4_desc">
+              Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II. Front de Pareto 3D interactif et
+              comparaison Markowitz.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> 190 actifs</span>
+              <span class="flex items-center gap-1"><i data-lucide="git-branch" class="w-3 h-3"></i> 3 objectifs</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">NSGA-II</span>
+              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">pymoo</span>
+              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">Streamlit</span>
+            </div>
+            <!-- Dual CTA -->
+            <div class="flex gap-2 mt-auto">
+              <a href="https://portfolio-optimization-multi-criteria.streamlit.app/" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-indigo-100 border border-gray-300 text-indigo-700 hover:bg-indigo-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_4_desc">
-            Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II et dashboard Streamlit.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">NSGA-II</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Streamlit</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
-        <!-- Project 4: Hackathon SIVAL (Real-world context) -->
-        <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-orange-50 text-orange-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="sprout" class="w-5 h-5"></i>
+        <!-- Project 4: Retail Segmentation -->
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-blue-50 text-blue-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_7_title">Segmentation Client Retail</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Tomates</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_7_desc">
+              Pipeline non-supervisé end-to-end (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas
+              actionnables.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="database" class="w-3 h-3 text-blue-500"></i> 1M+
+                tx</span>
+              <span class="flex items-center gap-1"><i data-lucide="target" class="w-3 h-3 text-blue-500"></i>
+                Silhouette: 0.46</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RFM</span>
+            </div>
+            <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
+              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+              <i data-lucide="github" class="w-3 h-3"></i>
+              Voir sur GitHub
+            </a>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_6_desc">
-            Prédiction de rendement de tomates sous serre avec ML (ElasticNet) et modèle physiologique TOMSIM.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">ElasticNet</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Hackathon</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
         <!-- Project 5: Fraud Detection -->
-        <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="shield-alert" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_2_title">Détection Fraude Bancaire</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_2_title">Détection Fraude Bancaire</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_2_desc">
+              Détection de fraudes par carte de crédit. Benchmark LogReg, RandomForest et XGBoost sur données
+              déséquilibrées.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="percent" class="w-3 h-3"></i> Imbalanced</span>
+              <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> XGBoost</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">XGBoost</span>
+              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">SMOTE</span>
+              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">Scikit-learn</span>
+            </div>
+            <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
+              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+              <i data-lucide="github" class="w-3 h-3"></i>
+              Voir sur GitHub
+            </a>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_2_desc">
-            Détection de fraudes par carte de crédit avec LogReg, RandomForest et XGBoost.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">XGBoost</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Scikit-learn</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
-        <!-- Project 6: Course Completion (Deep Learning) -->
-        <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+        <!-- Project 6: Course Completion -->
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_5_title">Prédiction Complétion Cours</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_5_title">Prédiction Complétion Cours</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_5_desc">
+              Modèle Deep Learning (TensorFlow) pour prédire la complétion de cours en ligne. Classification et
+              régression.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="brain" class="w-3 h-3"></i> Deep Learning</span>
+              <span class="flex items-center gap-1"><i data-lucide="layers" class="w-3 h-3"></i> TensorFlow</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">TensorFlow</span>
+              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">Keras</span>
+              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">DNN</span>
+            </div>
+            <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
+              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+              <i data-lucide="github" class="w-3 h-3"></i>
+              Voir sur GitHub
+            </a>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_5_desc">
-            Modèle Deep Learning pour prédire la complétion de cours en ligne.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">TensorFlow</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Deep Learning</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
 
-        <!-- Project 7: House Prices (Basic) -->
-        <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
-          class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
-              <i data-lucide="home" class="w-5 h-5"></i>
+        <!-- Project 7: House Prices -->
+        <div
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="home" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_3_title">Prédiction Prix Immobilier</h3>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="project_3_title">Prédiction Prix Immobilier</h3>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_3_desc">
+              Pipeline complet de régression ML. Benchmark Linear Regression, RandomForest et XGBoost avec early
+              stopping.
+            </p>
+            <!-- Metrics -->
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="bar-chart" class="w-3 h-3"></i> Regression</span>
+              <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> XGBoost</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">XGBoost</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">RandomForest</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">EDA</span>
+            </div>
+            <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
+              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+              <i data-lucide="github" class="w-3 h-3"></i>
+              Voir sur GitHub
+            </a>
           </div>
-          <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_3_desc">
-            Pipeline complet de régression ML pour prédire les prix immobiliers.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Python</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RandomForest</span>
-            <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">Jupyter</span>
-          </div>
-          <span class="text-sm text-blue-600 font-medium group-hover:underline" data-i18n="projects_view_github">Voir
-            sur GitHub →</span>
-        </a>
+        </div>
       </div>
     </div>
   </section>
