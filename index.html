@@ -25,15 +25,15 @@
 
   <!-- Styles -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.css?v=3" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@0.395.0"></script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/components.js" defer></script>
+  <script src="js/translations.js?v=3" defer></script>
+  <script src="js/main.js?v=3" defer></script>
+  <script src="js/components.js?v=3" defer></script>
 </head>
 
 <body class="antialiased selection:bg-blue-500 selection:text-white">
@@ -48,7 +48,9 @@
   <div id="navbar-placeholder"></div>
 
   <!-- ==================== HERO ==================== -->
-  <section id="home" class="min-h-screen flex flex-col justify-center pt-32 pb-16 relative">
+  <section id="home" class="min-h-screen flex flex-col justify-center pt-32 pb-16 relative overflow-hidden">
+    <!-- Interactive ambient glow -->
+    <div id="heroGlow" class="hero-glow"></div>
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 
       <!-- Profile Photo -->
@@ -94,19 +96,19 @@
       <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-10 animate-fade-in delay-200">
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-i18n="stat_internships_number">2</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="2" data-suffix="" data-i18n="stat_internships_number">2</div>
           <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider"
             data-i18n="stat_internships_label">Stages IA</div>
         </div>
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-i18n="stat_projects_number">7+</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="7" data-suffix="+" data-i18n="stat_projects_number">7+</div>
           <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider"
             data-i18n="stat_projects_label">Projets ML</div>
         </div>
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-i18n="stat_data_number">30M+</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="30" data-suffix="M+" data-i18n="stat_data_number">30M+</div>
           <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider" data-i18n="stat_data_label">
             Donnees traitees</div>
         </div>
@@ -278,7 +280,7 @@
 
         <!-- Credit Scoring Pipeline -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -316,7 +318,7 @@
 
         <!-- Hackathon SIVAL -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -356,7 +358,7 @@
 
         <!-- Portfolio Optimization -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -398,7 +400,7 @@
 
         <!-- Course Completion Prediction -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -430,7 +432,7 @@
 
         <!-- Retail Customer Segmentation -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-blue-50 text-blue-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -462,7 +464,7 @@
 
         <!-- Fraud Detection -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -493,7 +495,7 @@
 
         <!-- House Prices -->
         <div
-          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden">
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -779,7 +781,7 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    lucide.createIcons();
+    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide icons error:', e.message); }
   </script>
 </body>
 

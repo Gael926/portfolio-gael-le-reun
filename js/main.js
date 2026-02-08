@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  console.log('[Portfolio] main.js loaded, prefersReducedMotion:', prefersReducedMotion);
 
   // --- 1. Robust Smooth Scroll Implementation ---
   const smoothScrollTo = (targetY, duration = 800) => {
@@ -69,6 +70,81 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Interactive Effects ---
+  // These are user-triggered (mouse-driven) so they run regardless of reduced motion
+
+  // (A) Hero Mouse-Following Ambient Glow
+  const heroSection = document.getElementById('home');
+  const heroGlow = document.getElementById('heroGlow');
+  console.log('[Portfolio] Hero glow setup:', { heroSection: !!heroSection, heroGlow: !!heroGlow });
+  if (heroSection && heroGlow) {
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      heroGlow.style.left = (e.clientX - rect.left) + 'px';
+      heroGlow.style.top = (e.clientY - rect.top) + 'px';
+      if (!heroGlow.classList.contains('active')) {
+        heroGlow.classList.add('active');
+      }
+    });
+    heroSection.addEventListener('mouseleave', () => {
+      heroGlow.classList.remove('active');
+    });
+  }
+
+  // (B) Animated Stat Counters
+  const counters = document.querySelectorAll('[data-counter]');
+  console.log('[Portfolio] Counters found:', counters.length);
+  if (counters.length > 0) {
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-counter'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 2500;
+      const start = performance.now();
+
+      const update = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(eased * target);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      };
+      requestAnimationFrame(update);
+    };
+
+    const counterObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(el => counterObserver.observe(el));
+  }
+
+  // (C) 3D Tilt Effect on Project Cards
+  const tiltCards = document.querySelectorAll('.tilt-card');
+  console.log('[Portfolio] Tilt cards found:', tiltCards.length);
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -4;
+      const rotateY = ((x - centerX) / centerX) * 4;
+      card.style.transform = 'perspective(800px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
+    });
+  });
 
   // Scroll Animations (skip if reduced motion)
   if (!prefersReducedMotion) {

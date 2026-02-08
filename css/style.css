@@ -64,6 +64,35 @@ body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Hero Interactive Glow */
+.hero-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, rgba(99, 102, 241, 0.08) 35%, transparent 65%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: left 0.25s ease-out, top 0.25s ease-out, opacity 0.4s ease;
+  opacity: 0;
+  will-change: left, top;
+}
+
+.hero-glow.active {
+  opacity: 1;
+}
+
+/* Project Card 3D Tilt */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.12);
+}
+
 /* Stat Cards */
 .stat-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -224,15 +253,6 @@ body {
 
 /* Accessibility: Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
   .animate-fade-in {
     animation: none;
     opacity: 1;

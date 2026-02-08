@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 initNavbarScrollEffect();
                 // Re-initialize Lucide icons for navbar
                 if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
+                    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide navbar icons error:', e.message); }
                 }
             }
         } catch (error) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 footerPlaceholder.outerHTML = html;
                 // Re-initialize Lucide icons for footer
                 if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
+                    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide footer icons error:', e.message); }
                 }
             }
         } catch (error) {
