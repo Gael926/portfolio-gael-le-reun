@@ -64,20 +64,6 @@ body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Featured Project Cards */
-.featured-card {
-  border-top: 3px solid transparent;
-  border-image: linear-gradient(to right, #3b82f6, #6366f1) 1;
-}
-
-.featured-card:hover {
-  transform: translateY(-4px);
-}
-
-.featured-badge {
-  background: linear-gradient(135deg, #3b82f6, #6366f1);
-}
-
 /* Stat Cards */
 .stat-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;

@@ -41,7 +41,7 @@ const translations = {
     search_heading: 'Ce que je recherche',
     search_subtitle: 'Alternance / Contrat de professionnalisation \u00b7 5\u00e8me ann\u00e9e ESAIP',
     search_period: 'Oct 2026 - Oct 2027',
-    search_domains: 'IA, Data Science, ML',
+    search_domains: 'IA, Data Science, ML, Dev',
     search_location: 'France (mobilit\u00e9 nationale)',
 
     // Formation
@@ -181,7 +181,7 @@ const translations = {
     footer_github: 'GitHub',
     footer_linkedin: 'LinkedIn',
     footer_signature: '\u00a9 2026 Ga\u00ebl Le Reun. Tous droits r\u00e9serv\u00e9s.',
-    footer_cta: 'Disponible pour une alternance \u00e0 partir d\'octobre 2026 \u2014 Contactez-moi',
+    footer_cta: 'Disponible pour une alternance \u00e0 partir d\'octobre 2026 - Contactez-moi',
   },
   en: {
     // Page titles
@@ -225,7 +225,7 @@ const translations = {
     search_heading: 'What I\'m looking for',
     search_subtitle: 'Apprenticeship / Professional contract \u00b7 5th year ESAIP',
     search_period: 'Oct 2026 - Oct 2027',
-    search_domains: 'AI, Data Science, ML',
+    search_domains: 'AI, Data Science, ML, Dev',
     search_location: 'France (nationwide mobility)',
 
     // Formation
@@ -365,6 +365,6 @@ const translations = {
     footer_github: 'GitHub',
     footer_linkedin: 'LinkedIn',
     footer_signature: '\u00a9 2026 Ga\u00ebl Le Reun. All rights reserved.',
-    footer_cta: 'Available for apprenticeship from October 2026 \u2014 Contact me',
+    footer_cta: 'Available for apprenticeship from October 2026 - Contact me',
   },
 };
