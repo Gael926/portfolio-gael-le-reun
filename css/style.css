@@ -3,12 +3,8 @@
 
 :root {
   --primary: #0f172a;
-  /* Slate 900 */
   --secondary: #3b82f6;
-  /* Blue 500 */
   --accent: #6366f1;
-  /* Indigo 500 */
-  /* Darker glass background for better contrast */
   --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(255, 255, 255, 0.6);
   --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
@@ -17,21 +13,15 @@
 /* Base Layout & Scrolling */
 html {
   scroll-behavior: auto !important;
-  /* Let JS handle the smooth scroll animation */
   scroll-padding-top: 64px;
-  /* Matches new compact navbar height */
 }
 
 body {
   font-family: 'Outfit', sans-serif;
   background-color: #f8fafc;
-  /* Slate 50 */
-  /* Subtle, professional gradient - less "bizarre", more corporate/tech */
-  background-image:
-    linear-gradient(to bottom right, #f1f5f9 0%, #e2e8f0 100%);
+  background-image: linear-gradient(to bottom right, #f1f5f9 0%, #e2e8f0 100%);
   background-attachment: fixed;
   color: #1e293b;
-  /* Darker default text color */
   overflow-x: hidden;
 }
 
@@ -44,7 +34,7 @@ body {
   box-shadow: var(--glass-shadow);
 }
 
-/* Navbar specific - transparent by default, glass effect on scroll */
+/* Navbar */
 .nav-glass {
   background: transparent !important;
   border-bottom: 1px solid transparent;
@@ -52,7 +42,6 @@ body {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced shadow and glass effect when scrolled */
 .nav-scrolled {
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(12px);
@@ -63,7 +52,6 @@ body {
 
 .glass-card {
   background: rgba(255, 255, 255, 0.9);
-  /* More opaque for better text readability */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -76,18 +64,42 @@ body {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Featured Project Cards */
+.featured-card {
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #3b82f6, #6366f1) 1;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+}
+
+.featured-badge {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+/* Stat Cards */
+.stat-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,7 +112,6 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -123,6 +134,36 @@ body {
   animation-delay: 0.3s;
 }
 
+/* Slow pulse for profile photo glow */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* Subtle bounce for status badge */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-4px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 3s ease-in-out infinite;
+}
+
 /* Timeline */
 .timeline-line {
   position: absolute;
@@ -131,7 +172,6 @@ body {
   width: 2px;
   height: 100%;
   background-color: #cbd5e1;
-  /* Darker line */
   z-index: 0;
 }
 
@@ -141,7 +181,7 @@ body {
   }
 }
 
-/* Page Status Pill & Pulse */
+/* Status Pill & Pulse */
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -155,12 +195,6 @@ body {
   backdrop-filter: blur(8px);
   border: 1px solid rgba(59, 130, 246, 0.2);
   color: #1e40af;
-}
-
-.status-pill:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(59, 130, 246, 0.4);
-  transform: translateY(-2px);
 }
 
 .pulse-dot {
@@ -188,50 +222,10 @@ body {
     transform: scale(1);
     opacity: 0.15;
   }
-
   100% {
     transform: scale(2.5);
     opacity: 0;
   }
-}
-
-@keyframes bounce-subtle {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-.animate-bounce-subtle {
-  animation: bounce-subtle 3s ease-in-out infinite;
-}
-
-/* Announcement Bar */
-
-.announcement-bar {
-  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
-  color: white;
-  text-align: center;
-  padding: 8px 16px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  position: relative;
-  z-index: 60;
-}
-
-.announcement-bar a {
-  text-decoration: underline;
-  opacity: 0.9;
-  transition: opacity 0.2s;
-}
-
-.announcement-bar a:hover {
-  opacity: 1;
 }
 
 /* Utilities */
@@ -240,4 +234,35 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-bounce-subtle {
+    animation: none;
+  }
+
+  .animate-pulse-slow {
+    animation: none;
+  }
 }

@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- 1. Robust Smooth Scroll Implementation ---
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /**
-   * Custom Smooth Scroll function using requestAnimationFrame
-   * Guarantees smooth behavior even if CSS is conflicting
-   */
+  // --- 1. Robust Smooth Scroll Implementation ---
   const smoothScrollTo = (targetY, duration = 800) => {
+    if (prefersReducedMotion) {
+      window.scrollTo(0, targetY);
+      return;
+    }
+
     const startY = window.pageYOffset;
     const diff = targetY - startY;
     let startTime = null;
@@ -40,12 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (targetElement) {
       e.preventDefault();
 
-      // Calculate precise position accounting for dynamic navbar height
       const navbar = document.getElementById('navbar');
       const navbarHeight = navbar ? navbar.offsetHeight : 0;
       const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
 
-      // Execute custom smooth scroll
       smoothScrollTo(targetPosition);
 
       // Close mobile menu if open
@@ -56,10 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Navbar Scroll Effect - Always visible with enhanced shadow on scroll
+  // Navbar Scroll Effect
   const navbar = document.getElementById('navbar');
   if (navbar) {
-    // Always apply nav-glass for visibility
     navbar.classList.add('nav-glass');
 
     window.addEventListener('scroll', () => {
@@ -71,26 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Scroll Animations (Intersection Observer)
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
+  // Scroll Animations (skip if reduced motion)
+  if (!prefersReducedMotion) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-fade-in');
-        entry.target.classList.remove('opacity-0', 'translate-y-8');
-        observer.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+          entry.target.classList.remove('opacity-0', 'translate-y-8');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
     });
-  }, observerOptions);
-
-  document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
+  } else {
+    // Immediately show all elements for reduced motion users
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.classList.remove('opacity-0', 'translate-y-8');
+    });
+  }
 });
 
 /**
@@ -98,19 +104,13 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 let currentLang = localStorage.getItem('lang') || 'fr';
 
-/**
- * Toggle language between FR and EN
- * Called directly from navbar button onclick
- */
 function toggleLanguage() {
   const newLang = currentLang === 'fr' ? 'en' : 'fr';
   setLanguage(newLang);
 }
 
 function initTranslations() {
-  // Apply saved language
   applyTranslations(currentLang);
-  // Update flag icon
   updateLangFlag();
 }
 
@@ -133,7 +133,6 @@ function applyTranslations(lang) {
     return;
   }
 
-  // Translate all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (langData[key]) {
@@ -141,7 +140,6 @@ function applyTranslations(lang) {
     }
   });
 
-  // Update page title if applicable
   const pageTitle = document.querySelector('title[data-i18n]');
   if (pageTitle) {
     const key = pageTitle.getAttribute('data-i18n');
@@ -150,18 +148,15 @@ function applyTranslations(lang) {
     }
   }
 
-  // Update html lang attribute
   document.documentElement.lang = lang;
 }
 
 function updateLangFlag() {
   const targetLang = currentLang === 'fr' ? 'EN' : 'FR';
 
-  // Update Desktop Label
   const labelEl = document.getElementById('langLabel');
   if (labelEl) labelEl.textContent = targetLang;
 
-  // Update Mobile Label
   const mobileLabelEl = document.getElementById('mobileLangLabel');
   if (mobileLabelEl) mobileLabelEl.textContent = targetLang;
 
@@ -173,7 +168,6 @@ function updateLangFlag() {
   });
 }
 
-// Export for use by components.js
 window.initTranslations = initTranslations;
 window.setLanguage = setLanguage;
 window.toggleLanguage = toggleLanguage;
