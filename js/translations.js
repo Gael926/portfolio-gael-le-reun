@@ -75,6 +75,7 @@ const translations = {
     exp1_mission_1: 'D\u00e9veloppement d\'un pipeline Python pour le traitement automatis\u00e9 de 40 000 pages manuscrites',
     exp1_mission_2: 'Fine-tuning de mod\u00e8les LLM (Hugging Face) et mise en production d\'outils d\'analyse textuelle',
     exp1_mission_3: 'Optimisation des performances : r\u00e9duction des temps de traitement et automatisation des reprises',
+    exp1_mission_4: 'Travail en \u00e9quipe internationale exclusivement en anglais',
     exp_skills_title: 'Comp\u00e9tences d\u00e9velopp\u00e9es',
 
     // Sakura (kept for backward compatibility with other pages)
@@ -103,6 +104,8 @@ const translations = {
     tag_ai_agents: 'Agents IA',
     tag_solidarity: 'Solidarit\u00e9',
     tag_collective: 'Collectif',
+    tag_english: 'Anglais',
+    tag_js: 'JavaScript',
 
     // Skills
     skills_heading: 'Comp\u00e9tences cl\u00e9s',
@@ -271,6 +274,7 @@ const translations = {
     exp1_mission_1: 'Developed Python pipeline for automated processing of 40,000 manuscript pages',
     exp1_mission_2: 'Fine-tuned LLM models (Hugging Face) and deployed text analysis tools',
     exp1_mission_3: 'Performance optimization: reduced processing time and automated error recovery',
+    exp1_mission_4: 'Worked in an international team, collaborating exclusively in English',
     exp_skills_title: 'Skills developed',
 
     // Sakura (backward compat)
@@ -299,6 +303,8 @@ const translations = {
     tag_ai_agents: 'AI Agents',
     tag_solidarity: 'Solidarity',
     tag_collective: 'Teamwork',
+    tag_english: 'English',
+    tag_js: 'JavaScript',
 
     // Skills
     skills_heading: 'Key skills',
