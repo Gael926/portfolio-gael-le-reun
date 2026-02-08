@@ -47,10 +47,12 @@
   <!-- Navbar Placeholder -->
   <div id="navbar-placeholder"></div>
 
-  <!-- ==================== HERO ==================== -->
-  <section id="home" class="min-h-screen flex flex-col justify-center pt-32 pb-16 relative overflow-hidden">
-    <!-- Interactive ambient glow -->
+  <!-- ==================== HERO + SEARCH GLOW AREA ==================== -->
+  <div id="heroGlowArea" class="relative overflow-hidden">
     <div id="heroGlow" class="hero-glow"></div>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="min-h-screen flex flex-col justify-center pt-32 pb-16 relative">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
 
       <!-- Profile Photo -->
@@ -110,10 +112,18 @@
         </div>
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="30" data-suffix="M+"
-            data-i18n="stat_data_number">30M+</div>
-          <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider" data-i18n="stat_data_label">
-            Donnees traitees</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="3" data-suffix=""
+            data-i18n="stat_countries_number">3</div>
+          <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider"
+            data-i18n="stat_countries_label">
+            Pays</div>
+        </div>
+        <div
+          class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="905" data-suffix=""
+            data-i18n="stat_toeic_number">905</div>
+          <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider" data-i18n="stat_toeic_label">
+            TOEIC</div>
         </div>
       </div>
 
@@ -135,7 +145,7 @@
   </section>
 
   <!-- ==================== WHAT I'M LOOKING FOR ==================== -->
-  <section id="search" class="py-10">
+  <section id="search" class="py-10 relative z-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
         <div class="text-center mb-6">
@@ -165,6 +175,8 @@
       </div>
     </div>
   </section>
+
+  </div><!-- end heroGlowArea -->
 
   <!-- ==================== EXPERIENCE ==================== -->
   <section id="experience" class="py-24 bg-gray-50">

@@ -34,8 +34,10 @@ const translations = {
     stat_internships_label: 'Stages IA',
     stat_projects_number: '7+',
     stat_projects_label: 'Projets ML',
-    stat_data_number: '30M+',
-    stat_data_label: 'Donn\u00e9es trait\u00e9es',
+    stat_countries_number: '3',
+    stat_countries_label: 'Pays',
+    stat_toeic_number: '905',
+    stat_toeic_label: 'TOEIC',
 
     // What I'm looking for
     search_heading: 'Ce que je recherche',
@@ -130,7 +132,7 @@ const translations = {
     skills_tools_docker: 'Docker',
     skills_tools_n8n: 'n8n',
     skills_tools_aws: 'AWS (bases)',
-    skills_tools_cicd: 'CI/CD',
+    skills_tools_cicd: 'CI/CD (GitHub Actions)',
     skills_langues_title: 'Langues',
     skills_langues_fr: 'Français : Langue maternelle',
     skills_langues_en: 'Anglais : B2 (905 au TOEIC), semestre Erasmus, stage de 2,5 mois',
@@ -228,8 +230,10 @@ const translations = {
     stat_internships_label: 'AI Internships',
     stat_projects_number: '7+',
     stat_projects_label: 'ML Projects',
-    stat_data_number: '30M+',
-    stat_data_label: 'Data processed',
+    stat_countries_number: '3',
+    stat_countries_label: 'Countries',
+    stat_toeic_number: '905',
+    stat_toeic_label: 'TOEIC',
 
     // What I'm looking for
     search_heading: 'What I\'m looking for',
@@ -324,7 +328,7 @@ const translations = {
     skills_tools_docker: 'Docker',
     skills_tools_n8n: 'n8n',
     skills_tools_aws: 'AWS (basics)',
-    skills_tools_cicd: 'CI/CD',
+    skills_tools_cicd: 'CI/CD (GitHub Actions)',
     skills_langues_title: 'Languages',
     skills_langues_fr: 'French: Native speaker',
     skills_langues_en: 'English: B2 (905 TOEIC), Erasmus semester, 2.5-month internship',

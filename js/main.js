@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 1. Robust Smooth Scroll Implementation ---
   const smoothScrollTo = (targetY, duration = 800) => {
-    if (prefersReducedMotion) {
-      window.scrollTo(0, targetY);
-      return;
-    }
-
     const startY = window.pageYOffset;
     const diff = targetY - startY;
     let startTime = null;
@@ -75,19 +70,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // These are user-triggered (mouse-driven) so they run regardless of reduced motion
 
   // (A) Hero Mouse-Following Ambient Glow
-  const heroSection = document.getElementById('home');
+  const heroGlowArea = document.getElementById('heroGlowArea');
   const heroGlow = document.getElementById('heroGlow');
-  console.log('[Portfolio] Hero glow setup:', { heroSection: !!heroSection, heroGlow: !!heroGlow });
-  if (heroSection && heroGlow) {
-    heroSection.addEventListener('mousemove', (e) => {
-      const rect = heroSection.getBoundingClientRect();
+  console.log('[Portfolio] Hero glow setup:', { heroGlowArea: !!heroGlowArea, heroGlow: !!heroGlow });
+  if (heroGlowArea && heroGlow) {
+    heroGlowArea.addEventListener('mousemove', (e) => {
+      const rect = heroGlowArea.getBoundingClientRect();
       heroGlow.style.left = (e.clientX - rect.left) + 'px';
       heroGlow.style.top = (e.clientY - rect.top) + 'px';
       if (!heroGlow.classList.contains('active')) {
         heroGlow.classList.add('active');
       }
     });
-    heroSection.addEventListener('mouseleave', () => {
+    heroGlowArea.addEventListener('mouseleave', () => {
       heroGlow.classList.remove('active');
     });
   }
