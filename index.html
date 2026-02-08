@@ -96,19 +96,22 @@
       <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-10 animate-fade-in delay-200">
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="2" data-suffix="" data-i18n="stat_internships_number">2</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="2" data-suffix=""
+            data-i18n="stat_internships_number">2</div>
           <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider"
             data-i18n="stat_internships_label">Stages IA</div>
         </div>
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="7" data-suffix="+" data-i18n="stat_projects_number">7+</div>
-          <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider"
-            data-i18n="stat_projects_label">Projets ML</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="7" data-suffix="+"
+            data-i18n="stat_projects_number">7+</div>
+          <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider" data-i18n="stat_projects_label">
+            Projets ML</div>
         </div>
         <div
           class="stat-card bg-white/80 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-gray-100 text-center min-w-[120px]">
-          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="30" data-suffix="M+" data-i18n="stat_data_number">30M+</div>
+          <div class="text-2xl md:text-3xl font-bold text-blue-600 mb-0.5" data-counter="30" data-suffix="M+"
+            data-i18n="stat_data_number">30M+</div>
           <div class="text-[11px] text-gray-500 font-semibold uppercase tracking-wider" data-i18n="stat_data_label">
             Donnees traitees</div>
         </div>
@@ -136,7 +139,8 @@
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
         <div class="text-center mb-6">
-          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-1" data-i18n="search_heading">Ce que je recherche</h3>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-1" data-i18n="search_heading">Ce que je recherche
+          </h3>
           <p class="text-sm text-gray-500" data-i18n="search_subtitle">
             Alternance / Contrat de professionnalisation - 5eme annee ESAIP
           </p>
@@ -531,24 +535,9 @@
   <section id="skills" class="py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-12" data-i18n="skills_heading">Competences cles</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Languages -->
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="p-2.5 bg-blue-50 rounded-xl text-blue-600">
-              <i data-lucide="code-2" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg">Python</span>
-            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg">JavaScript</span>
-            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg">Java</span>
-            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg">SQL</span>
-          </div>
-        </div>
-
+      <!-- Top Rows: 3 Items Each -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
         <!-- AI & Data -->
         <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
           <div class="flex items-center gap-3 mb-5">
@@ -558,50 +547,70 @@
             <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">IA & Data</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg">Machine
-              Learning</span>
-            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg">Deep
-              Learning</span>
-            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg">RAG & LLM</span>
-            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg">Hugging Face</span>
-            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg">Data
-              Pipelines</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_ml">Machine Learning</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_dl">Deep Learning</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_llm">RAG & LLM</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_hf">Hugging Face</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_agents">Agents IA</span>
+            <span class="px-3 py-1.5 bg-purple-50 text-purple-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_ai_pipelines">Data Pipelines</span>
           </div>
         </div>
 
-        <!-- Web -->
-        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
-          <div class="flex items-center gap-3 mb-5">
-            <div class="p-2.5 bg-green-50 rounded-xl text-green-600">
-              <i data-lucide="globe" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_web_title">Web</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-sm font-medium rounded-lg">HTML / CSS /
-              JS</span>
-            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-sm font-medium rounded-lg">Node.js /
-              Express</span>
-            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-sm font-medium rounded-lg">React / Vue</span>
-          </div>
-        </div>
-
-        <!-- Databases -->
+        <!-- Librairies & Frameworks -->
         <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
           <div class="flex items-center gap-3 mb-5">
             <div class="p-2.5 bg-yellow-50 rounded-xl text-yellow-600">
-              <i data-lucide="database" class="w-5 h-5"></i>
+              <i data-lucide="library" class="w-5 h-5"></i>
             </div>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_db_title">Bases de donnees</h3>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_libs_title">Librairies & Frameworks</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg">SQL</span>
-            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg">MongoDB</span>
-            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg">MariaDB</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_numpy">NumPy</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_pandas">Pandas</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_sklearn">Scikit-learn</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_pytorch">PyTorch</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_keras">Keras</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_fastapi">FastAPI</span>
+            <span class="px-3 py-1.5 bg-yellow-50 text-yellow-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_libs_streamlit">Streamlit</span>
           </div>
         </div>
 
-        <!-- DevOps & Tools -->
+        <!-- Languages (Coding) -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 bg-blue-50 rounded-xl text-blue-600">
+              <i data-lucide="code-2" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_languages_python">Python</span>
+            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_languages_js">JavaScript</span>
+            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_languages_java">Java</span>
+            <span class="px-3 py-1.5 bg-blue-50 text-blue-700 text-sm font-medium rounded-lg">SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: 3 Items -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- DevOps & Outils -->
         <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
           <div class="flex items-center gap-3 mb-5">
             <div class="p-2.5 bg-red-50 rounded-xl text-red-500">
@@ -610,10 +619,34 @@
             <h3 class="font-bold text-gray-900" data-i18n="skills_devops_title">DevOps & Outils</h3>
           </div>
           <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg">Git</span>
-            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg">Docker</span>
-            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg">Linux</span>
-            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg">AWS</span>
+            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_tools_git">Git</span>
+            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_tools_docker">Docker</span>
+            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_tools_n8n">n8n</span>
+            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_tools_cicd">CI/CD</span>
+            <span class="px-3 py-1.5 bg-red-50 text-red-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_tools_aws">AWS</span>
+          </div>
+        </div>
+
+        <!-- Langues -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all border border-gray-200">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 bg-green-50 rounded-xl text-green-600">
+              <i data-lucide="languages" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_langues_title">Langues</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-xs font-medium rounded-lg"
+              data-i18n="skills_langues_fr">Français : Langue maternelle</span>
+            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-[10px] md:text-xs font-medium rounded-lg"
+              data-i18n="skills_langues_en">Anglais : B2 (905 au TOEIC), semestre Erasmus, stage de 2,5 mois</span>
+            <span class="px-3 py-1.5 bg-green-50 text-green-700 text-[10px] md:text-xs font-medium rounded-lg"
+              data-i18n="skills_langues_es">Espagnol : B1, semestre Erasmus à Buenos Aires</span>
           </div>
         </div>
 
@@ -634,6 +667,10 @@
               data-i18n="skills_soft_communication">Communication</span>
             <span class="px-3 py-1.5 bg-pink-50 text-pink-700 text-sm font-medium rounded-lg"
               data-i18n="skills_soft_teamwork">Travail d'equipe</span>
+            <span class="px-3 py-1.5 bg-pink-50 text-pink-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_soft_agile">Agile</span>
+            <span class="px-3 py-1.5 bg-pink-50 text-pink-700 text-sm font-medium rounded-lg"
+              data-i18n="skills_soft_problem_solving">Résolution de problèmes</span>
           </div>
         </div>
       </div>
@@ -770,8 +807,8 @@
             <i data-lucide="github" class="w-6 h-6"></i>
           </div>
           <h3 class="font-bold text-gray-900 mb-1" data-i18n="contact_github_label">GitHub</h3>
-          <p class="text-xs text-gray-500 group-hover:text-gray-900 transition-colors"
-            data-i18n="contact_github_view">Voir mes projets</p>
+          <p class="text-xs text-gray-500 group-hover:text-gray-900 transition-colors" data-i18n="contact_github_view">
+            Voir mes projets</p>
         </a>
       </div>
     </div>
@@ -781,7 +818,7 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide icons error:', e.message); }
+    try { lucide.createIcons(); } catch (e) { console.warn('[Portfolio] Lucide icons error:', e.message); }
   </script>
 </body>
 
