@@ -56,6 +56,9 @@ const translations = {
     formation_erasmus_school: 'Obuda University, Budapest',
     formation_erasmus_date: 'F\u00e9vrier 2025 - Juin 2025',
     formation_erasmus_desc: 'Databases, Cloud services and security (AWS), SAP Analytics, Entrepreneurship, Business projects',
+    formation_unaj_title: 'Semestre Erasmus',
+    formation_unaj_school: 'UNAJ, Buenos Aires',
+    formation_unaj_date: 'Mars 2026 - Juillet 2026',
 
     // Experiences
     experiences_heading: 'Exp\u00e9riences professionnelles',
@@ -255,6 +258,9 @@ const translations = {
     formation_erasmus_school: 'Obuda University, Budapest',
     formation_erasmus_date: 'February 2025 - June 2025',
     formation_erasmus_desc: 'Databases, Cloud services and security (AWS), SAP Analytics, Entrepreneurship, Business projects',
+    formation_unaj_title: 'Erasmus Semester',
+    formation_unaj_school: 'UNAJ, Buenos Aires',
+    formation_unaj_date: 'March 2026 - July 2026',
 
     // Experiences
     experiences_heading: 'Professional experience',
