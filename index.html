@@ -136,7 +136,7 @@
             data-i18n="button_contact">
             Me contacter
           </a>
-          <a href="CV_Gael_Le_Reun.pdf" target="_blank"
+          <a href="assets/CV_Gael_Le_Reun.pdf" target="_blank"
             class="bg-white text-gray-900 border-2 border-gray-400 hover:border-blue-600 hover:text-blue-700 font-bold py-3.5 px-10 rounded-full transition-all shadow-md hover:shadow-lg"
             data-i18n="button_cv">
             Telecharger mon CV
@@ -203,25 +203,31 @@
               <p class="text-sm text-gray-500" data-i18n="exp0_date">Janvier 2026 - Fevrier 2026</p>
             </div>
             <ul class="space-y-2 text-gray-700 mb-4">
-              <li data-i18n="exp0_mission_1">Conception et deploiement de workflows d'automatisation pour entreprises
-                avec n8n et Python</li>
-              <li data-i18n="exp0_mission_2">Integration de services externes via API (CRM, outils de productivite,
-                bases de donnees)</li>
-              <li data-i18n="exp0_mission_3">Developpement d'agents IA pour optimiser les processus metier automatises
-              </li>
-              <li data-i18n="exp0_mission_4">NutriTracker : application de suivi nutritionnel par dictee vocale avec
-                analyse IA</li>
+              <li data-i18n="exp0_mission_1">Developpement de A a Z de l'application full-stack NutriTracker (PWA)</li>
+              <li data-i18n="exp0_mission_2">Deploiement de workflows d'automatisation complexes avec n8n (Twilio,
+                Resend, API)</li>
+              <li data-i18n="exp0_mission_3">Integration de modeles LLM en cascade (Groq/Cerebras) pour l'analyse fine
+                de dictees vocales</li>
+              <li data-i18n="exp0_mission_4">Mise en place de l'architecture backend et de l'authentification avec
+                Supabase</li>
             </ul>
             <div class="flex flex-wrap gap-2">
               <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
                 data-i18n="tag_n8n">n8n</span>
               <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
+                data-i18n="tag_inference_llm">Inference LLM</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded">Supabase</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
+                data-i18n="tag_pwa">PWA</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
                 data-i18n="tag_python">Python</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded">API</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded">TypeScript</span>
               <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
-                data-i18n="tag_ai_agents">Agents IA</span>
+                data-i18n="tag_webhooks">Webhooks & API</span>
               <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
-                data-i18n="tag_js">JavaScript</span>
+                data-i18n="tag_ocr">OCR</span>
+              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-bold rounded"
+                data-i18n="tag_linear_programming">Programmation Lin&eacute;aire</span>
             </div>
           </div>
         </div>
@@ -256,6 +262,12 @@
                 data-i18n="tag_huggingface">Hugging Face</span>
               <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
                 data-i18n="tag_python">Python</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
+                data-i18n="tag_data_engineering">Data Engineering</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
+                data-i18n="tag_data_pipeline">Pipeline de donn&eacute;es</span>
+              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded"
+                data-i18n="tag_optimization">Optimisation</span>
             </div>
           </div>
         </div>
@@ -281,6 +293,12 @@
                 data-i18n="tag_customer_relation">Relation client</span>
               <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
                 data-i18n="tag_teamwork">Travail d'equipe</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
+                data-i18n="tag_stress_management">Gestion du stress</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
+                data-i18n="tag_adaptability">Adaptabilité</span>
+              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded"
+                data-i18n="tag_multi_tasking">Multi-tasking</span>
             </div>
           </div>
         </div>
@@ -298,12 +316,17 @@
         </p>
       </div>
 
-      <!-- Featured Projects (3 with Live Demo) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <!-- All Projects Grid (8 Projects) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
 
         <!-- Credit Scoring Pipeline -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-credit-scoring.png" alt="Credit Scoring Pipeline"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-purple-50 text-purple-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -319,19 +342,21 @@
               <span class="flex items-center gap-1"><i data-lucide="database" class="w-3 h-3"></i> 30M+ rows</span>
               <span class="flex items-center gap-1"><i data-lucide="layers" class="w-3 h-3"></i> MLOps</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">LightGBM</span>
-              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">SHAP</span>
-              <span class="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">MLflow</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">LightGBM</span>
+              <span class="px-1.5 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">SHAP</span>
+              <span class="px-1.5 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded">MLflow</span>
             </div>
-            <div class="flex gap-2 mt-auto">
+            <div class="flex flex-col xl:flex-row gap-2 mt-auto">
               <a href="https://credit-scoring-analysis-pipeline.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-purple-100 border border-gray-300 text-purple-700 hover:bg-purple-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-purple-100 border border-purple-200 text-purple-700 hover:bg-purple-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i>
                 Live Demo
               </a>
               <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i>
                 GitHub
               </a>
@@ -342,12 +367,18 @@
         <!-- Hackathon SIVAL -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-sival.png" alt="Hackathon SIVAL"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
                 <i data-lucide="sprout" class="w-5 h-5"></i>
               </div>
-              <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Tomates</h3>
+              <h3 class="font-bold text-gray-900" data-i18n="project_6_title">Hackathon SIVAL - Pr&eacute;diction
+                Rendement Tomates</h3>
             </div>
             <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_6_desc">
               Prediction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + modele physiologique
@@ -359,19 +390,21 @@
               <span class="flex items-center gap-1"><i data-lucide="building" class="w-3 h-3 text-green-600"></i>
                 CTIFL</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">ElasticNet</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">TOMSIM</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Streamlit</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">ElasticNet</span>
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">TOMSIM</span>
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">Scikit-learn</span>
             </div>
-            <div class="flex gap-2 mt-auto">
+            <div class="flex flex-col xl:flex-row gap-2 mt-auto">
               <a href="https://hackaton-sival-agreen-ctilf.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-green-100 border border-gray-300 text-green-700 hover:bg-green-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-green-100 border border-green-200 text-green-700 hover:bg-green-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i>
                 Live Demo
               </a>
               <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i>
                 GitHub
               </a>
@@ -382,6 +415,11 @@
         <!-- Portfolio Optimization -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-portfolio.png" alt="Portfolio Optimization"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-indigo-50 text-indigo-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -397,33 +435,80 @@
               <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> 190 actifs</span>
               <span class="flex items-center gap-1"><i data-lucide="git-branch" class="w-3 h-3"></i> 3 objectifs</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">NSGA-II</span>
-              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">pymoo</span>
-              <span class="px-2 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">Streamlit</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">NSGA-II</span>
+              <span class="px-1.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">pymoo</span>
+              <span class="px-1.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">Plotly</span>
+              <span class="px-1.5 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded">Streamlit</span>
             </div>
-            <div class="flex gap-2 mt-auto">
+            <div class="flex flex-col xl:flex-row gap-2 mt-auto">
               <a href="https://portfolio-optimization-multi-criteria.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-indigo-100 border border-gray-300 text-indigo-700 hover:bg-indigo-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-indigo-100 border border-indigo-200 text-indigo-700 hover:bg-indigo-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i>
                 Live Demo
               </a>
               <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i>
                 GitHub
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Other Projects (4 full cards) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
+        <!-- NutriTracker -->
+        <div
+          class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-nutritracker.png" alt="NutriTracker"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="p-2 bg-pink-50 text-pink-600 rounded-lg group-hover:scale-110 transition-transform">
+                <i data-lucide="smartphone" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-bold text-gray-900" data-i18n="project_nutritracker_title">NutriTracker (PWA)</h3>
+            </div>
+            <p class="text-sm text-gray-600 mb-4 flex-grow" data-i18n="project_nutritracker_desc">
+              Application de suivi nutritionnel intelligent. Dictee vocale hybride IA/CIQUAL, scan code-barres et
+              optimisation macro-nutritionnelle.
+            </p>
+            <div class="flex items-center gap-4 mb-4 text-xs text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="mic" class="w-3 h-3 text-pink-600"></i> Dictee
+                IA</span>
+              <span class="flex items-center gap-1"><i data-lucide="database" class="w-3 h-3 text-pink-600"></i>
+                CIQUAL</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded">n8n</span>
+              <span class="px-1.5 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded">Supabase</span>
+              <span class="px-1.5 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded"
+                data-i18n="tag_inference_llm">Inference LLM</span>
+              <span class="px-1.5 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded">TypeScript</span>
+            </div>
+            <div class="mt-auto">
+              <a href="https://nutritracker.fr" target="_blank"
+                class="w-full text-center px-3 py-2 bg-pink-100 border border-pink-200 text-pink-700 hover:bg-pink-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_demo">
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
         <!-- Course Completion Prediction -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-course-completion.png" alt="Prédiction Complétion Cours"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/FEFCE8/A16207?text=Image+Projet';">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-yellow-50 text-yellow-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -439,23 +524,38 @@
               <span class="flex items-center gap-1"><i data-lucide="brain" class="w-3 h-3"></i> Deep Learning</span>
               <span class="flex items-center gap-1"><i data-lucide="layers" class="w-3 h-3"></i> TensorFlow</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">TensorFlow</span>
-              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">Keras</span>
-              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">PyTorch</span>
-              <span class="px-2 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">DNN</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">TensorFlow</span>
+              <span class="px-1.5 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">Keras</span>
+              <span class="px-1.5 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">PyTorch</span>
+              <span class="px-1.5 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded">DNN</span>
             </div>
-            <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
-              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
-              <i data-lucide="github" class="w-3 h-3"></i>
-              Voir sur GitHub
-            </a>
+            <div class="flex flex-col xl:flex-row gap-2 mt-auto">
+              <a href="https://dl-course-completion-prediction.streamlit.app/" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-yellow-100 border border-yellow-200 text-yellow-700 hover:bg-yellow-200 text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_demo">
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+                Live Demo
+              </a>
+              <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Retail Customer Segmentation -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-retail.png" alt="Segmentation Client Retail"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/EFF6FF/1D4ED8?text=Image+Projet';">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-blue-50 text-blue-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -472,22 +572,31 @@
               <span class="flex items-center gap-1"><i data-lucide="target" class="w-3 h-3 text-blue-500"></i>
                 Silhouette: 0.46</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
-              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
-              <span class="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RFM</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">K-Means</span>
+              <span class="px-1.5 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">UMAP</span>
+              <span class="px-1.5 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded">RFM</span>
             </div>
-            <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
-              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
-              <i data-lucide="github" class="w-3 h-3"></i>
-              Voir sur GitHub
-            </a>
+            <div class="mt-auto">
+              <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
+                class="w-full text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Fraud Detection -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-fraud.png" alt="Détection Fraude Bancaire"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/FEF2F2/B91C1C?text=Image+Projet';">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-red-50 text-red-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -503,22 +612,31 @@
               <span class="flex items-center gap-1"><i data-lucide="percent" class="w-3 h-3"></i> Imbalanced</span>
               <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> XGBoost</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">XGBoost</span>
-              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">SMOTE</span>
-              <span class="px-2 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">Scikit-learn</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">XGBoost</span>
+              <span class="px-1.5 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">SMOTE</span>
+              <span class="px-1.5 py-1 bg-red-50 text-red-700 text-xs font-medium rounded">Scikit-learn</span>
             </div>
-            <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
-              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
-              <i data-lucide="github" class="w-3 h-3"></i>
-              Voir sur GitHub
-            </a>
+            <div class="mt-auto">
+              <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
+                class="w-full text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- House Prices -->
         <div
           class="group tilt-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-200 flex flex-col overflow-hidden hover:-translate-y-1">
+          <!-- Image Section -->
+          <div class="h-48 overflow-hidden bg-gray-100 border-b border-gray-100 shrink-0">
+            <img src="assets/img/projects/project-house-pricing.png" alt="Prédiction Prix Immobilier"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0FDF4/15803D?text=Image+Projet';">
+          </div>
           <div class="p-6 flex flex-col flex-grow">
             <div class="flex items-center gap-3 mb-4">
               <div class="p-2 bg-green-50 text-green-600 rounded-lg group-hover:scale-110 transition-transform">
@@ -534,16 +652,19 @@
               <span class="flex items-center gap-1"><i data-lucide="bar-chart" class="w-3 h-3"></i> Regression</span>
               <span class="flex items-center gap-1"><i data-lucide="check-circle" class="w-3 h-3"></i> XGBoost</span>
             </div>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">XGBoost</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">RandomForest</span>
-              <span class="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">EDA</span>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">XGBoost</span>
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">RandomForest</span>
+              <span class="px-1.5 py-1 bg-green-50 text-green-700 text-xs font-medium rounded">EDA</span>
             </div>
-            <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
-              class="mt-auto text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1">
-              <i data-lucide="github" class="w-3 h-3"></i>
-              Voir sur GitHub
-            </a>
+            <div class="mt-auto">
+              <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
+                class="w-full text-center px-3 py-2 bg-gray-100 border border-gray-300 hover:border-gray-400 hover:bg-gray-200 text-gray-700 text-xs font-medium rounded-lg transition-colors flex items-center justify-center gap-1"
+                data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                GitHub
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateCounter = (el) => {
       const target = parseInt(el.getAttribute('data-counter'), 10);
       const suffix = el.getAttribute('data-suffix') || '';
-      const duration = 2500;
+      const duration = 5000;
       const start = performance.now();
 
       const update = (now) => {
