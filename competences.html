@@ -1,102 +1,119 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page_title_skills">Compétences | Gaël Le Reun</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <title data-i18n="page_title_skills">Comp&eacute;tences | Ga&euml;l Le Reun</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'system-ui', 'sans-serif'],
+            mono: ['IBM Plex Mono', 'Consolas', 'monospace'],
+          },
+          colors: {
+            'd': { 1: '#08080c', 2: '#111118', 3: '#18181f', 4: '#1e1e28' },
+            'ln': { 1: '#25253a', 2: '#2f2f44' },
+            't': { 1: '#e4e4ec', 2: '#8c8ca0', 3: '#56566a' },
+            'am': { DEFAULT: '#e8a830', h: '#f0b844' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="css/style.css?v=4" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.395.0"></script>
-  <script src="js/components.js" defer></script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/components.js?v=4" defer></script>
+  <script src="js/translations.js?v=4" defer></script>
+  <script src="js/main.js?v=4" defer></script>
 </head>
 
-<body class="min-h-screen flex flex-col text-gray-700">
+<body class="font-sans min-h-screen flex flex-col">
   <div id="navbar-placeholder"></div>
 
-  <main class="flex-1">
-    <section class="py-16 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-3xl">
-          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="skills_heading">Compétences clés</h1>
-          <p class="mt-4 text-base text-gray-600" data-i18n="skills_intro">
-            Un socle technique solide complété par des compétences humaines et méthodologiques pour mener des projets IA
-            & Data de bout en bout.
-          </p>
-        </div>
+  <main class="flex-1 pt-24 pb-16">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+      <span class="section-label">Comp&eacute;tences</span>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-i18n="skills_heading">Comp&eacute;tences
+        cl&eacute;s</h1>
+      <p class="text-t-2 mb-12 max-w-2xl" data-i18n="skills_intro">
+        Un socle technique solide compl&eacute;t&eacute; par des comp&eacute;tences humaines et m&eacute;thodologiques
+        pour mener des projets IA &amp; Data de bout en bout.
+      </p>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-2">
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_languages_title">Langages</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_languages_python">Python</li>
-              <li data-i18n="skills_languages_js">JavaScript</li>
-              <li data-i18n="skills_languages_java">Java</li>
-            </ul>
-          </article>
+      <div class="grid gap-5 md:grid-cols-2">
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_languages_title">Langages</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_languages_python">Python</span>
+            <span class="skill-tag" data-i18n="skills_languages_js">JavaScript</span>
+            <span class="skill-tag" data-i18n="skills_languages_java">Java</span>
+          </div>
+        </article>
 
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_ai_title">IA &amp; Data</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_ai_ml">Machine Learning (supervisé, non supervisé, optimisation)</li>
-              <li data-i18n="skills_ai_hf">Hugging Face / Fine-tuning de modèles</li>
-              <li data-i18n="skills_ai_llm">APIs LLM (intégration et utilisation)</li>
-              <li data-i18n="skills_ai_pipelines">Conception et orchestration de pipelines de données</li>
-            </ul>
-          </article>
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_ai_title">IA &amp; Data</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_ai_ml">Machine Learning</span>
+            <span class="skill-tag" data-i18n="skills_ai_hf">Hugging Face / Fine-tuning</span>
+            <span class="skill-tag" data-i18n="skills_ai_llm">APIs LLM</span>
+            <span class="skill-tag" data-i18n="skills_ai_pipelines">Data Pipelines</span>
+          </div>
+        </article>
 
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_web_title">Web</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_web_front">HTML / CSS / JavaScript</li>
-              <li data-i18n="skills_web_node">Node.js / Express</li>
-            </ul>
-          </article>
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_web_title">Web</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_web_front">HTML / CSS / JavaScript</span>
+            <span class="skill-tag" data-i18n="skills_web_node">Node.js / Express</span>
+          </div>
+        </article>
 
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_db_title">Bases de données</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_db_sql">SQL</li>
-              <li data-i18n="skills_db_nosql">MongoDB / MariaDB</li>
-            </ul>
-          </article>
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_db_title">Bases de donn&eacute;es</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_db_sql">SQL</span>
+            <span class="skill-tag" data-i18n="skills_db_nosql">MongoDB / MariaDB</span>
+          </div>
+        </article>
 
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_tools_title">Outils</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_tools_git">Git</li>
-              <li data-i18n="skills_tools_linux">Linux</li>
-              <li data-i18n="skills_tools_uml">Modélisation UML</li>
-              <li data-i18n="skills_tools_aws">AWS (bases)</li>
-              <li data-i18n="skills_tools_logging">Logs &amp; monitoring</li>
-            </ul>
-          </article>
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_tools_title">Outils</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_tools_git">Git</span>
+            <span class="skill-tag" data-i18n="skills_tools_linux">Linux</span>
+            <span class="skill-tag" data-i18n="skills_tools_uml">Mod&eacute;lisation UML</span>
+            <span class="skill-tag" data-i18n="skills_tools_aws">AWS (bases)</span>
+            <span class="skill-tag" data-i18n="skills_tools_logging">Logs &amp; monitoring</span>
+          </div>
+        </article>
 
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-6">
-            <h2 class="text-lg font-semibold text-gray-900" data-i18n="skills_soft_title">Soft skills</h2>
-            <ul class="mt-4 space-y-2 text-sm text-gray-700">
-              <li data-i18n="skills_soft_autonomy">Autonomie</li>
-              <li data-i18n="skills_soft_initiative">Prise d'initiative</li>
-              <li data-i18n="skills_soft_communication">Communication claire</li>
-              <li data-i18n="skills_soft_teamwork">Travail en équipe &amp; coordination</li>
-              <li data-i18n="skills_soft_adaptability">Adaptabilité</li>
-            </ul>
-          </article>
-        </div>
+        <article class="skill-card">
+          <h2 class="text-lg font-bold text-white mb-4" data-i18n="skills_soft_title">Soft skills</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag" data-i18n="skills_soft_autonomy">Autonomie</span>
+            <span class="skill-tag" data-i18n="skills_soft_initiative">Prise d'initiative</span>
+            <span class="skill-tag" data-i18n="skills_soft_communication">Communication claire</span>
+            <span class="skill-tag" data-i18n="skills_soft_teamwork">Travail en &eacute;quipe</span>
+            <span class="skill-tag" data-i18n="skills_soft_adaptability">Adaptabilit&eacute;</span>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <div id="footer-placeholder"></div>
 
   <script>
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
+    if (typeof lucide !== 'undefined') { lucide.createIcons(); }
   </script>
 </body>
 
