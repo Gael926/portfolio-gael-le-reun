@@ -4,10 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page_title_volunteering">Engagements b&eacute;n&eacute;voles | Ga&euml;l Le Reun</title>
+  <title data-i18n="page_title_volunteering">Engagements benevoles | Gael Le Reun</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -18,47 +21,40 @@
             sans: ['Sora', 'system-ui', 'sans-serif'],
             mono: ['IBM Plex Mono', 'Consolas', 'monospace'],
           },
-          colors: {
-            'd': { 1: '#08080c', 2: '#111118', 3: '#18181f', 4: '#1e1e28' },
-            'ln': { 1: '#25253a', 2: '#2f2f44' },
-            't': { 1: '#e4e4ec', 2: '#8c8ca0', 3: '#56566a' },
-            'am': { DEFAULT: '#e8a830', h: '#f0b844' },
-          }
         }
       }
     }
   </script>
 
-  <link href="css/style.css?v=4" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+  <link href="css/style.css?v=5" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.395.0"></script>
-  <script src="js/components.js?v=4" defer></script>
-  <script src="js/translations.js?v=4" defer></script>
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/components.js?v=5" defer></script>
+  <script src="js/translations.js?v=5" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </head>
 
-<body class="font-sans min-h-screen flex flex-col">
+<body class="font-sans min-h-screen flex flex-col bg-white text-gray-900">
   <div id="navbar-placeholder"></div>
 
   <main class="flex-1 pt-24 pb-16">
     <div class="max-w-3xl mx-auto px-6 sm:px-8 space-y-10">
       <div>
         <span class="section-label">Engagement</span>
-        <h1 class="text-3xl sm:text-4xl font-bold text-white" data-i18n="volunteer_heading">Engagements
-          b&eacute;n&eacute;voles</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="volunteer_heading">Engagements benevoles
+        </h1>
       </div>
 
-      <p class="text-t-2 leading-relaxed text-base" data-i18n="volunteer_paragraph">
-        Lors de mes 3&egrave;me et 4&egrave;me ann&eacute;es d'&eacute;cole d'ing&eacute;nieur, j'ai rejoint
-        l'association COP1 &agrave; Angers. Chaque jeudi, nous organisions une distribution gratuite de nourriture et de
-        produits de premi&egrave;re n&eacute;cessit&eacute; pour des &eacute;tudiants et des personnes en situation de
-        pr&eacute;carit&eacute;. Cet engagement m'a permis de d&eacute;velopper un sens fort du collectif, de
-        l'&eacute;coute et de la solidarit&eacute;, ainsi qu'une forte sensibilit&eacute; aux r&eacute;alit&eacute;s
-        sociales auxquelles de nombreux jeunes et particuli&egrave;rement les &eacute;tudiants font face. Il a
-        &eacute;galement renforc&eacute; ma conviction qu'un ing&eacute;nieur doit rester connect&eacute; &agrave;
-        l'humain et &agrave; l'impact social de ses actions.
+      <p class="text-gray-500 leading-relaxed text-base" data-i18n="volunteer_paragraph">
+        Lors de mes 3eme et 4eme annees d'ecole d'ingenieur, j'ai rejoint l'association COP1 a Angers. Chaque jeudi,
+        nous organisions une distribution gratuite de nourriture et de produits de premiere necessite pour des etudiants
+        et des personnes en situation de precarite. Cet engagement m'a permis de developper un sens fort du collectif, de
+        l'ecoute et de la solidarite, ainsi qu'une forte sensibilite aux realites sociales auxquelles de nombreux jeunes
+        et particulierement les etudiants font face. Il a egalement renforce ma conviction qu'un ingenieur doit rester
+        connecte a l'humain et a l'impact social de ses actions.
       </p>
 
-      <div class="rounded-2xl overflow-hidden border border-ln-1">
+      <div class="rounded-xl overflow-hidden">
         <img src="assets/img/cop1.jpeg" alt="Distribution solidaire avec l'association COP1 Angers"
           class="w-full max-w-3xl mx-auto">
       </div>

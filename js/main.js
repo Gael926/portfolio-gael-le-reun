@@ -207,7 +207,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (langData[key]) {
-      el.textContent = langData[key];
+      el.innerHTML = langData[key];
     }
   });
 
@@ -242,3 +242,36 @@ function updateLangFlag() {
 window.initTranslations = initTranslations;
 window.setLanguage = setLanguage;
 window.toggleLanguage = toggleLanguage;
+
+/**
+ * Theme Toggle System (light/dark)
+ */
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+  updateThemeIcons();
+}
+
+function updateThemeIcons() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const iconName = isDark ? 'sun' : 'moon';
+  ['themeIcon', 'mobileThemeIcon'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.innerHTML = '<i data-lucide="' + iconName + '" class="w-3.5 h-3.5"></i>';
+    }
+  });
+  if (typeof lucide !== 'undefined') {
+    try { lucide.createIcons(); } catch(e) {}
+  }
+}
+
+window.toggleTheme = toggleTheme;
+window.updateThemeIcons = updateThemeIcons;

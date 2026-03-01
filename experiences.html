@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page_title_experiences">Exp&eacute;riences | Ga&euml;l Le Reun</title>
+  <title data-i18n="page_title_experiences">Experiences | Gael Le Reun</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
 
-  <!-- Tailwind 3 -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -20,191 +21,184 @@
             sans: ['Sora', 'system-ui', 'sans-serif'],
             mono: ['IBM Plex Mono', 'Consolas', 'monospace'],
           },
-          colors: {
-            'd': { 1: '#08080c', 2: '#111118', 3: '#18181f', 4: '#1e1e28' },
-            'ln': { 1: '#25253a', 2: '#2f2f44' },
-            't': { 1: '#e4e4ec', 2: '#8c8ca0', 3: '#56566a' },
-            'am': { DEFAULT: '#e8a830', h: '#f0b844' },
-          }
         }
       }
     }
   </script>
 
-  <link href="css/style.css?v=4" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})()</script>
+  <link href="css/style.css?v=5" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.395.0"></script>
-  <script src="js/components.js?v=4" defer></script>
-  <script src="js/translations.js?v=4" defer></script>
-  <script src="js/main.js?v=4" defer></script>
+  <script src="js/components.js?v=5" defer></script>
+  <script src="js/translations.js?v=5" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </head>
 
-<body class="font-sans min-h-screen flex flex-col">
+<body class="font-sans min-h-screen flex flex-col bg-white text-gray-900">
   <div id="navbar-placeholder"></div>
 
   <main class="flex-1 pt-24 pb-16">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <span class="section-label">Exp&eacute;riences</span>
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-4" data-i18n="experiences_heading">Exp&eacute;riences
+      <span class="section-label">Experiences</span>
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" data-i18n="experiences_heading">Experiences
         professionnelles</h1>
-      <p class="text-t-2 mb-12 max-w-2xl" data-i18n="experiences_intro">
-        Des missions vari&eacute;es, de la conception d'infrastructures IA &agrave; la gestion op&eacute;rationnelle de
-        terrain, qui nourrissent ma vision pragmatique des projets.
+      <p class="text-gray-500 mb-12 max-w-2xl" data-i18n="experiences_intro">
+        Des missions variees, de la conception d'infrastructures IA a la gestion operationnelle de terrain, qui
+        nourrissent ma vision pragmatique des projets.
       </p>
 
-      <div class="space-y-6">
-
+      <div class="space-y-8">
         <!-- Tatin -->
-        <article class="accent-card p-6 md:p-8">
+        <article class="accent-card py-6">
           <header class="mb-5">
-            <p class="text-xs font-mono text-am font-semibold uppercase tracking-wide" data-i18n="exp0_badge">Stage R&amp;D</p>
-            <h2 class="mt-2 text-xl font-bold text-white" data-i18n="exp0_title_page">Tatin - Stagiaire Automatisation
-              &amp; Int&eacute;gration IA</h2>
-            <p class="mt-1 text-xs text-t-3 font-mono" data-i18n="exp0_date_page">T&eacute;l&eacute;travail &middot;
-              Janvier 2026 - F&eacute;vrier 2026</p>
+            <p class="text-xs font-mono text-teal-600 font-semibold uppercase tracking-wide" data-i18n="exp0_badge">
+              Stage R&amp;D</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp0_title_page">Tatin - Stagiaire
+              Automatisation &amp; Integration IA</h2>
+            <p class="mt-1 text-xs text-gray-400 font-mono" data-i18n="exp0_date_page">Teletravail · Janvier 2026 -
+              Fevrier 2026</p>
           </header>
           <div class="mb-5">
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
               Missions principales</h3>
-            <ul class="mission-list space-y-2 text-sm text-t-2">
-              <li data-i18n="exp0_mission_1_page">Conception et d&eacute;veloppement de NutriTracker, une application PWA
-                de suivi nutritionnel par dict&eacute;e vocale.</li>
-              <li data-i18n="exp0_mission_2_page">D&eacute;ploiement de workflows d'automatisation complexes avec n8n
-                (Twilio, Resend, authentification Google).</li>
-              <li data-i18n="exp0_mission_3_page">Int&eacute;gration d'un parsing LLM en cascade (Groq/Cerebras) pour
-                l'analyse NLP des dict&eacute;es.</li>
-              <li data-i18n="exp0_mission_4_page">Architecture Cloud et gestion de base de donn&eacute;es relationnelles
-                sur Supabase.</li>
+            <ul class="mission-list space-y-2 text-sm text-gray-600">
+              <li data-i18n="exp0_mission_1_page">Conception et developpement de NutriTracker, une application PWA de
+                suivi nutritionnel par dictee vocale.</li>
+              <li data-i18n="exp0_mission_2_page">Deploiement de workflows d'automatisation complexes avec n8n (Twilio,
+                Resend, authentification Google).</li>
+              <li data-i18n="exp0_mission_3_page">Integration d'un parsing LLM en cascade (Groq/Cerebras) pour
+                l'analyse NLP des dictees.</li>
+              <li data-i18n="exp0_mission_4_page">Architecture Cloud et gestion de base de donnees relationnelles sur
+                Supabase.</li>
             </ul>
           </div>
           <div>
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
-              Comp&eacute;tences d&eacute;velopp&eacute;es</h3>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag-amber" data-i18n="tag_n8n">n8n</span>
-              <span class="tag-amber" data-i18n="tag_python">Python</span>
-              <span class="tag-amber" data-i18n="tag_llm_cascade">LLM Cascade</span>
-              <span class="tag-amber" data-i18n="tag_supabase">Supabase</span>
-              <span class="tag-amber" data-i18n="tag_pwa">PWA</span>
-              <span class="tag-amber" data-i18n="tag_webhooks">Webhooks &amp; API</span>
-              <span class="tag-amber" data-i18n="tag_ocr">OCR</span>
-              <span class="tag-amber" data-i18n="tag_linear_programming">Programmation Lin&eacute;aire</span>
+              <span class="tag-accent" data-i18n="tag_n8n">n8n</span>
+              <span class="tag-accent" data-i18n="tag_python">Python</span>
+              <span class="tag-accent" data-i18n="tag_llm_cascade">LLM Cascade</span>
+              <span class="tag-accent" data-i18n="tag_supabase">Supabase</span>
+              <span class="tag-accent" data-i18n="tag_pwa">PWA</span>
+              <span class="tag-accent" data-i18n="tag_webhooks">Webhooks &amp; API</span>
+              <span class="tag-accent" data-i18n="tag_ocr">OCR</span>
+              <span class="tag-accent" data-i18n="tag_linear_programming">Programmation Lineaire</span>
             </div>
           </div>
         </article>
 
         <!-- Alitheia -->
-        <article class="accent-card p-6 md:p-8">
+        <article class="accent-card py-6">
           <header class="mb-5">
-            <p class="text-xs font-mono text-am font-semibold uppercase tracking-wide" data-i18n="exp1_badge">Stage
-              &agrave; l'&eacute;tranger</p>
-            <h2 class="mt-2 text-xl font-bold text-white" data-i18n="exp1_title">Alitheia Editions - Stagiaire
-              D&eacute;veloppement IA &amp; Infrastructure</h2>
-            <p class="mt-1 text-xs text-t-3 font-mono" data-i18n="exp1_date">Budapest &middot; Avril 2024 - Ao&ucirc;t
-              2024</p>
+            <p class="text-xs font-mono text-teal-600 font-semibold uppercase tracking-wide" data-i18n="exp1_badge">
+              Stage a l'etranger</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp1_title">Alitheia Editions - Stagiaire
+              Developpement IA &amp; Infrastructure</h2>
+            <p class="mt-1 text-xs text-gray-400 font-mono" data-i18n="exp1_date">Budapest · Avril 2024 - Aout 2024
+            </p>
           </header>
           <div class="mb-5">
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
               Missions principales</h3>
-            <ul class="mission-list space-y-2 text-sm text-t-2">
-              <li data-i18n="exp1_mission_1">D&eacute;veloppement d'un pipeline Python automatis&eacute; pour traiter
-                40 000 pages manuscrites (pr&eacute;paration, structuration, OCR).</li>
-              <li data-i18n="exp1_mission_2">Fine-tuning de mod&egrave;les IA open source (Hugging Face) et
-                int&eacute;gration dans des outils d'analyse textuelle.</li>
+            <ul class="mission-list space-y-2 text-sm text-gray-600">
+              <li data-i18n="exp1_mission_1">Developpement d'un pipeline Python automatise pour traiter 40 000 pages
+                manuscrites (preparation, structuration, OCR).</li>
+              <li data-i18n="exp1_mission_2">Fine-tuning de modeles IA open source (Hugging Face) et integration dans
+                des outils d'analyse textuelle.</li>
               <li data-i18n="exp1_mission_3">Optimisation des performances de traitement et automatisation des reprises
-                pour s&eacute;curiser les livrables.</li>
-              <li data-i18n="exp1_mission_4">Documentation et transfert de connaissances aupr&egrave;s de l'&eacute;quipe
-                technique.</li>
+                pour securiser les livrables.</li>
+              <li data-i18n="exp1_mission_4">Documentation et transfert de connaissances aupres de l'equipe technique.
+              </li>
             </ul>
           </div>
           <div>
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
-              Comp&eacute;tences d&eacute;velopp&eacute;es</h3>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag-amber" data-i18n="tag_python">Python</span>
-              <span class="tag-amber" data-i18n="tag_data_pipeline">Pipeline de donn&eacute;es</span>
-              <span class="tag-amber" data-i18n="tag_huggingface">Hugging Face</span>
-              <span class="tag-amber" data-i18n="tag_finetuning">Fine-tuning</span>
-              <span class="tag-amber" data-i18n="tag_automation">Automatisation</span>
-              <span class="tag-amber" data-i18n="tag_data_engineering">Data Engineering</span>
-              <span class="tag-amber" data-i18n="tag_optimization">Optimisation</span>
-              <span class="tag-amber" data-i18n="tag_technical_docs">Documentation technique</span>
-              <span class="tag-amber" data-i18n="tag_international_collab">Collaboration internationale</span>
-              <span class="tag-amber" data-i18n="tag_english">Anglais</span>
+              <span class="tag-accent" data-i18n="tag_python">Python</span>
+              <span class="tag-accent" data-i18n="tag_data_pipeline">Pipeline de donnees</span>
+              <span class="tag-accent" data-i18n="tag_huggingface">Hugging Face</span>
+              <span class="tag-accent" data-i18n="tag_finetuning">Fine-tuning</span>
+              <span class="tag-accent" data-i18n="tag_automation">Automatisation</span>
+              <span class="tag-accent" data-i18n="tag_data_engineering">Data Engineering</span>
+              <span class="tag-accent" data-i18n="tag_optimization">Optimisation</span>
+              <span class="tag-accent" data-i18n="tag_technical_docs">Documentation technique</span>
+              <span class="tag-accent" data-i18n="tag_international_collab">Collaboration internationale</span>
+              <span class="tag-accent" data-i18n="tag_english">Anglais</span>
             </div>
           </div>
         </article>
 
         <!-- Sakura -->
-        <article class="accent-card p-6 md:p-8">
+        <article class="accent-card py-6">
           <header class="mb-5">
-            <p class="text-xs font-mono text-am font-semibold uppercase tracking-wide" data-i18n="exp2_badge">Emploi
-              &eacute;tudiant</p>
-            <h2 class="mt-2 text-xl font-bold text-white" data-i18n="exp2_title">Sakura - Serveur en restauration</h2>
-            <p class="mt-1 text-xs text-t-3 font-mono" data-i18n="exp2_date">Angers &middot; 2022 - 2023</p>
+            <p class="text-xs font-mono text-gray-400 font-semibold uppercase tracking-wide" data-i18n="exp2_badge">
+              Emploi etudiant</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp2_title">Sakura - Serveur en restauration
+            </h2>
+            <p class="mt-1 text-xs text-gray-400 font-mono" data-i18n="exp2_date">Angers · 2022 - 2023</p>
           </header>
           <div class="mb-5">
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
               Missions principales</h3>
-            <ul class="mission-list space-y-2 text-sm text-t-2">
-              <li data-i18n="exp2_mission_1">Gestion quotidienne de la salle et coordination avec la cuisine en
-                p&eacute;riode de forte affluence.</li>
-              <li data-i18n="exp2_mission_2">Suivi de l'exp&eacute;rience client, prise de commandes et encaissement.</li>
-              <li data-i18n="exp2_mission_3">Respect strict des standards d'hygi&egrave;ne et de pr&eacute;sentation
-                produits.</li>
+            <ul class="mission-list space-y-2 text-sm text-gray-600">
+              <li data-i18n="exp2_mission_1">Gestion quotidienne de la salle et coordination avec la cuisine en periode
+                de forte affluence.</li>
+              <li data-i18n="exp2_mission_2">Suivi de l'experience client, prise de commandes et encaissement.</li>
+              <li data-i18n="exp2_mission_3">Respect strict des standards d'hygiene et de presentation produits.</li>
             </ul>
           </div>
           <div>
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
-              Comp&eacute;tences d&eacute;velopp&eacute;es</h3>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag-neutral" data-i18n="tag_customer_relation">Relation client</span>
               <span class="tag-neutral" data-i18n="tag_communication">Communication</span>
               <span class="tag-neutral" data-i18n="tag_prioritization">Priorisation</span>
-              <span class="tag-neutral" data-i18n="tag_teamwork">Travail d'&eacute;quipe</span>
+              <span class="tag-neutral" data-i18n="tag_teamwork">Travail d'equipe</span>
               <span class="tag-neutral" data-i18n="tag_stress_management">Gestion du stress</span>
               <span class="tag-neutral" data-i18n="tag_organization">Organisation</span>
-              <span class="tag-neutral" data-i18n="tag_adaptability">Adaptabilit&eacute;</span>
+              <span class="tag-neutral" data-i18n="tag_adaptability">Adaptabilite</span>
               <span class="tag-neutral" data-i18n="tag_multi_tasking">Multi-tasking</span>
             </div>
           </div>
         </article>
 
         <!-- Tricycle -->
-        <article class="accent-card p-6 md:p-8">
+        <article class="accent-card py-6">
           <header class="mb-5">
-            <p class="text-xs font-mono text-am font-semibold uppercase tracking-wide" data-i18n="exp3_badge">Job
-              d'&eacute;t&eacute;</p>
-            <h2 class="mt-2 text-xl font-bold text-white" data-i18n="exp3_title">Tricycle - Manutentionnaire</h2>
-            <p class="mt-1 text-xs text-t-3 font-mono" data-i18n="exp3_date">Gennevilliers &middot; &Eacute;t&eacute;
-              2023</p>
+            <p class="text-xs font-mono text-gray-400 font-semibold uppercase tracking-wide" data-i18n="exp3_badge">Job
+              d'ete</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp3_title">Tricycle - Manutentionnaire</h2>
+            <p class="mt-1 text-xs text-gray-400 font-mono" data-i18n="exp3_date">Gennevilliers · Ete 2023</p>
           </header>
           <div class="mb-5">
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
               Missions principales</h3>
-            <ul class="mission-list space-y-2 text-sm text-t-2">
-              <li data-i18n="exp3_mission_1">Tri, manutention et valorisation de mat&eacute;riel r&eacute;cup&eacute;r&eacute;
-                destin&eacute; au r&eacute;emploi.</li>
-              <li data-i18n="exp3_mission_2">Organisation et optimisation des flux entrants et sortants pour respecter les
-                d&eacute;lais de livraison.</li>
-              <li data-i18n="exp3_mission_3">Encadrement et formation d'une &eacute;quipe de 5 stagiaires.</li>
-              <li data-i18n="exp3_mission_4">Contribution &agrave; la maintenance du parc mat&eacute;riel et au respect
-                des r&egrave;gles de s&eacute;curit&eacute;.</li>
+            <ul class="mission-list space-y-2 text-sm text-gray-600">
+              <li data-i18n="exp3_mission_1">Tri, manutention et valorisation de materiel recupere destine au reemploi.
+              </li>
+              <li data-i18n="exp3_mission_2">Organisation et optimisation des flux entrants et sortants pour respecter
+                les delais de livraison.</li>
+              <li data-i18n="exp3_mission_3">Encadrement et formation d'une equipe de 5 stagiaires.</li>
+              <li data-i18n="exp3_mission_4">Contribution a la maintenance du parc materiel et au respect des regles de
+                securite.</li>
             </ul>
           </div>
           <div>
-            <h3 class="text-xs font-semibold text-t-2 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
-              Comp&eacute;tences d&eacute;velopp&eacute;es</h3>
+            <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag-neutral" data-i18n="tag_team_management">Gestion d'&eacute;quipe</span>
+              <span class="tag-neutral" data-i18n="tag_team_management">Gestion d'equipe</span>
               <span class="tag-neutral" data-i18n="tag_transmission">Transmission</span>
               <span class="tag-neutral" data-i18n="tag_rigor">Rigueur</span>
-              <span class="tag-neutral" data-i18n="tag_safety">S&eacute;curit&eacute;</span>
-              <span class="tag-neutral" data-i18n="tag_responsibility">Responsabilit&eacute;</span>
+              <span class="tag-neutral" data-i18n="tag_safety">Securite</span>
+              <span class="tag-neutral" data-i18n="tag_responsibility">Responsabilite</span>
               <span class="tag-neutral" data-i18n="tag_organization">Organisation</span>
             </div>
           </div>
         </article>
-
       </div>
     </div>
   </main>
