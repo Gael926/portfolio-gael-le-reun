@@ -206,7 +206,7 @@ const translations = {
 
     // Contact
     contact_heading: 'Contactez-moi',
-    contact_intro: 'Je suis actuellement \u00e0 la recherche d\'une alternance pour ma 5\u00e8me ann\u00e9e (octobre 2026 - octobre 2027). N\'h\u00e9sitez pas \u00e0 me contacter pour \u00e9changer sur mon profil.',
+    contact_intro: 'Je suis actuellement \u00e0 la <strong class="text-teal-600">recherche d\'une alternance pour ma 5\u00e8me ann\u00e9e (octobre 2026 - octobre 2027)</strong>. N\'h\u00e9sitez pas \u00e0 me contacter pour \u00e9changer sur mon profil.',
     contact_email_label: 'Email',
     contact_phone_label: 'T\u00e9l\u00e9phone',
     contact_linkedin_label: 'LinkedIn',
@@ -450,7 +450,7 @@ const translations = {
 
     // Contact
     contact_heading: 'Contact Me',
-    contact_intro: 'I am currently looking for an apprenticeship for my 5th year (October 2026 - October 2027). Feel free to contact me to discuss my profile.',
+    contact_intro: 'I am currently <strong class="text-teal-600">looking for an apprenticeship for my 5th year (October 2026 - October 2027)</strong>. Feel free to contact me to discuss my profile.',
     contact_email_label: 'Email',
     contact_phone_label: 'Phone',
     contact_linkedin_label: 'LinkedIn',

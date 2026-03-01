@@ -262,14 +262,21 @@ function toggleTheme() {
 function updateThemeIcons() {
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   const iconName = isDark ? 'sun' : 'moon';
-  ['themeIcon', 'mobileThemeIcon'].forEach(function(id) {
+  ['themeIcon', 'mobileThemeIcon'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) {
       el.innerHTML = '<i data-lucide="' + iconName + '" class="w-3.5 h-3.5"></i>';
     }
   });
+
+  const favicon = document.getElementById('favicon');
+  if (favicon) {
+    const color = isDark ? 'd97706' : '0d9488'; // Amber 600 vs Teal 600
+    favicon.href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23" + color + "' rx='20' width='100' height='100'/%3E%3Ctext x='50' y='68' text-anchor='middle' fill='white' font-family='sans-serif' font-size='60' font-weight='bold'%3EG%3C/text%3E%3C/svg%3E";
+  }
+
   if (typeof lucide !== 'undefined') {
-    try { lucide.createIcons(); } catch(e) {}
+    try { lucide.createIcons(); } catch (e) { }
   }
 }
 
