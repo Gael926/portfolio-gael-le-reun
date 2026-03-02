@@ -37,13 +37,13 @@
       <div class="hidden md:flex items-center gap-3">
         <button id="themeToggle" onclick="toggleTheme()"
           class="flex items-center justify-center text-gray-700 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 p-2 rounded-lg border border-gray-300 hover:border-blue-200 transition-all shadow-sm"
-          title="Toggle theme">
+          title="Toggle theme" aria-label="Changer le thème">
           <span id="themeIcon"><i data-lucide="moon" class="w-4 h-4"></i></span>
         </button>
 
         <button id="langToggle" onclick="toggleLanguage()"
           class="flex items-center justify-center gap-1.5 text-gray-700 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 px-3 py-2 rounded-lg text-xs font-bold font-mono border border-gray-300 hover:border-blue-200 transition-all shadow-sm"
-          title="Switch language">
+          title="Switch language" aria-label="Changer la langue">
           <i data-lucide="globe" class="w-4 h-4"></i>
           <span id="langLabel">EN</span>
         </button>
@@ -56,18 +56,20 @@
       <div class="flex md:hidden items-center gap-2">
         <button id="mobileThemeToggle" onclick="toggleTheme()"
           class="flex items-center justify-center text-gray-700 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 p-2 rounded-lg border border-gray-300 transition-all shadow-sm"
-          title="Toggle theme">
+          title="Toggle theme" aria-label="Changer le thème">
           <span id="mobileThemeIcon"><i data-lucide="moon" class="w-4 h-4"></i></span>
         </button>
 
         <button id="mobileLangToggle" onclick="toggleLanguage()"
-          class="flex items-center justify-center gap-1.5 text-gray-700 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 px-3 py-2 rounded-lg text-xs font-bold font-mono border border-gray-300 transition-all shadow-sm">
+          class="flex items-center justify-center gap-1.5 text-gray-700 hover:text-blue-600 bg-gray-50 hover:bg-blue-50 px-3 py-2 rounded-lg text-xs font-bold font-mono border border-gray-300 transition-all shadow-sm"
+          aria-label="Changer la langue">
           <i data-lucide="globe" class="w-4 h-4"></i>
           <span id="mobileLangLabel">EN</span>
         </button>
 
         <button type="button" id="mobileMenuButton"
-          class="p-2 rounded-lg text-gray-600 hover:text-blue-600 transition-colors">
+          class="p-2 rounded-lg text-gray-600 hover:text-blue-600 transition-colors" aria-label="Ouvrir le menu"
+          aria-expanded="false" aria-controls="mobileMenu">
           <span class="sr-only">Ouvrir le menu</span>
           <i data-lucide="menu" class="h-5 w-5"></i>
         </button>

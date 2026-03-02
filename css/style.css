@@ -7,20 +7,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 :root {
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
-  --accent-light: #dbeafe;
-  --accent-subtle: rgba(37, 99, 235, 0.05);
-  --accent-border: rgba(37, 99, 235, 0.18);
+  --accent: #1d4ed8;
+  /* Darker blue for better contrast (orig #2563eb) */
+  --accent-hover: #1e40af;
+  --accent-light: #eff6ff;
+  --accent-subtle: rgba(29, 78, 216, 0.04);
+  --accent-border: rgba(29, 78, 216, 0.15);
 
   --text: #111827;
   --text-2: #374151;
-  --text-3: #6b7280;
+  --text-3: #52525b;
+  /* Darker than #6b7280 for better contrast */
 
   --bg: #ffffff;
-  --surface: #eaecf0;
-  --border: #e5e7eb;
-  --border-light: #f3f4f6;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
 
   --green: #059669;
 }
@@ -42,6 +44,14 @@ body {
   color: var(--text);
   overflow-x: hidden;
   position: relative;
+}
+
+.text-blue-600 {
+  color: var(--accent) !important;
+}
+
+.text-blue-700 {
+  color: var(--accent-hover) !important;
 }
 
 /* Subtle grain overlay for warmth & texture */
@@ -191,10 +201,12 @@ body::after {
   padding: 0.25rem 0.625rem;
   font-size: 0.75rem;
   font-weight: 600;
+  /* Increased weight */
   border-radius: 4px;
-  background: var(--accent-subtle);
+  background: var(--accent-light);
   color: var(--accent);
-  border: 1px solid transparent;
+  /* Now #1d4ed8 which is WCAG compliant */
+  border: 1px solid var(--accent-border);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 }
@@ -232,7 +244,8 @@ body::after {
   border-radius: 6px;
   background: var(--surface);
   color: var(--text-2);
-  border: 1px solid transparent;
+  /* #374151 is usually fine on white/surface */
+  border: 1px solid var(--border);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 }
@@ -364,7 +377,7 @@ body::after {
 
 /* ---- Text Gradient ---- */
 .text-gradient {
-  color: #2563eb;
+  color: var(--accent);
 }
 
 /* ---- Project Items (separator borders removed) ---- */
@@ -374,21 +387,7 @@ body::after {
   background-color: var(--surface);
 }
 
-/* ---- Hero decorative watermark ---- */
-.hero-watermark {
-  position: absolute;
-  right: -4%;
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(18rem, 30vw, 26rem);
-  font-weight: 800;
-  color: rgba(37, 99, 235, 0.03);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
+
 
 /* ---- Animations ---- */
 @keyframes fadeIn {
@@ -452,10 +451,6 @@ body::after {
   .hero-name {
     font-size: 2.5rem !important;
     line-height: 1.1 !important;
-  }
-
-  .hero-watermark {
-    display: none;
   }
 }
 
@@ -735,11 +730,6 @@ html[data-theme="dark"] body {
 /* Hero glow → amber */
 [data-theme="dark"] .hero-glow {
   background: radial-gradient(circle, rgba(245, 158, 11, 0.12) 0%, rgba(245, 158, 11, 0.03) 40%, transparent 65%) !important;
-}
-
-/* Hero watermark → amber */
-[data-theme="dark"] .hero-watermark {
-  color: rgba(245, 158, 11, 0.04) !important;
 }
 
 /* Photo ring → amber */

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 initNavbarScrollEffect();
                 // Re-initialize Lucide icons for navbar
                 if (typeof lucide !== 'undefined') {
-                    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide navbar icons error:', e.message); }
+                    try { lucide.createIcons(); } catch (e) { console.warn('[Portfolio] Lucide navbar icons error:', e.message); }
                 }
                 // Update theme icons to match current theme
                 if (typeof window.updateThemeIcons === 'function') {
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 footerPlaceholder.outerHTML = html;
                 // Re-initialize Lucide icons for footer
                 if (typeof lucide !== 'undefined') {
-                    try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide footer icons error:', e.message); }
+                    try { lucide.createIcons(); } catch (e) { console.warn('[Portfolio] Lucide footer icons error:', e.message); }
                 }
             }
         } catch (error) {
@@ -64,7 +64,9 @@ function initMobileMenu() {
 
     if (menuButton && mobileMenu) {
         menuButton.addEventListener('click', () => {
+            const willBeHidden = !mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+            menuButton.setAttribute('aria-expanded', !willBeHidden);
         });
     }
 }
