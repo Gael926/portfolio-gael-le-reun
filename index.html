@@ -46,7 +46,13 @@
   </script>
 
   <!-- Theme init (prevents flash) -->
-  <script>(function () { var t = localStorage.getItem('theme'); if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); })()</script>
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (t === "dark")
+        document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
 
   <!-- Custom Styles -->
   <link href="css/style.css?v=5" rel="stylesheet" />
@@ -63,7 +69,7 @@
 <body class="font-sans bg-white text-gray-900">
   <!-- Skip to content -->
   <a href="#home"
-    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-teal-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-bold">
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:font-bold">
     Aller au contenu principal
   </a>
 
@@ -78,39 +84,73 @@
     <section id="home" class="min-h-screen flex items-center pt-24 pb-16 relative surface-dots">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 w-full relative z-10">
         <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <!-- Photo -->
-          <div class="lg:order-2 flex-shrink-0 animate-fade-in">
+          <!-- Right Column: Photo & Stats -->
+          <div class="lg:order-2 flex-shrink-0 animate-fade-in flex flex-col items-center gap-10 lg:w-[380px]">
+            <!-- Photo -->
             <div class="w-44 h-44 sm:w-52 sm:h-52 lg:w-64 lg:h-64 relative">
               <img src="assets/img/photo_profil.jpeg" alt="Gael Le Reun"
                 class="w-full h-full object-cover rounded-full photo-ring shadow-xl" />
             </div>
+
+            <!-- Stats -->
+            <div class="flex w-[110%] sm:w-full flex-row justify-between items-center animate-fade-in delay-400">
+              <div class="flex flex-col items-center flex-1">
+                <span class="text-2xl sm:text-3xl font-bold text-blue-600 tabular-nums" data-counter="2" data-suffix=""
+                  data-i18n="stat_internships_number">2</span>
+                <span
+                  class="text-[0.7rem] sm:text-xs text-gray-900 font-bold mt-1 uppercase tracking-widest font-mono text-center"
+                  data-i18n="stat_internships_label">Stages IA</span>
+              </div>
+              <div class="flex flex-col items-center flex-1">
+                <span class="text-2xl sm:text-3xl font-bold text-blue-600 tabular-nums" data-counter="7" data-suffix="+"
+                  data-i18n="stat_projects_number">7+</span>
+                <span
+                  class="text-[0.7rem] sm:text-xs text-gray-900 font-bold mt-1 uppercase tracking-widest font-mono text-center"
+                  data-i18n="stat_projects_label">Projets ML</span>
+              </div>
+              <div class="flex flex-col items-center flex-1">
+                <span class="text-2xl sm:text-3xl font-bold text-blue-600 tabular-nums" data-counter="3" data-suffix=""
+                  data-i18n="stat_countries_number">3</span>
+                <span
+                  class="text-[0.7rem] sm:text-xs text-gray-900 font-bold mt-1 uppercase tracking-widest font-mono text-center"
+                  data-i18n="stat_countries_label">Pays</span>
+              </div>
+              <div class="flex flex-col items-center flex-1">
+                <span class="text-2xl sm:text-3xl font-bold text-blue-600 tabular-nums" data-counter="905"
+                  data-suffix="" data-i18n="stat_toeic_number">905</span>
+                <span
+                  class="text-[0.7rem] sm:text-xs text-gray-900 font-bold mt-1 uppercase tracking-widest font-mono text-center"
+                  data-i18n="stat_toeic_label">TOEIC</span>
+              </div>
+            </div>
           </div>
 
-          <!-- Content -->
+          <!-- Content (Left Column) -->
           <div class="flex-1 text-center lg:text-left">
-            <p class="text-sm text-gray-600 font-medium mb-4 animate-fade-in" data-i18n="hero_subtitle">
+            <p class="text-sm text-gray-700 font-medium mb-4 animate-fade-in" data-i18n="hero_subtitle">
               Etudiant ingenieur en Informatique (ESAIP) - Specialisation IA
             </p>
 
             <h1
               class="hero-name text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6 animate-fade-in delay-100">
-              Gael <span class="text-gradient">Le Reun</span>
+              Gael <span class="text-blue-600">Le Reun</span>
             </h1>
 
-            <p class="text-lg text-gray-600 max-w-xl mb-8 leading-relaxed mx-auto lg:mx-0 animate-fade-in delay-200"
+            <p class="text-lg text-gray-700 max-w-xl mb-8 leading-relaxed mx-auto lg:mx-0 animate-fade-in delay-200"
               data-i18n="hero_tagline">
-              Je concois des solutions IA concretes, du pipeline de donnees au modele en production.
-              Toujours avec un objectif : simplicite, robustesse et impact reel.
+              Je concois des solutions IA concretes, du pipeline de donnees au
+              modele en production. Toujours avec un objectif : simplicite,
+              robustesse et impact reel.
             </p>
 
             <!-- Availability Badge -->
             <div
-              class="inline-flex items-center gap-2.5 rounded-full px-4 py-2 mb-8 animate-fade-in delay-200 bg-teal-50 border border-teal-200">
+              class="inline-flex items-center gap-2.5 rounded-full px-4 py-2 mb-8 animate-fade-in delay-200 bg-blue-50 border border-blue-200">
               <span class="pulse-dot"></span>
-              <span class="text-teal-700 text-sm font-semibold" data-i18n="hero_availability_title">
+              <span class="text-blue-700 text-sm font-semibold" data-i18n="hero_availability_title">
                 Recherche Alternance 2026/2027
               </span>
-              <span class="text-teal-600 opacity-60 text-xs font-medium hidden sm:inline"
+              <span class="text-blue-600 opacity-60 text-xs font-medium hidden sm:inline"
                 data-i18n="hero_availability_subtitle">
                 — IA &amp; Data
               </span>
@@ -118,45 +158,14 @@
 
             <!-- CTAs -->
             <div
-              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-in delay-300">
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 lg:mb-0 animate-fade-in delay-300">
               <a href="#contact" class="btn-accent py-3.5 px-10 text-base" data-i18n="button_contact">
                 Me contacter
               </a>
-              <a href="assets/CV_Gael_Le_Reun.pdf" target="_blank" class="btn-ghost py-3.5 px-10 text-base"
-                data-i18n="button_cv">
-                Telecharger mon CV
+              <a href="assets/CV_Gael_Le_Reun.pdf" target="_blank" class="btn-secondary py-3.5 px-10 text-base">
+                <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                <span data-i18n="button_cv">Telecharger mon CV</span>
               </a>
-            </div>
-
-            <!-- Stats -->
-            <div class="flex flex-wrap gap-8 justify-center lg:justify-start animate-fade-in delay-400">
-              <div class="text-center lg:text-left">
-                <span class="text-3xl font-bold text-gray-900" data-counter="2" data-suffix=""
-                  data-i18n="stat_internships_number">2</span>
-                <span class="block text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider font-mono"
-                  data-i18n="stat_internships_label">Stages IA</span>
-              </div>
-              <div class="w-px h-10 bg-gray-200 hidden sm:block self-center"></div>
-              <div class="text-center lg:text-left">
-                <span class="text-3xl font-bold text-gray-900" data-counter="7" data-suffix="+"
-                  data-i18n="stat_projects_number">7+</span>
-                <span class="block text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider font-mono"
-                  data-i18n="stat_projects_label">Projets ML</span>
-              </div>
-              <div class="w-px h-10 bg-gray-200 hidden sm:block self-center"></div>
-              <div class="text-center lg:text-left">
-                <span class="text-3xl font-bold text-gray-900" data-counter="3" data-suffix=""
-                  data-i18n="stat_countries_number">3</span>
-                <span class="block text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider font-mono"
-                  data-i18n="stat_countries_label">Pays</span>
-              </div>
-              <div class="w-px h-10 bg-gray-200 hidden sm:block self-center"></div>
-              <div class="text-center lg:text-left">
-                <span class="text-3xl font-bold text-gray-900" data-counter="905" data-suffix=""
-                  data-i18n="stat_toeic_number">905</span>
-                <span class="block text-xs text-gray-500 font-medium mt-1 uppercase tracking-wider font-mono"
-                  data-i18n="stat_toeic_label">TOEIC</span>
-              </div>
             </div>
           </div>
         </div>
@@ -166,28 +175,28 @@
     <!-- ==================== WHAT I'M LOOKING FOR ==================== -->
     <section id="search" class="py-8 relative z-10">
       <div class="max-w-6xl mx-auto px-6 sm:px-8">
-        <div class="border-t border-b border-gray-200 py-5">
-          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 justify-center">
-            <h3 class="font-semibold text-gray-900 text-sm whitespace-nowrap" data-i18n="search_heading">
+        <div class="border-t border-b border-gray-300 py-5">
+          <div class="flex flex-col xl:flex-row items-center gap-4 lg:gap-8 justify-center">
+            <h3 class="font-bold text-gray-900 text-base xl:text-lg whitespace-nowrap" data-i18n="search_heading">
               Ce que je recherche
             </h3>
-            <div class="hidden sm:block w-px h-6 bg-gray-200"></div>
-            <div class="flex flex-wrap gap-4 justify-center">
-              <div class="flex items-center gap-2 text-sm text-gray-600 font-medium">
-                <i data-lucide="building-2" class="w-4 h-4 text-teal-600 shrink-0"></i>
+            <div class="hidden xl:block w-px h-6 bg-gray-300"></div>
+            <div
+              class="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap items-center gap-4 lg:gap-6 justify-center">
+              <div class="flex items-center gap-2 text-base text-gray-900 font-semibold whitespace-nowrap">
+                <i data-lucide="building-2" class="w-5 h-5 text-blue-600 shrink-0"></i>
                 <span data-i18n="search_type">Alternance</span>
               </div>
-              <div class="hidden sm:block w-px h-4 bg-gray-200"></div>
-              <div class="flex items-center gap-2 text-sm text-gray-600">
-                <i data-lucide="calendar" class="w-4 h-4 text-teal-600 shrink-0"></i>
+              <div class="flex items-center gap-2 text-base text-gray-900 font-semibold whitespace-nowrap">
+                <i data-lucide="calendar" class="w-5 h-5 text-blue-600 shrink-0"></i>
                 <span data-i18n="search_period">Oct 2026 - Oct 2027</span>
               </div>
-              <div class="flex items-center gap-2 text-sm text-gray-600">
-                <i data-lucide="target" class="w-4 h-4 text-teal-600 shrink-0"></i>
+              <div class="flex items-center gap-2 text-base text-gray-900 font-semibold whitespace-nowrap">
+                <i data-lucide="target" class="w-5 h-5 text-blue-600 shrink-0"></i>
                 <span data-i18n="search_domains">IA, Data Science, ML, Dev</span>
               </div>
-              <div class="flex items-center gap-2 text-sm text-gray-600">
-                <i data-lucide="map-pin" class="w-4 h-4 text-teal-600 shrink-0"></i>
+              <div class="flex items-center gap-2 text-base text-gray-900 font-semibold whitespace-nowrap">
+                <i data-lucide="map-pin" class="w-5 h-5 text-blue-600 shrink-0"></i>
                 <span data-i18n="search_location">France (mobilite nationale)</span>
               </div>
             </div>
@@ -201,43 +210,51 @@
   <!-- ==================== EXPERIENCE ==================== -->
   <section id="experience" class="py-24 md:py-32">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <span class="section-label">01</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="experiences_heading">
-        Experiences professionnelles
-      </h2>
-      <p class="text-gray-600 mb-12 max-w-2xl" data-i18n="experiences_intro">
-        Des missions variees, de la conception d'infrastructures IA a la gestion operationnelle de terrain.
-      </p>
+      <div class="text-center mb-16">
+        <span class="section-label">01</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="experiences_heading">
+          Experiences professionnelles
+        </h2>
+        <p class="text-gray-700 max-w-2xl mx-auto" data-i18n="experiences_intro">
+          Des missions variees, de la conception d'infrastructures IA a la
+          gestion operationnelle de terrain.
+        </p>
+      </div>
 
       <div class="space-y-6">
         <!-- Tatin -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-teal-600 shrink-0"></div>
-            <div class="w-px flex-1 mt-2 bg-gray-200"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
+            <div class="w-px flex-1 mt-2 bg-gray-300"></div>
           </div>
           <div class="flex-1 pb-8">
             <div class="mb-5">
               <h3 class="text-lg font-bold text-gray-900">Tatin</h3>
-              <p class="text-teal-600 font-medium text-sm" data-i18n="exp0_title">
+              <p class="text-blue-600 font-medium text-sm" data-i18n="exp0_title">
                 Stagiaire Automatisation &amp; Integration IA
               </p>
-              <p class="text-xs text-gray-500 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp0_date"><i
-                  data-lucide="calendar" class="w-3.5 h-3.5"></i> Janvier 2026 -
-                Fevrier 2026</p>
+              <p class="text-xs text-gray-600 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp0_date">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Janvier
+                2026 - Fevrier 2026
+              </p>
             </div>
-            <ul class="mission-list space-y-2 text-sm text-gray-700 mb-5">
+            <ul class="mission-list space-y-2 text-sm text-gray-800 mb-5">
               <li data-i18n="exp0_mission_1">
-                Developpement de A a Z de l'application full-stack NutriTracker (PWA)
+                Developpement de A a Z de l'application full-stack
+                NutriTracker (PWA)
               </li>
               <li data-i18n="exp0_mission_2">
-                Deploiement de workflows d'automatisation complexes avec n8n (Twilio, Resend, API)
+                Deploiement de workflows d'automatisation complexes avec n8n
+                (Twilio, Resend, API)
               </li>
               <li data-i18n="exp0_mission_3">
-                Integration de modeles LLM en cascade (Groq/Cerebras) pour l'analyse fine de dictees vocales
+                Integration de modeles LLM en cascade (Groq/Cerebras) pour
+                l'analyse fine de dictees vocales
               </li>
               <li data-i18n="exp0_mission_4">
-                Mise en place de l'architecture backend et de l'authentification avec Supabase
+                Mise en place de l'architecture backend et de
+                l'authentification avec Supabase
               </li>
             </ul>
             <div class="flex flex-wrap gap-2">
@@ -257,28 +274,34 @@
         <!-- Alitheia -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-teal-600 shrink-0"></div>
-            <div class="w-px flex-1 mt-2 bg-gray-200"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
+            <div class="w-px flex-1 mt-2 bg-gray-300"></div>
           </div>
           <div class="flex-1 pb-8">
             <div class="mb-5">
-              <h3 class="text-lg font-bold text-gray-900">Alitheia Editions</h3>
-              <p class="text-teal-600 font-medium text-sm" data-i18n="exp1_title">
+              <h3 class="text-lg font-bold text-gray-900">
+                Alitheia Editions
+              </h3>
+              <p class="text-blue-600 font-medium text-sm" data-i18n="exp1_title">
                 Stagiaire Developpement IA &amp; Infrastructure
               </p>
-              <p class="text-xs text-gray-500 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp1_date"><i
-                  data-lucide="calendar" class="w-3.5 h-3.5"></i> Budapest ·
-                Juin 2025 - Aout 2025</p>
+              <p class="text-xs text-gray-600 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp1_date">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Budapest ·
+                Juin 2025 - Aout 2025
+              </p>
             </div>
-            <ul class="mission-list space-y-2 text-sm text-gray-700 mb-5">
+            <ul class="mission-list space-y-2 text-sm text-gray-800 mb-5">
               <li data-i18n="exp1_mission_1">
-                Developpement d'un pipeline Python pour le traitement automatise de 40 000 pages manuscrites
+                Developpement d'un pipeline Python pour le traitement
+                automatise de 40 000 pages manuscrites
               </li>
               <li data-i18n="exp1_mission_2">
-                Fine-tuning de modeles LLM (Hugging Face) et mise en production d'outils d'analyse textuelle
+                Fine-tuning de modeles LLM (Hugging Face) et mise en
+                production d'outils d'analyse textuelle
               </li>
               <li data-i18n="exp1_mission_3">
-                Optimisation des performances : reduction des temps de traitement et automatisation des reprises
+                Optimisation des performances : reduction des temps de
+                traitement et automatisation des reprises
               </li>
               <li data-i18n="exp1_mission_4">
                 Travail en equipe internationale exclusivement en anglais
@@ -299,19 +322,25 @@
         <!-- Sakura -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-gray-300 shrink-0"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
           </div>
           <div class="flex-1">
             <div class="mb-5">
-              <h3 class="text-lg font-bold text-gray-900" data-i18n="exp2_company">Restaurant Sakura</h3>
-              <p class="text-gray-600 font-medium text-sm" data-i18n="exp2_title">Serveur</p>
-              <p class="text-xs text-gray-500 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp2_date"><i
-                  data-lucide="calendar" class="w-3.5 h-3.5"></i> Angers ·
-                Avril 2024 - Janvier 2025</p>
+              <h3 class="text-lg font-bold text-gray-900" data-i18n="exp2_company">
+                Restaurant Sakura
+              </h3>
+              <p class="text-gray-700 font-medium text-sm" data-i18n="exp2_title">
+                Serveur
+              </p>
+              <p class="text-xs text-gray-600 font-mono mt-1.5 flex items-center gap-1.5" data-i18n="exp2_date">
+                <i data-lucide="calendar" class="w-3.5 h-3.5"></i> Angers ·
+                Avril 2024 - Janvier 2025
+              </p>
             </div>
-            <ul class="mission-list space-y-2 text-sm text-gray-700 mb-5">
+            <ul class="mission-list space-y-2 text-sm text-gray-800 mb-5">
               <li data-i18n="exp2_mission_1">
-                Service a la clientele, prise de commandes, gestion des paiements et operations quotidiennes
+                Service a la clientele, prise de commandes, gestion des
+                paiements et operations quotidiennes
               </li>
             </ul>
             <div class="flex flex-wrap gap-2">
@@ -335,8 +364,9 @@
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="projects_heading">
           Mes Projets
         </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="projects_intro">
-          Decouvrez mes realisations en Machine Learning, Data Science et developpement.
+        <p class="text-gray-700 max-w-2xl mx-auto" data-i18n="projects_intro">
+          Decouvrez mes realisations en Machine Learning, Data Science et
+          developpement.
         </p>
       </div>
 
@@ -351,9 +381,10 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_1_title">
               Credit Scoring Pipeline
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_1_desc">
-              Pipeline ML complet (30M+ lignes). Feature engineering avance, optimisation cout metier, SHAP
-              explainability et dashboard interactif.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_1_desc">
+              Pipeline ML complet (30M+ lignes). Feature engineering avance,
+              optimisation cout metier, SHAP explainability et dashboard
+              interactif.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">LightGBM</span>
@@ -362,12 +393,12 @@
             </div>
             <div class="flex gap-2 mt-auto">
               <a href="https://credit-scoring-analysis-pipeline.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100 shadow-sm"
+                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 shadow-sm"
                 data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
               </a>
               <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -385,9 +416,10 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_6_title">
               Hackathon SIVAL
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_6_desc">
-              Prediction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + modele physiologique
-              TOMSIM. Projet reel avec le CTIFL.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_6_desc">
+              Prediction de rendement de tomates sous serre. Approche hybride
+              ML (ElasticNet) + modele physiologique TOMSIM. Projet reel avec
+              le CTIFL.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">ElasticNet</span>
@@ -396,12 +428,12 @@
             </div>
             <div class="flex gap-2 mt-auto">
               <a href="https://hackaton-sival-agreen-ctilf.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100 shadow-sm"
+                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 shadow-sm"
                 data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
               </a>
               <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -419,9 +451,9 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_4_title">
               Optimisation Portefeuille
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_4_desc">
-              Optimisation multi-objectifs (Rendement/Risque/Couts) avec NSGA-II. Front de Pareto 3D interactif et
-              comparaison Markowitz.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_4_desc">
+              Optimisation multi-objectifs (Rendement/Risque/Couts) avec
+              NSGA-II. Front de Pareto 3D interactif et comparaison Markowitz.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">NSGA-II</span>
@@ -430,12 +462,12 @@
             </div>
             <div class="flex gap-2 mt-auto">
               <a href="https://portfolio-optimization-multi-criteria.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100 shadow-sm"
+                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 shadow-sm"
                 data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
               </a>
               <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -453,9 +485,10 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_nutritracker_title">
               NutriTracker (PWA)
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_nutritracker_desc">
-              Application de suivi nutritionnel intelligent. Dictee vocale hybride IA/CIQUAL, scan code-barres et
-              optimisation macro-nutritionnelle.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_nutritracker_desc">
+              Application de suivi nutritionnel intelligent. Dictee vocale
+              hybride IA/CIQUAL, scan code-barres et optimisation
+              macro-nutritionnelle.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">n8n</span>
@@ -465,7 +498,7 @@
             </div>
             <div class="mt-auto">
               <a href="https://nutritracker.fr" target="_blank"
-                class="w-full text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100"
+                class="w-full text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100"
                 data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
               </a>
@@ -483,8 +516,9 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_5_title">
               Prediction Completion Cours
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_5_desc">
-              Modele Deep Learning (TensorFlow) pour predire la completion de cours en ligne.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_5_desc">
+              Modele Deep Learning (TensorFlow) pour predire la completion de
+              cours en ligne.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">TensorFlow</span>
@@ -493,12 +527,12 @@
             </div>
             <div class="flex gap-2 mt-auto">
               <a href="https://dl-course-completion-prediction.streamlit.app/" target="_blank"
-                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-teal-50 border border-teal-200 text-teal-700 hover:bg-teal-100 shadow-sm"
+                class="flex-1 text-center px-3 py-2 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 bg-blue-50 border border-blue-200 text-blue-700 hover:bg-blue-100 shadow-sm"
                 data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Live Demo
               </a>
               <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank"
-                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="flex-1 text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -516,8 +550,9 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_7_title">
               Segmentation Client Retail
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_7_desc">
-              Pipeline non-supervise (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_7_desc">
+              Pipeline non-supervise (RFM, UMAP, K-Means) pour segmenter 1M+
+              transactions en personas.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">K-Means</span>
@@ -526,7 +561,7 @@
             </div>
             <div class="mt-auto">
               <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank"
-                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -544,9 +579,9 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_2_title">
               Detection Fraude Bancaire
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_2_desc">
-              Detection de fraudes par carte de credit. Benchmark LogReg, RandomForest et XGBoost sur donnees
-              desequilibrees.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_2_desc">
+              Detection de fraudes par carte de credit. Benchmark LogReg,
+              RandomForest et XGBoost sur donnees desequilibrees.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">XGBoost</span>
@@ -555,7 +590,7 @@
             </div>
             <div class="mt-auto">
               <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank"
-                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -573,8 +608,9 @@
             <h3 class="font-bold text-gray-900 text-base mb-2" data-i18n="project_3_title">
               Prediction Prix Immobilier
             </h3>
-            <p class="text-xs text-gray-600 mb-4 flex-grow leading-relaxed" data-i18n="project_3_desc">
-              Pipeline complet de regression ML. Benchmark Linear Regression, RandomForest et XGBoost.
+            <p class="text-xs text-gray-700 mb-4 flex-grow leading-relaxed" data-i18n="project_3_desc">
+              Pipeline complet de regression ML. Benchmark Linear Regression,
+              RandomForest et XGBoost.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="tag-accent">XGBoost</span>
@@ -583,7 +619,7 @@
             </div>
             <div class="mt-auto">
               <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank"
-                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-200 border border-teal-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
+                class="w-full text-center px-3 py-2 bg-gray-100 hover:bg-gray-300 border border-blue-200 text-gray-900 text-xs font-bold rounded-lg transition-all flex items-center justify-center gap-1 shadow-sm"
                 data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
@@ -606,10 +642,12 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- AI & Data -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="brain-circuit" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">IA &amp; Data</h3>
+            <i data-lucide="brain-circuit" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_ai_title">
+              IA &amp; Data
+            </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="tag-accent" data-i18n="skills_ai_ml">Machine Learning</span>
@@ -622,10 +660,12 @@
         </div>
 
         <!-- Libraries -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="library" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_libs_title">Librairies &amp; Frameworks</h3>
+            <i data-lucide="library" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_libs_title">
+              Librairies &amp; Frameworks
+            </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="tag-accent" data-i18n="skills_libs_numpy">NumPy</span>
@@ -639,10 +679,12 @@
         </div>
 
         <!-- Languages -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="code-2" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">Langages</h3>
+            <i data-lucide="code-2" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_languages_title">
+              Langages
+            </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="tag-accent" data-i18n="skills_languages_python">Python</span>
@@ -653,49 +695,60 @@
         </div>
 
         <!-- DevOps -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="wrench" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_devops_title">DevOps &amp; Outils</h3>
+            <i data-lucide="wrench" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_devops_title">
+              DevOps &amp; Outils
+            </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="tag-accent" data-i18n="skills_tools_git">Git</span>
             <span class="tag-accent" data-i18n="skills_tools_docker">Docker</span>
-            <span class="tag-accent" data-i18n="skills_tools_n8n">n8n</span>
             <span class="tag-accent" data-i18n="skills_tools_cicd">CI/CD</span>
             <span class="tag-accent" data-i18n="skills_tools_aws">AWS</span>
+            <span class="tag-accent" data-i18n="skills_tools_n8n">n8n</span>
           </div>
         </div>
 
         <!-- Langues -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="languages" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_langues_title">Langues</h3>
+            <i data-lucide="languages" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_langues_title">
+              Langues
+            </h3>
           </div>
           <div class="flex flex-col gap-3 w-full">
             <div class="flex items-center gap-4">
               <span class="tag-accent w-24 justify-center shrink-0" data-i18n="skills_langues_fr_tag">Francais</span>
-              <p class="text-gray-600 text-xs text-left" data-i18n="skills_langues_fr_level">Langue maternelle</p>
+              <p class="text-gray-700 text-xs text-left" data-i18n="skills_langues_fr_level">
+                Langue maternelle
+              </p>
             </div>
             <div class="flex items-center gap-4">
               <span class="tag-accent w-24 justify-center shrink-0" data-i18n="skills_langues_en_tag">Anglais</span>
-              <p class="text-gray-600 text-xs text-left" data-i18n="skills_langues_en_desc"><strong>B2 (905 au
-                  TOEIC)</strong>, semestre Erasmus, stage de 2,5 mois</p>
+              <p class="text-gray-700 text-xs text-left" data-i18n="skills_langues_en_desc">
+                <strong>B2 (905 au TOEIC)</strong>, semestre Erasmus, stage de
+                2,5 mois
+              </p>
             </div>
             <div class="flex items-center gap-4">
               <span class="tag-accent w-24 justify-center shrink-0" data-i18n="skills_langues_es_tag">Espagnol</span>
-              <p class="text-gray-600 text-xs text-left" data-i18n="skills_langues_es_desc"><strong>B1</strong>,
-                semestre Erasmus a Buenos Aires</p>
+              <p class="text-gray-700 text-xs text-left" data-i18n="skills_langues_es_desc">
+                <strong>B1</strong>, semestre Erasmus a Buenos Aires
+              </p>
             </div>
           </div>
         </div>
 
         <!-- Soft Skills -->
-        <div class="flex flex-col gap-4 pt-6 border-t border-gray-200 animate-on-scroll opacity-0 translate-y-8">
+        <div class="flex flex-col gap-4 pt-6 border-t border-gray-300 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex items-center gap-3 mb-2">
-            <i data-lucide="heart" class="w-5 h-5 text-teal-600"></i>
-            <h3 class="font-bold text-gray-900" data-i18n="skills_soft_title">Soft Skills</h3>
+            <i data-lucide="heart" class="w-5 h-5 text-blue-600"></i>
+            <h3 class="font-bold text-gray-900" data-i18n="skills_soft_title">
+              Soft Skills
+            </h3>
           </div>
           <div class="flex flex-wrap gap-2">
             <span class="tag-accent" data-i18n="skills_soft_autonomy">Autonomie</span>
@@ -713,22 +766,29 @@
   <!-- ==================== FORMATION ==================== -->
   <section id="formation" class="py-24 md:py-32 surface-dots">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <span class="section-label">04</span>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-12" data-i18n="formation_heading">
-        Formations
-      </h2>
+      <div class="text-center mb-16">
+        <span class="section-label">04</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="formation_heading">
+          Formations
+        </h2>
+      </div>
 
       <div class="space-y-8">
         <!-- UNAJ -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-teal-600 shrink-0"></div>
-            <div class="w-px flex-1 mt-2 bg-gray-200"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
+            <div class="w-px flex-1 mt-2 bg-gray-300"></div>
           </div>
           <div class="pb-2">
-            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_unaj_title">Semestre Erasmus</h3>
-            <p class="text-teal-600 font-medium text-sm" data-i18n="formation_unaj_school">UNAJ, Buenos Aires</p>
-            <p class="text-xs text-gray-500 font-mono mt-1" data-i18n="formation_unaj_date">Mars 2026 - Juillet 2026
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_unaj_title">
+              Semestre Erasmus
+            </h3>
+            <p class="text-blue-600 font-medium text-sm" data-i18n="formation_unaj_school">
+              UNAJ, Buenos Aires
+            </p>
+            <p class="text-xs text-gray-600 font-mono mt-1" data-i18n="formation_unaj_date">
+              Mars 2026 - Juillet 2026
             </p>
           </div>
         </div>
@@ -736,15 +796,19 @@
         <!-- ESAIP -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-teal-600 shrink-0"></div>
-            <div class="w-px flex-1 mt-2 bg-gray-200"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
+            <div class="w-px flex-1 mt-2 bg-gray-300"></div>
           </div>
           <div class="pb-2">
-            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_esaip_title">Cycle Ingenieur Informatique
-              - Majeure IA</h3>
-            <p class="text-teal-600 font-medium text-sm" data-i18n="formation_esaip_school">ESAIP, Angers</p>
-            <p class="text-xs text-gray-500 font-mono mt-1" data-i18n="formation_esaip_date">Depuis 2022 -
-              Actuellement en 4eme annee</p>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_esaip_title">
+              Cycle Ingenieur Informatique - Majeure IA
+            </h3>
+            <p class="text-blue-600 font-medium text-sm" data-i18n="formation_esaip_school">
+              ESAIP, Angers
+            </p>
+            <p class="text-xs text-gray-600 font-mono mt-1" data-i18n="formation_esaip_date">
+              Depuis 2022 - Actuellement en 4eme annee
+            </p>
             <div class="flex flex-wrap gap-2 mt-3">
               <span class="tag-accent" data-i18n="tag_ml">Machine Learning</span>
               <span class="tag-accent" data-i18n="tag_dl">Deep Learning</span>
@@ -764,14 +828,18 @@
         <!-- Erasmus Budapest -->
         <div class="flex gap-5 animate-on-scroll opacity-0 translate-y-8">
           <div class="flex flex-col items-center pt-1.5">
-            <div class="w-3 h-3 rounded-full bg-teal-600 shrink-0"></div>
+            <div class="w-3 h-3 rounded-full bg-blue-600 shrink-0"></div>
           </div>
           <div>
-            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_erasmus_title">Semestre Erasmus</h3>
-            <p class="text-teal-600 font-medium text-sm" data-i18n="formation_erasmus_school">Obuda University,
-              Budapest</p>
-            <p class="text-xs text-gray-500 font-mono mt-1" data-i18n="formation_erasmus_date">Fevrier 2025 - Juin
-              2025</p>
+            <h3 class="text-lg font-bold text-gray-900" data-i18n="formation_erasmus_title">
+              Semestre Erasmus
+            </h3>
+            <p class="text-blue-600 font-medium text-sm" data-i18n="formation_erasmus_school">
+              Obuda University, Budapest
+            </p>
+            <p class="text-xs text-gray-600 font-mono mt-1" data-i18n="formation_erasmus_date">
+              Fevrier 2025 - Juin 2025
+            </p>
             <div class="flex flex-wrap gap-2 mt-3">
               <span class="tag-accent" data-i18n="tag_db">Databases</span>
               <span class="tag-accent" data-i18n="tag_cloud">Cloud services and security (AWS)</span>
@@ -788,17 +856,21 @@
   <!-- ==================== VOLUNTEERING ==================== -->
   <section id="volunteering" class="py-24 md:py-32">
     <div class="max-w-5xl mx-auto px-6 sm:px-8">
-      <span class="section-label">05</span>
+      <div class="text-center mb-16">
+        <span class="section-label">05</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900" data-i18n="volunteer_heading">
+          Engagements benevoles
+        </h2>
+      </div>
       <div class="flex flex-col md:flex-row gap-12 items-center">
         <div class="flex-1">
-          <h2 class="text-3xl font-bold text-gray-900 mb-6" data-i18n="volunteer_heading">
-            Engagements benevoles
-          </h2>
-          <p class="text-gray-600 leading-relaxed mb-6" data-i18n="volunteer_paragraph">
-            Lors de mes 3eme et 4eme annees d'ecole d'ingenieur, j'ai rejoint l'association COP1 a Angers. Chaque
-            jeudi, nous organisions une distribution gratuite de nourriture et de produits de premiere necessite pour
-            des etudiants et des personnes en situation de precarite. Cet engagement m'a permis de developper un sens
-            fort du collectif, de l'ecoute et de la solidarite.
+          <p class="text-gray-700 leading-relaxed mb-6" data-i18n="volunteer_paragraph">
+            Lors de mes 3eme et 4eme annees d'ecole d'ingenieur, j'ai rejoint
+            l'association COP1 a Angers. Chaque jeudi, nous organisions une
+            distribution gratuite de nourriture et de produits de premiere
+            necessite pour des etudiants et des personnes en situation de
+            precarite. Cet engagement m'a permis de developper un sens fort du
+            collectif, de l'ecoute et de la solidarite.
           </p>
           <div class="flex items-center gap-3">
             <span class="tag-accent" data-i18n="tag_solidarity">Solidarite</span>
@@ -823,9 +895,10 @@
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4" data-i18n="contact_heading">
           Contactez-moi
         </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="contact_intro">
-          Je suis actuellement a la recherche d'une alternance pour ma 5eme annee (octobre 2026 - octobre 2027).
-          N'hesitez pas a me contacter pour echanger sur mon profil.
+        <p class="text-gray-700 max-w-2xl mx-auto" data-i18n="contact_intro">
+          Je suis actuellement a la recherche d'une alternance pour ma 5eme
+          annee (octobre 2026 - octobre 2027). N'hesitez pas a me contacter
+          pour echanger sur mon profil.
         </p>
       </div>
 
@@ -833,50 +906,66 @@
         <a href="mailto:lereungael@gmail.com"
           class="group flex flex-col items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
           <div
-            class="w-12 h-12 rounded-full flex items-center justify-center border border-teal-200 bg-teal-50 group-hover:border-teal-300 group-hover:bg-teal-100 transition-all">
-            <i data-lucide="mail" class="w-5 h-5 text-teal-600 group-hover:text-teal-700"></i>
+            class="w-12 h-12 rounded-full flex items-center justify-center border border-blue-200 bg-blue-50 group-hover:border-blue-300 group-hover:bg-blue-100 transition-all">
+            <i data-lucide="mail" class="w-5 h-5 text-blue-600 group-hover:text-blue-700"></i>
           </div>
           <div class="text-center">
-            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_email_label">Email</p>
-            <p class="text-xs text-gray-500 group-hover:text-teal-600 transition-colors">lereungael@gmail.com</p>
+            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_email_label">
+              Email
+            </p>
+            <p class="text-xs text-gray-600 group-hover:text-blue-600 transition-colors">
+              lereungael@gmail.com
+            </p>
           </div>
         </a>
 
         <a href="tel:+33615075866"
           class="group flex flex-col items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
           <div
-            class="w-12 h-12 rounded-full flex items-center justify-center border border-teal-200 bg-teal-50 group-hover:border-teal-300 group-hover:bg-teal-100 transition-all">
-            <i data-lucide="phone" class="w-5 h-5 text-teal-600 group-hover:text-teal-700"></i>
+            class="w-12 h-12 rounded-full flex items-center justify-center border border-blue-200 bg-blue-50 group-hover:border-blue-300 group-hover:bg-blue-100 transition-all">
+            <i data-lucide="phone" class="w-5 h-5 text-blue-600 group-hover:text-blue-700"></i>
           </div>
           <div class="text-center">
-            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_phone_label">Telephone</p>
-            <p class="text-xs text-gray-500 group-hover:text-teal-600 transition-colors">+33 6 15 07 58 66</p>
+            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_phone_label">
+              Telephone
+            </p>
+            <p class="text-xs text-gray-600 group-hover:text-blue-600 transition-colors">
+              +33 6 15 07 58 66
+            </p>
           </div>
         </a>
 
         <a href="https://www.linkedin.com/in/gael-le-reun-16374525a/" target="_blank"
           class="group flex flex-col items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
           <div
-            class="w-12 h-12 rounded-full flex items-center justify-center border border-teal-200 bg-teal-50 group-hover:border-teal-300 group-hover:bg-teal-100 transition-all">
-            <i data-lucide="linkedin" class="w-5 h-5 text-teal-600 group-hover:text-teal-700"></i>
+            class="w-12 h-12 rounded-full flex items-center justify-center border border-blue-200 bg-blue-50 group-hover:border-blue-300 group-hover:bg-blue-100 transition-all">
+            <i data-lucide="linkedin" class="w-5 h-5 text-blue-600 group-hover:text-blue-700"></i>
           </div>
           <div class="text-center">
-            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_linkedin_label">LinkedIn</p>
-            <p class="text-xs text-gray-500 group-hover:text-teal-600 transition-colors"
-              data-i18n="contact_linkedin_view">Voir mon profil</p>
+            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_linkedin_label">
+              LinkedIn
+            </p>
+            <p class="text-xs text-gray-600 group-hover:text-blue-600 transition-colors"
+              data-i18n="contact_linkedin_view">
+              Voir mon profil
+            </p>
           </div>
         </a>
 
         <a href="https://github.com/Gael926/" target="_blank"
           class="group flex flex-col items-center gap-3 transition-transform duration-300 hover:-translate-y-1">
           <div
-            class="w-12 h-12 rounded-full flex items-center justify-center border border-teal-200 bg-teal-50 group-hover:border-teal-300 group-hover:bg-teal-100 transition-all">
-            <i data-lucide="github" class="w-5 h-5 text-teal-600 group-hover:text-teal-700"></i>
+            class="w-12 h-12 rounded-full flex items-center justify-center border border-blue-200 bg-blue-50 group-hover:border-blue-300 group-hover:bg-blue-100 transition-all">
+            <i data-lucide="github" class="w-5 h-5 text-blue-600 group-hover:text-blue-700"></i>
           </div>
           <div class="text-center">
-            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_github_label">GitHub</p>
-            <p class="text-xs text-gray-500 group-hover:text-gray-900 transition-colors"
-              data-i18n="contact_github_view">Voir mes projets</p>
+            <p class="font-semibold text-gray-900 text-sm" data-i18n="contact_github_label">
+              GitHub
+            </p>
+            <p class="text-xs text-gray-600 group-hover:text-gray-900 transition-colors"
+              data-i18n="contact_github_view">
+              Voir mes projets
+            </p>
           </div>
         </a>
       </div>
