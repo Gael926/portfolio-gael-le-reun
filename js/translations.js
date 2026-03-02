@@ -22,8 +22,7 @@ const translations = {
     // Hero
     hero_name: 'Ga\u00ebl Le Reun',
     hero_subtitle: '\u00c9tudiant ing\u00e9nieur en Informatique (ESAIP) - Sp\u00e9cialisation IA',
-    hero_availability_title: 'Recherche Alternance 2026/2027',
-    hero_availability_subtitle: 'IA & Data',
+    hero_availability_text: 'Recherche alternance 2026/2027 \u00b7 IA & Data',
     hero_tagline: 'Je con\u00e7ois des solutions IA concr\u00e8tes, du pipeline de donn\u00e9es au mod\u00e8le en production. Toujours avec un objectif : <strong class="text-gray-900 font-semibold">simplicit\u00e9, robustesse et impact r\u00e9el</strong>.',
     button_contact: 'Me contacter',
     button_experiences: 'Voir mes exp\u00e9riences',
@@ -266,8 +265,7 @@ const translations = {
     // Hero
     hero_name: 'Ga\u00ebl Le Reun',
     hero_subtitle: 'Computer engineering student (ESAIP) - AI specialization',
-    hero_availability_title: 'Seeking Apprenticeship 2026/2027',
-    hero_availability_subtitle: 'AI & Data',
+    hero_availability_text: 'Seeking Apprenticeship 2026/2027 \u00b7 AI & Data',
     hero_tagline: 'I build practical AI solutions, from data pipelines to models in production. Always aiming for <strong class="text-gray-900 font-semibold">simplicity, robustness and real impact</strong>.',
     button_contact: 'Contact me',
     button_experiences: 'View my experiences',
