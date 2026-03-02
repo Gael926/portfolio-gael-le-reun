@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (typeof lucide !== 'undefined') {
                     try { lucide.createIcons(); } catch(e) { console.warn('[Portfolio] Lucide navbar icons error:', e.message); }
                 }
+                // Update theme icons to match current theme
+                if (typeof window.updateThemeIcons === 'function') {
+                    window.updateThemeIcons();
+                }
             }
         } catch (error) {
             console.error('Failed to load navbar:', error);

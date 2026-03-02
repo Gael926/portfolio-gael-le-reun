@@ -24,7 +24,7 @@ const translations = {
     hero_subtitle: '\u00c9tudiant ing\u00e9nieur en Informatique (ESAIP) - Sp\u00e9cialisation IA',
     hero_availability_title: 'Recherche Alternance 2026/2027',
     hero_availability_subtitle: 'IA & Data',
-    hero_tagline: 'Je con\u00e7ois des solutions IA concr\u00e8tes, du pipeline de donn\u00e9es au mod\u00e8le en production. Toujours avec un objectif : simplicit\u00e9, robustesse et impact r\u00e9el.',
+    hero_tagline: 'Je con\u00e7ois des solutions IA concr\u00e8tes, du pipeline de donn\u00e9es au mod\u00e8le en production. Toujours avec un objectif : <strong class="text-gray-900 font-semibold">simplicit\u00e9, robustesse et impact r\u00e9el</strong>.',
     button_contact: 'Me contacter',
     button_experiences: 'Voir mes exp\u00e9riences',
     button_cv: 'T\u00e9l\u00e9charger mon CV',
@@ -41,6 +41,7 @@ const translations = {
 
     // What I'm looking for
     search_heading: 'Ce que je recherche',
+    search_contract: 'Alternance',
     search_subtitle: 'Alternance / Contrat de professionnalisation \u00b7 5\u00e8me ann\u00e9e ESAIP',
     search_period: 'Oct 2026 - Oct 2027',
     search_domains: 'IA, Data Science, ML, Dev',
@@ -82,9 +83,9 @@ const translations = {
     // Alitheia
     exp1_title: 'Stagiaire D\u00e9veloppement IA & Infrastructure',
     exp1_date: 'Budapest \u00b7 Juin 2025 - Ao\u00fbt 2025',
-    exp1_mission_1: 'D\u00e9veloppement d\'un pipeline Python pour le traitement automatis\u00e9 de 40 000 pages manuscrites',
+    exp1_mission_1: 'D\u00e9veloppement d\'un pipeline Python pour le traitement automatis\u00e9 de <strong class="text-gray-900">40 000 pages manuscrites</strong>',
     exp1_mission_2: 'Fine-tuning de mod\u00e8les LLM (Hugging Face) et mise en production d\'outils d\'analyse textuelle',
-    exp1_mission_3: 'Optimisation des performances : r\u00e9duction des temps de traitement et automatisation des reprises',
+    exp1_mission_3: 'Optimisation des performances : <strong class="text-gray-900">r\u00e9duction des temps de traitement</strong> et automatisation des reprises',
     exp1_mission_4: 'Travail en \u00e9quipe internationale exclusivement en anglais',
     exp_skills_title: 'Comp\u00e9tences d\u00e9velopp\u00e9es',
 
@@ -156,9 +157,12 @@ const translations = {
     skills_tools_aws: 'AWS (bases)',
     skills_tools_cicd: 'CI/CD (GitHub Actions)',
     skills_langues_title: 'Langues',
-    skills_langues_fr: 'Français : Langue maternelle',
-    skills_langues_en: 'Anglais : B2 (905 au TOEIC), semestre Erasmus, stage de 2,5 mois',
-    skills_langues_es: 'Espagnol : B1, semestre Erasmus à Buenos Aires',
+    skills_langues_fr_tag: 'Fran\u00e7ais',
+    skills_langues_fr_level: 'Langue maternelle',
+    skills_langues_en_tag: 'Anglais',
+    skills_langues_en_desc: '<strong>B2 (905 au TOEIC)</strong>, semestre Erasmus, stage de 3 mois',
+    skills_langues_es_tag: 'Espagnol',
+    skills_langues_es_desc: '<strong>B1</strong>, semestre Erasmus \u00e0 Buenos Aires',
     skills_soft_title: 'Soft Skills',
     skills_soft_autonomy: 'Autonomie',
     skills_soft_initiative: 'Prise d\'initiative',
@@ -178,7 +182,7 @@ const translations = {
     project_nutritracker_title: 'NutriTracker (PWA)',
     project_nutritracker_desc: 'Application de suivi nutritionnel intelligent. Dict\u00e9e vocale hybride IA/CIQUAL, scan code-barres et optimisation macro-nutritionnelle.',
     project_1_title: 'Credit Scoring Pipeline',
-    project_1_desc: 'Pipeline ML complet sur donn\u00e9es Home Credit (30M+ lignes). Feature engineering avanc\u00e9, optimisation co\u00fbt m\u00e9tier, SHAP explainability et dashboard interactif.',
+    project_1_desc: 'Pipeline ML complet sur donn\u00e9es Home Credit <strong class="text-gray-900">(30M+ lignes)</strong>. Feature engineering avanc\u00e9, optimisation co\u00fbt m\u00e9tier, SHAP explainability et dashboard interactif.',
     project_2_title: 'D\u00e9tection Fraude Bancaire',
     project_2_desc: 'D\u00e9tection de fraudes par carte de cr\u00e9dit avec LogReg, RandomForest et XGBoost.',
     project_2_short: 'XGBoost, SMOTE \u2013 donn\u00e9es d\u00e9s\u00e9quilibr\u00e9es',
@@ -193,7 +197,7 @@ const translations = {
     project_6_title: 'Hackathon SIVAL - Pr\u00e9diction Rendement Tomates',
     project_6_desc: 'Pr\u00e9diction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + mod\u00e8le physiologique TOMSIM. Projet r\u00e9el avec le CTIFL.',
     project_7_title: 'Segmentation Client Retail',
-    project_7_desc: 'Pipeline non-supervis\u00e9 (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.',
+    project_7_desc: 'Pipeline non-supervis\u00e9 (RFM, UMAP, K-Means) pour segmenter <strong class="text-gray-900">1M+ transactions</strong> en personas.',
     project_7_short: 'RFM, UMAP, K-Means \u2013 1M+ transactions',
 
     // Volunteering
@@ -202,7 +206,7 @@ const translations = {
 
     // Contact
     contact_heading: 'Contactez-moi',
-    contact_intro: 'Je suis actuellement \u00e0 la recherche d\'une alternance pour ma 5\u00e8me ann\u00e9e (octobre 2026 - octobre 2027). N\'h\u00e9sitez pas \u00e0 me contacter pour \u00e9changer sur mon profil.',
+    contact_intro: 'Je suis actuellement \u00e0 la <strong class="text-blue-600">recherche d\'une alternance pour ma 5\u00e8me ann\u00e9e (octobre 2026 - octobre 2027)</strong>. N\'h\u00e9sitez pas \u00e0 me contacter pour \u00e9changer sur mon profil.',
     contact_email_label: 'Email',
     contact_phone_label: 'T\u00e9l\u00e9phone',
     contact_linkedin_label: 'LinkedIn',
@@ -220,6 +224,24 @@ const translations = {
     footer_linkedin: 'LinkedIn',
     footer_signature: '\u00a9 2026 Ga\u00ebl Le Reun. Tous droits r\u00e9serv\u00e9s.',
     footer_cta: 'Disponible pour une alternance \u00e0 partir d\'octobre 2026 - Contactez-moi',
+
+    // Formation Tags
+    tag_ml: 'Machine Learning',
+    tag_dl: 'Deep Learning',
+    tag_dataeng: 'Data Engineering',
+    tag_optim: 'Optimisation multicrit\u00e8res',
+    tag_cv: 'Traitement d\'images',
+    tag_cyber: 'Cybers\u00e9curit\u00e9',
+    tag_devops: 'DevOps',
+    tag_backend: 'D\u00e9veloppement Backend',
+    tag_network: 'R\u00e9seaux',
+    tag_sysadmin: 'Admin Windows',
+    tag_agile: 'Gestion de projets agiles',
+    tag_db: 'Bases de donn\u00e9es',
+    tag_cloud: 'Cloud services and security (AWS)',
+    tag_sap: 'SAP Analytics',
+    tag_entrepreneurship: 'Entrepreneuriat',
+    tag_business_projects: 'Projets Business',
   },
   en: {
     // Page titles
@@ -246,7 +268,7 @@ const translations = {
     hero_subtitle: 'Computer engineering student (ESAIP) - AI specialization',
     hero_availability_title: 'Seeking Apprenticeship 2026/2027',
     hero_availability_subtitle: 'AI & Data',
-    hero_tagline: 'I build practical AI solutions, from data pipelines to models in production. Always aiming for simplicity, robustness and real impact.',
+    hero_tagline: 'I build practical AI solutions, from data pipelines to models in production. Always aiming for <strong class="text-gray-900 font-semibold">simplicity, robustness and real impact</strong>.',
     button_contact: 'Contact me',
     button_experiences: 'View my experiences',
     button_cv: 'Download my resume',
@@ -262,8 +284,9 @@ const translations = {
     stat_toeic_label: 'TOEIC',
 
     // What I'm looking for
-    search_heading: 'What I\'m looking for',
-    search_subtitle: 'Apprenticeship / Professional contract \u00b7 5th year ESAIP',
+    search_heading: 'Open to Opportunities',
+    search_contract: 'Work-study / Apprenticeship',
+    search_subtitle: 'Apprenticeship / Work-study contract \u00b7 5th year engineering student',
     search_period: 'Oct 2026 - Oct 2027',
     search_domains: 'AI, Data Science, ML, Dev',
     search_location: 'France (nationwide mobility)',
@@ -304,9 +327,9 @@ const translations = {
     // Alitheia
     exp1_title: 'AI & Infrastructure Development Intern',
     exp1_date: 'Budapest \u00b7 June 2025 - August 2025',
-    exp1_mission_1: 'Developed Python pipeline for automated processing of 40,000 manuscript pages',
+    exp1_mission_1: 'Developed Python pipeline for automated processing of <strong class="text-gray-900">40,000 manuscript pages</strong>',
     exp1_mission_2: 'Fine-tuned LLM models (Hugging Face) and deployed text analysis tools',
-    exp1_mission_3: 'Performance optimization: reduced processing time and automated error recovery',
+    exp1_mission_3: 'Performance optimization: <strong class="text-gray-900">reduced processing time</strong> and automated error recovery',
     exp1_mission_4: 'Worked in an international team, collaborating exclusively in English',
     exp_skills_title: 'Skills developed',
 
@@ -378,9 +401,12 @@ const translations = {
     skills_tools_aws: 'AWS (basics)',
     skills_tools_cicd: 'CI/CD (GitHub Actions)',
     skills_langues_title: 'Languages',
-    skills_langues_fr: 'French: Native speaker',
-    skills_langues_en: 'English: B2 (905 TOEIC), Erasmus semester, 2.5-month internship',
-    skills_langues_es: 'Spanish: B1, Erasmus semester in Buenos Aires',
+    skills_langues_fr_tag: 'French',
+    skills_langues_fr_level: 'Native speaker',
+    skills_langues_en_tag: 'English',
+    skills_langues_en_desc: '<strong>B2 (905 TOEIC)</strong>, Erasmus semester, 3-month internship',
+    skills_langues_es_tag: 'Spanish',
+    skills_langues_es_desc: '<strong>B1</strong>, Erasmus semester in Buenos Aires',
     skills_soft_title: 'Soft Skills',
     skills_soft_autonomy: 'Autonomy',
     skills_soft_initiative: 'Initiative',
@@ -400,7 +426,7 @@ const translations = {
     project_nutritracker_title: 'NutriTracker (PWA)',
     project_nutritracker_desc: 'Smart nutrition tracking application. Hybrid AI/CIQUAL voice dictation, barcode scanning, and macro-nutritional optimization.',
     project_1_title: 'Credit Scoring Pipeline',
-    project_1_desc: 'Full ML pipeline on Home Credit data (30M+ rows). Advanced feature engineering, business cost optimization, SHAP explainability and interactive dashboard.',
+    project_1_desc: 'Full ML pipeline on Home Credit data <strong class="text-gray-900">(30M+ rows)</strong>. Advanced feature engineering, business cost optimization, SHAP explainability and interactive dashboard.',
     project_2_title: 'Bank Fraud Detection',
     project_2_desc: 'Credit card fraud detection using LogReg, RandomForest and XGBoost.',
     project_2_short: 'XGBoost, SMOTE \u2013 imbalanced data',
@@ -415,7 +441,7 @@ const translations = {
     project_6_title: 'Hackathon SIVAL - Tomato Yield Prediction',
     project_6_desc: 'Tomato yield prediction in greenhouses using ML (ElasticNet) and TOMSIM physiological model. Real project with CTIFL.',
     project_7_title: 'Retail Customer Segmentation',
-    project_7_desc: 'Unsupervised pipeline (RFM, UMAP, K-Means) to segment 1M+ transactions into personas.',
+    project_7_desc: 'Unsupervised pipeline (RFM, UMAP, K-Means) to segment <strong class="text-gray-900">1M+ transactions</strong> into personas.',
     project_7_short: 'RFM, UMAP, K-Means \u2013 1M+ transactions',
 
     // Volunteering
@@ -424,7 +450,7 @@ const translations = {
 
     // Contact
     contact_heading: 'Contact Me',
-    contact_intro: 'I am currently looking for an apprenticeship for my 5th year (October 2026 - October 2027). Feel free to contact me to discuss my profile.',
+    contact_intro: 'I am currently <strong class="text-blue-600">looking for an apprenticeship for my 5th year (October 2026 - October 2027)</strong>. Feel free to contact me to discuss my profile.',
     contact_email_label: 'Email',
     contact_phone_label: 'Phone',
     contact_linkedin_label: 'LinkedIn',
@@ -442,5 +468,23 @@ const translations = {
     footer_linkedin: 'LinkedIn',
     footer_signature: '\u00a9 2026 Ga\u00ebl Le Reun. All rights reserved.',
     footer_cta: 'Available for apprenticeship from October 2026 - Contact me',
+
+    // Formation Tags
+    tag_ml: 'Machine Learning',
+    tag_dl: 'Deep Learning',
+    tag_dataeng: 'Data Engineering',
+    tag_optim: 'Multi-criteria Optimization',
+    tag_cv: 'Image Processing',
+    tag_cyber: 'Cybersecurity',
+    tag_devops: 'DevOps',
+    tag_backend: 'Backend Development',
+    tag_network: 'Networking',
+    tag_sysadmin: 'Windows SysAdmin',
+    tag_agile: 'Agile Project Management',
+    tag_db: 'Databases',
+    tag_cloud: 'Cloud services and security (AWS)',
+    tag_sap: 'SAP Analytics',
+    tag_entrepreneurship: 'Entrepreneurship',
+    tag_business_projects: 'Business projects',
   },
 };

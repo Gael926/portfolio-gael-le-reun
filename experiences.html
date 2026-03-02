@@ -1,211 +1,212 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="page_title_experiences">Expériences | Gaël Le Reun</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <title data-i18n="page_title_experiences">Experiences | Gael Le Reun</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Sora', 'system-ui', 'sans-serif'],
+            mono: ['IBM Plex Mono', 'Consolas', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <script>(function () { var t = localStorage.getItem('theme'); if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark'); })()</script>
+  <link href="css/style.css?v=5" rel="stylesheet">
   <script src="https://unpkg.com/lucide@0.395.0"></script>
-  <script src="js/components.js" defer></script>
-  <script src="js/translations.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="js/components.js?v=5" defer></script>
+  <script src="js/translations.js?v=5" defer></script>
+  <script src="js/main.js?v=5" defer></script>
 </head>
 
-<body class="min-h-screen flex flex-col text-gray-700">
+<body class="font-sans min-h-screen flex flex-col bg-white text-gray-900">
   <div id="navbar-placeholder"></div>
 
-  <main class="flex-1">
-    <section class="py-16 lg:py-24">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-3xl">
-          <h1 class="text-3xl sm:text-4xl font-bold text-gray-900" data-i18n="experiences_heading">Expériences
-            professionnelles</h1>
-          <p class="mt-4 text-base text-gray-600" data-i18n="experiences_intro">
-            Des missions variées, de la conception d'infrastructures IA à la gestion opérationnelle de terrain, qui
-            nourrissent ma vision pragmatique des projets.
-          </p>
-        </div>
+  <main class="flex-1 pt-24 pb-16">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
+      <span class="section-label">Experiences</span>
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4" data-i18n="experiences_heading">Experiences
+        professionnelles</h1>
+      <p class="text-gray-600 mb-12 max-w-2xl" data-i18n="experiences_intro">
+        Des missions variees, de la conception d'infrastructures IA a la gestion operationnelle de terrain, qui
+        nourrissent ma vision pragmatique des projets.
+      </p>
 
-        <div class="mt-12 grid gap-10">
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
-            <header>
-              <p class="text-sm uppercase tracking-wide text-green-600 font-semibold" data-i18n="exp0_badge">Stage
-                R&amp;D</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp0_title_page">Tatin - Stagiaire
-                Automatisation &amp; Intégration IA</h2>
-              <p class="mt-2 text-sm text-gray-500" data-i18n="exp0_date_page">Télétravail · Janvier 2026 - Février 2026
-              </p>
-            </header>
-            <div class="space-y-4">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">
-                Missions principales</h3>
-              <ul class="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
-                <li data-i18n="exp0_mission_1_page">Conception et développement de NutriTracker, une application PWA de
-                  suivi nutritionnel par dictée vocale.</li>
-                <li data-i18n="exp0_mission_2_page">Déploiement de workflows d'automatisation complexes avec n8n
-                  (Twilio, Resend, authentification Google).</li>
-                <li data-i18n="exp0_mission_3_page">Intégration d'un parsing LLM en cascade (Groq/Cerebras) pour
-                  l'analyse NLP des dictées.</li>
-                <li data-i18n="exp0_mission_4_page">Architecture Cloud et gestion de base de données relationnelles sur
-                  Supabase.</li>
-              </ul>
-            </div>
-            <div class="space-y-3">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_skills_title">
-                Compétences développées</h3>
-              <ul class="flex flex-wrap gap-2 text-xs font-medium text-green-700">
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_n8n">n8n</li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_python">Python</li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_llm_cascade">LLM Cascade
-                </li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_supabase">Supabase</li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_pwa">PWA</li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_webhooks">Webhooks & API
-                </li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_ocr">OCR</li>
-                <li class="px-3 py-1 rounded-full bg-green-50 text-green-700" data-i18n="tag_linear_programming">
-                  Programmation Lin&eacute;aire</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
-            <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp1_badge">Stage à
-                l'étranger</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp1_title">Alitheia Editions - Stagiaire
-                Développement IA &amp; Infrastructure</h2>
-              <p class="mt-2 text-sm text-gray-500" data-i18n="exp1_date">Budapest · Avril 2024 - Août 2024</p>
-            </header>
-            <div class="space-y-4">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">
-                Missions principales</h3>
-              <ul class="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
-                <li data-i18n="exp1_mission_1">Développement d'un pipeline Python automatisé pour traiter 40 000 pages
-                  manuscrites (préparation, structuration, OCR).</li>
-                <li data-i18n="exp1_mission_2">Fine-tuning de modèles IA open source (Hugging Face) et intégration dans
-                  des outils d'analyse textuelle.</li>
-                <li data-i18n="exp1_mission_3">Optimisation des performances de traitement et automatisation des
-                  reprises pour sécuriser les livrables.</li>
-                <li data-i18n="exp1_mission_4">Documentation et transfert de connaissances auprès de l'équipe technique.
-                </li>
-              </ul>
-            </div>
-            <div class="space-y-3">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_skills_title">
-                Compétences développées</h3>
-              <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700">
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_python">Python</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_data_pipeline">Pipeline de
-                  donn&eacute;es</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_huggingface">Hugging Face
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_finetuning">Fine-tuning</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_automation">Automatisation
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_data_engineering">Data
-                  Engineering</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_optimization">Optimisation
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_technical_docs">Documentation
-                  technique</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_international_collab">
-                  Collaboration internationale</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_english">Anglais</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
-            <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp2_badge">Emploi
-                étudiant</p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp2_title">Sakura - Serveur en
-                restauration</h2>
-              <p class="mt-2 text-sm text-gray-500" data-i18n="exp2_date">Angers · 2022 - 2023</p>
-            </header>
-            <div class="space-y-4">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">
-                Missions principales</h3>
-              <ul class="list-disc list-inside text-sm sm:text-base text-gray-700 space-y-2">
-                <li data-i18n="exp2_mission_1">Gestion quotidienne de la salle et coordination avec la cuisine en
-                  période de forte affluence.</li>
-                <li data-i18n="exp2_mission_2">Suivi de l'expérience client, prise de commandes et encaissement.</li>
-                <li data-i18n="exp2_mission_3">Respect strict des standards d'hygiène et de présentation produits.</li>
-              </ul>
-            </div>
-            <div class="space-y-3">
-              <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_skills_title">
-                Compétences développées</h3>
-              <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700">
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_customer_relation">Relation
-                  client</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_communication">Communication
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_prioritization">Priorisation
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_teamwork">Travail d'équipe
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_stress_management">Gestion du
-                  stress</li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_organization">Organisation
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_adaptability">Adaptabilité
-                </li>
-                <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_multi_tasking">Multi-tasking
-                </li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="bg-white border border-gray-200 rounded-3xl shadow-sm p-8 space-y-6">
-            <header>
-              <p class="text-sm uppercase tracking-wide text-blue-600 font-semibold" data-i18n="exp3_badge">Job d'été
-              </p>
-              <h2 class="mt-2 text-2xl font-semibold text-gray-900" data-i18n="exp3_title">Tricycle - Manutentionnaire
-              </h2>
-              <p class="mt-2 text-sm text-gray-500" data-i18n="exp3_date">Gennevilliers · Été 2023</p>
-            </header>
-            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide" data-i18n="exp_missions_title">
+      <div class="space-y-8">
+        <!-- Tatin -->
+        <article class="accent-card py-6">
+          <header class="mb-5">
+            <p class="text-xs font-mono text-teal-600 font-semibold uppercase tracking-wide" data-i18n="exp0_badge">
+              Stage R&amp;D</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp0_title_page">Tatin - Stagiaire
+              Automatisation &amp; Integration IA</h2>
+            <p class="mt-1 text-xs text-gray-500 font-mono" data-i18n="exp0_date_page">Teletravail · Janvier 2026 -
+              Fevrier 2026</p>
+          </header>
+          <div class="mb-5">
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
               Missions principales</h3>
-            <ul class="mt-4 list-disc pl-6 space-y-2 text-gray-700">
-              <li data-i18n="exp3_mission_1">Tri, manutention et valorisation de matériel récupéré destiné au réemploi.
+            <ul class="mission-list space-y-2 text-sm text-gray-700">
+              <li data-i18n="exp0_mission_1_page">Conception et developpement de NutriTracker, une application PWA de
+                suivi nutritionnel par dictee vocale.</li>
+              <li data-i18n="exp0_mission_2_page">Deploiement de workflows d'automatisation complexes avec n8n (Twilio,
+                Resend, authentification Google).</li>
+              <li data-i18n="exp0_mission_3_page">Integration d'un parsing LLM en cascade (Groq/Cerebras) pour
+                l'analyse NLP des dictees.</li>
+              <li data-i18n="exp0_mission_4_page">Architecture Cloud et gestion de base de donnees relationnelles sur
+                Supabase.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-accent" data-i18n="tag_n8n">n8n</span>
+              <span class="tag-accent" data-i18n="tag_python">Python</span>
+              <span class="tag-accent" data-i18n="tag_llm_cascade">LLM Cascade</span>
+              <span class="tag-accent" data-i18n="tag_supabase">Supabase</span>
+              <span class="tag-accent" data-i18n="tag_pwa">PWA</span>
+              <span class="tag-accent" data-i18n="tag_webhooks">Webhooks &amp; API</span>
+              <span class="tag-accent" data-i18n="tag_ocr">OCR</span>
+              <span class="tag-accent" data-i18n="tag_linear_programming">Programmation Lineaire</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Alitheia -->
+        <article class="accent-card py-6">
+          <header class="mb-5">
+            <p class="text-xs font-mono text-teal-600 font-semibold uppercase tracking-wide" data-i18n="exp1_badge">
+              Stage a l'etranger</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp1_title">Alitheia Editions - Stagiaire
+              Developpement IA &amp; Infrastructure</h2>
+            <p class="mt-1 text-xs text-gray-500 font-mono" data-i18n="exp1_date">Budapest · Avril 2024 - Aout 2024
+            </p>
+          </header>
+          <div class="mb-5">
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+              Missions principales</h3>
+            <ul class="mission-list space-y-2 text-sm text-gray-700">
+              <li data-i18n="exp1_mission_1">Developpement d'un pipeline Python automatise pour traiter 40 000 pages
+                manuscrites (preparation, structuration, OCR).</li>
+              <li data-i18n="exp1_mission_2">Fine-tuning de modeles IA open source (Hugging Face) et integration dans
+                des outils d'analyse textuelle.</li>
+              <li data-i18n="exp1_mission_3">Optimisation des performances de traitement et automatisation des reprises
+                pour securiser les livrables.</li>
+              <li data-i18n="exp1_mission_4">Documentation et transfert de connaissances aupres de l'equipe technique.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-accent" data-i18n="tag_python">Python</span>
+              <span class="tag-accent" data-i18n="tag_data_pipeline">Pipeline de donnees</span>
+              <span class="tag-accent" data-i18n="tag_huggingface">Hugging Face</span>
+              <span class="tag-accent" data-i18n="tag_finetuning">Fine-tuning</span>
+              <span class="tag-accent" data-i18n="tag_automation">Automatisation</span>
+              <span class="tag-accent" data-i18n="tag_data_engineering">Data Engineering</span>
+              <span class="tag-accent" data-i18n="tag_optimization">Optimisation</span>
+              <span class="tag-accent" data-i18n="tag_technical_docs">Documentation technique</span>
+              <span class="tag-accent" data-i18n="tag_international_collab">Collaboration internationale</span>
+              <span class="tag-accent" data-i18n="tag_english">Anglais</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sakura -->
+        <article class="accent-card py-6">
+          <header class="mb-5">
+            <p class="text-xs font-mono text-gray-500 font-semibold uppercase tracking-wide" data-i18n="exp2_badge">
+              Emploi etudiant</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp2_title">Sakura - Serveur en restauration
+            </h2>
+            <p class="mt-1 text-xs text-gray-500 font-mono" data-i18n="exp2_date">Angers · 2022 - 2023</p>
+          </header>
+          <div class="mb-5">
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+              Missions principales</h3>
+            <ul class="mission-list space-y-2 text-sm text-gray-700">
+              <li data-i18n="exp2_mission_1">Gestion quotidienne de la salle et coordination avec la cuisine en periode
+                de forte affluence.</li>
+              <li data-i18n="exp2_mission_2">Suivi de l'experience client, prise de commandes et encaissement.</li>
+              <li data-i18n="exp2_mission_3">Respect strict des standards d'hygiene et de presentation produits.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-accent" data-i18n="tag_customer_relation">Relation client</span>
+              <span class="tag-accent" data-i18n="tag_communication">Communication</span>
+              <span class="tag-accent" data-i18n="tag_prioritization">Priorisation</span>
+              <span class="tag-accent" data-i18n="tag_teamwork">Travail d'equipe</span>
+              <span class="tag-accent" data-i18n="tag_stress_management">Gestion du stress</span>
+              <span class="tag-accent" data-i18n="tag_organization">Organisation</span>
+              <span class="tag-accent" data-i18n="tag_adaptability">Adaptabilite</span>
+              <span class="tag-accent" data-i18n="tag_multi_tasking">Multi-tasking</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tricycle -->
+        <article class="accent-card py-6">
+          <header class="mb-5">
+            <p class="text-xs font-mono text-gray-500 font-semibold uppercase tracking-wide" data-i18n="exp3_badge">Job
+              d'ete</p>
+            <h2 class="mt-2 text-xl font-bold text-gray-900" data-i18n="exp3_title">Tricycle - Manutentionnaire</h2>
+            <p class="mt-1 text-xs text-gray-500 font-mono" data-i18n="exp3_date">Gennevilliers · Ete 2023</p>
+          </header>
+          <div class="mb-5">
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_missions_title">
+              Missions principales</h3>
+            <ul class="mission-list space-y-2 text-sm text-gray-700">
+              <li data-i18n="exp3_mission_1">Tri, manutention et valorisation de materiel recupere destine au reemploi.
               </li>
               <li data-i18n="exp3_mission_2">Organisation et optimisation des flux entrants et sortants pour respecter
-                les délais de livraison.</li>
-              <li data-i18n="exp3_mission_3">Encadrement et formation d'une équipe de 5 stagiaires.</li>
-              <li data-i18n="exp3_mission_4">Contribution à la maintenance du parc matériel et au respect des règles de
-                sécurité.</li>
+                les delais de livraison.</li>
+              <li data-i18n="exp3_mission_3">Encadrement et formation d'une equipe de 5 stagiaires.</li>
+              <li data-i18n="exp3_mission_4">Contribution a la maintenance du parc materiel et au respect des regles de
+                securite.</li>
             </ul>
-
-            <h3 class="text-sm font-semibold text-gray-900 uppercase tracking-wide mt-6" data-i18n="exp_skills_title">
-              Compétences développées</h3>
-            <ul class="flex flex-wrap gap-2 text-xs font-medium text-blue-700 mt-3">
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_team_management">Gestion
-                d'équipe</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_transmission">Transmission</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_rigor">Rigueur</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_safety">Sécurité</li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_responsibility">Responsabilité
-              </li>
-              <li class="px-3 py-1 rounded-full bg-blue-50 text-blue-700" data-i18n="tag_organization">Organisation</li>
-            </ul>
-          </article>
-        </div>
+          </div>
+          <div>
+            <h3 class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3" data-i18n="exp_skills_title">
+              Competences developpees</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-accent" data-i18n="tag_team_management">Gestion d'equipe</span>
+              <span class="tag-accent" data-i18n="tag_transmission">Transmission</span>
+              <span class="tag-accent" data-i18n="tag_rigor">Rigueur</span>
+              <span class="tag-accent" data-i18n="tag_safety">Securite</span>
+              <span class="tag-accent" data-i18n="tag_responsibility">Responsabilite</span>
+              <span class="tag-accent" data-i18n="tag_organization">Organisation</span>
+            </div>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
   </main>
 
   <div id="footer-placeholder"></div>
 
   <script>
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
+    if (typeof lucide !== 'undefined') { lucide.createIcons(); }
   </script>
 </body>
 

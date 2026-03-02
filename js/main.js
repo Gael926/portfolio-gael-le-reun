@@ -207,7 +207,7 @@ function applyTranslations(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (langData[key]) {
-      el.textContent = langData[key];
+      el.innerHTML = langData[key];
     }
   });
 
@@ -220,6 +220,13 @@ function applyTranslations(lang) {
   }
 
   document.documentElement.lang = lang;
+  if (typeof lucide !== 'undefined') {
+    try {
+      lucide.createIcons();
+    } catch (e) {
+      console.warn('[Portfolio] Lucide translation icons error:', e.message);
+    }
+  }
 }
 
 function updateLangFlag() {
@@ -242,3 +249,43 @@ function updateLangFlag() {
 window.initTranslations = initTranslations;
 window.setLanguage = setLanguage;
 window.toggleLanguage = toggleLanguage;
+
+/**
+ * Theme Toggle System (light/dark)
+ */
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  if (isDark) {
+    html.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+  updateThemeIcons();
+}
+
+function updateThemeIcons() {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const iconName = isDark ? 'sun' : 'moon';
+  ['themeIcon', 'mobileThemeIcon'].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.innerHTML = '<i data-lucide="' + iconName + '" class="w-3.5 h-3.5"></i>';
+    }
+  });
+
+  const favicon = document.getElementById('favicon');
+  if (favicon) {
+    const color = isDark ? 'd97706' : '2563eb'; // Amber 600 vs Blue 600
+    favicon.href = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23" + color + "' rx='20' width='100' height='100'/%3E%3Ctext x='50' y='68' text-anchor='middle' fill='white' font-family='sans-serif' font-size='60' font-weight='bold'%3EG%3C/text%3E%3C/svg%3E";
+  }
+
+  if (typeof lucide !== 'undefined') {
+    try { lucide.createIcons(); } catch (e) { }
+  }
+}
+
+window.toggleTheme = toggleTheme;
+window.updateThemeIcons = updateThemeIcons;
