@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (typeof window.initTranslations === 'function') {
         window.initTranslations();
     }
+    
+    // Reveal body after components are loaded
+    document.body.classList.add('components-loaded');
 });
 
 /**

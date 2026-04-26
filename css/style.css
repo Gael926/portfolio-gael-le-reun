@@ -16,8 +16,8 @@
 
   --text: #111827;
   --text-2: #374151;
-  --text-3: #52525b;
-  /* Darker than #6b7280 for better contrast */
+  --text-3: #374151;
+  /* Darker shade for WCAG AA compliance */
 
   --bg: #ffffff;
   --surface: #e2e8f0;
@@ -44,6 +44,21 @@ body {
   color: var(--text);
   overflow-x: hidden;
   position: relative;
+}
+
+/* ---- FOUC Prevention ---- */
+.js-enabled body {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.js-enabled body.components-loaded {
+  opacity: 1;
+}
+
+/* ---- Animation Fallback ---- */
+.js-enabled .animate-on-scroll:not(.animate-fade-in) {
+  opacity: 0;
+  transform: translateY(2rem);
 }
 
 .text-blue-600 {
