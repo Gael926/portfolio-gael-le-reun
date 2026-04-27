@@ -8,6 +8,7 @@
 
 :root {
   --accent: #1d4ed8;
+  --accent-rgb: 29, 78, 216;
   /* Darker blue for better contrast (orig #2563eb) */
   --accent-hover: #1e40af;
   --accent-light: #eff6ff;
@@ -211,41 +212,24 @@ body::after {
 }
 
 /* ---- Tags ---- */
-.tag-accent {
+.tag-accent, .tag-neutral, .tag-inline {
   display: inline-flex;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  font-family: 'Sora', sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
-  /* Increased weight */
-  border-radius: 4px;
-  background: var(--accent-light);
-  color: var(--accent);
-  /* Now #1d4ed8 which is WCAG compliant */
+  white-space: nowrap;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
 }
 
-.tag-accent:hover {
+.tag-accent:hover, .tag-neutral:hover, .tag-inline:hover {
   background: var(--accent-light);
-  transform: translateY(-1px);
-}
-
-.tag-neutral {
-  display: inline-flex;
-  padding: 0.25rem 0.625rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  border-radius: 4px;
-  background: var(--surface);
-  color: var(--text-2);
-  border: none;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: default;
-}
-
-.tag-neutral:hover {
-  border-color: transparent;
-  color: var(--accent);
   transform: translateY(-1px);
 }
 
@@ -508,6 +492,7 @@ body::after {
 
 [data-theme="dark"] {
   --accent: #f59e0b;
+  --accent-rgb: 245, 158, 11;
   --accent-hover: #d97706;
   --accent-light: rgba(245, 158, 11, 0.07);
   --accent-subtle: rgba(245, 158, 11, 0.06);
@@ -801,3 +786,686 @@ html {
 html[data-theme="dark"] body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* ════ BENTO GRID ════ */
+    .bento-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(240px, auto);
+      gap: 18px;
+      z-index: 1;
+    }
+    @media (min-width: 1025px) {
+      .bento-hero     { grid-column: span 2; grid-row: span 2; }
+      .bento-wide     { grid-column: span 2; grid-row: span 1; }
+      .bento-std      { grid-column: span 1; grid-row: span 1; }
+      .bento-wide-low { grid-column: span 2; grid-row: span 1; }
+    }
+    @media (max-width: 1024px) {
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(240px, auto);
+      }
+      .bento-hero     { grid-column: span 2; grid-row: span 2; }
+      .bento-wide     { grid-column: span 2; }
+      .bento-std      { grid-column: span 1; }
+      .bento-wide-low { grid-column: span 2; }
+    }
+    @media (max-width: 640px) {
+      .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+      .bento-hero, .bento-wide, .bento-wide-low, .bento-std {
+        grid-column: span 1; grid-row: span 1;
+      }
+      .bento-card { min-height: 280px; }
+    }
+
+    /* ════ CARD BASE — Glassmorphism + dual-theme ════ */
+    .bento-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      flex-direction: column;
+
+      /* Light: white pur, ombre bleue ample, bordure très fine */
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgb(229 231 235); /* gray-200 */
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.05),
+        0 12px 32px -8px rgba(29, 78, 216, 0.08),
+        0 24px 48px -12px rgba(15, 23, 42, 0.06);
+
+      transition:
+        transform 0.5s var(--ease-spring),
+        box-shadow 0.5s var(--ease-spring),
+        border-color 0.4s var(--ease-spring);
+    }
+
+    [data-theme="dark"] .bento-card {
+      background: rgba(39, 39, 42, 0.65);
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.5),
+        0 12px 32px -8px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+
+    /* ── Glow ring (animated on hover) ── */
+    .bento-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: linear-gradient(135deg,
+        rgba(var(--accent-rgb), 0) 0%,
+        rgba(var(--accent-rgb), 0) 40%,
+        rgba(var(--accent-rgb), 0.45) 50%,
+        rgba(var(--accent-rgb), 0) 60%,
+        rgba(var(--accent-rgb), 0) 100%);
+      background-size: 250% 250%;
+      background-position: 100% 100%;
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+              mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.5s var(--ease-spring), background-position 1.2s var(--ease-spring);
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* Hover lift + shadow + glow */
+    .bento-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(var(--accent-rgb), 0.35);
+      box-shadow:
+        0 1px 2px rgba(15, 23, 42, 0.04),
+        0 24px 48px -8px rgba(var(--accent-rgb), 0.18),
+        0 32px 64px -12px rgba(15, 23, 42, 0.08);
+    }
+    [data-theme="dark"] .bento-card:hover {
+      border-color: rgba(var(--accent-rgb), 0.40);
+      box-shadow:
+        0 1px 2px rgba(0,0,0,0.35),
+        0 24px 56px -8px rgba(var(--accent-rgb), 0.18),
+        0 32px 64px -12px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+    .bento-card:hover::before {
+      opacity: 1;
+      background-position: 0% 0%;
+    }
+
+    /* ════ HERO CARD — NutriTracker SaaS Premium ════ */
+    /* NutriTracker brand color (vert/teal du site vitrine) */
+    .bento-card-hero {
+      --nt-rgb: 16, 185, 129;     /* emerald-500 */
+      --nt-dark-rgb: 5, 150, 105; /* emerald-600 */
+      flex-direction: row;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Subtle textured backdrop on the hero — gradient + dotted grid */
+    .bento-card-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(140% 90% at 100% 100%, rgba(var(--nt-rgb), 0.18), transparent 55%),
+        radial-gradient(120% 80% at 0% 0%, rgba(var(--nt-rgb), 0.08), transparent 60%),
+        radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.07) 1px, transparent 0);
+      background-size: 100% 100%, 100% 100%, 22px 22px;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.95;
+      transition: opacity 0.5s var(--ease-spring);
+    }
+    [data-theme="dark"] .bento-card-hero::after {
+      background:
+        radial-gradient(140% 90% at 100% 100%, rgba(var(--nt-rgb), 0.22), transparent 55%),
+        radial-gradient(120% 80% at 0% 0%, rgba(var(--nt-rgb), 0.10), transparent 60%),
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.04) 1px, transparent 0);
+      background-size: 100% 100%, 100% 100%, 22px 22px;
+    }
+    .bento-card-hero:hover::after { opacity: 1; }
+
+    /* Left content block */
+    .bento-card-hero .body {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      max-width: 50%;
+      padding: 1.75rem 1.5rem 1.75rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    /* NutriTracker logo chip */
+    .nt-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      padding: 5px 11px 5px 5px;
+      border-radius: 9999px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px) saturate(160%);
+      border: 1px solid rgba(255,255,255,0.9);
+      box-shadow: 0 4px 14px rgba(15,23,42,0.06);
+    }
+    [data-theme="dark"] .nt-logo {
+      background: rgba(24,24,27,0.65);
+      border-color: rgba(255,255,255,0.10);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+    .nt-logo-mark {
+      width: 22px; height: 22px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(16,185,129,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+    }
+    .nt-logo-text {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: var(--fg1);
+    }
+    .nt-logo-text em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--fg3);
+      margin-left: 2px;
+    }
+
+    /* Glass tags column */
+    .nt-tags {
+      display: flex; flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    /* ── PHONE MOCKUP STAGE ── */
+    .nt-phone-stage {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 55%;
+      z-index: 1;
+      pointer-events: none;
+      perspective: 1400px;
+      perspective-origin: 30% 50%;
+    }
+
+    /* Glow halo behind the phone */
+    .nt-phone-stage::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 90%; height: 90%;
+      transform: translate(-45%, -50%);
+      background:
+        radial-gradient(ellipse at center,
+          rgba(var(--nt-rgb), 0.45) 0%,
+          rgba(var(--nt-rgb), 0.25) 25%,
+          rgba(var(--nt-rgb), 0.10) 50%,
+          transparent 70%);
+      filter: blur(40px);
+      transition: opacity 0.6s var(--ease-spring), transform 0.6s var(--ease-spring);
+      opacity: 0.85;
+    }
+    [data-theme="dark"] .nt-phone-stage::before {
+      background:
+        radial-gradient(ellipse at center,
+          rgba(var(--nt-rgb), 0.55) 0%,
+          rgba(var(--nt-rgb), 0.30) 25%,
+          rgba(var(--nt-rgb), 0.12) 50%,
+          transparent 70%);
+      opacity: 0.9;
+    }
+    .bento-card-hero:hover .nt-phone-stage::before {
+      opacity: 1;
+      transform: translate(-45%, -55%) scale(1.05);
+    }
+
+    /* iPhone Frame */
+    .nt-phone {
+      position: absolute;
+      top: 2%;
+      right: -2%;
+      width: 290px;
+      aspect-ratio: 250 / 510;
+      transform-style: preserve-3d;
+      transform:
+        rotateY(-15deg)
+        rotateX(8deg)
+        rotate(-4deg);
+      transition: transform 0.7s var(--ease-spring);
+      filter:
+        drop-shadow(0 30px 40px rgba(15, 23, 42, 0.20))
+        drop-shadow(0 12px 18px rgba(var(--nt-rgb), 0.22));
+      will-change: transform;
+    }
+    [data-theme="dark"] .nt-phone {
+      filter:
+        drop-shadow(0 30px 40px rgba(0, 0, 0, 0.55))
+        drop-shadow(0 12px 18px rgba(var(--nt-rgb), 0.30));
+    }
+    .bento-card-hero:hover .nt-phone {
+      transform:
+        rotateY(-9deg)
+        rotateX(5deg)
+        rotate(-2deg)
+        translateY(-8px);
+    }
+
+    /* Outer titanium body */
+    .nt-phone-body {
+      position: absolute;
+      inset: 0;
+      border-radius: 30px;
+      background:
+        linear-gradient(145deg, #2d2d2f 0%, #1a1a1c 35%, #131315 100%);
+      padding: 8px;
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.08),
+        inset 0 1px 1px rgba(255,255,255,0.18),
+        inset 0 -1px 1px rgba(0,0,0,0.5);
+    }
+
+    /* Side buttons (subtle) */
+    .nt-phone-body::before {
+      content: '';
+      position: absolute;
+      left: -2px; top: 22%;
+      width: 2.5px; height: 14%;
+      background: linear-gradient(90deg, #0a0a0c, #1f1f21);
+      border-radius: 2px 0 0 2px;
+      box-shadow: 0 22px 0 #1a1a1c, 0 38px 0 #1a1a1c;
+    }
+    .nt-phone-body::after {
+      content: '';
+      position: absolute;
+      right: -2px; top: 30%;
+      width: 2.5px; height: 18%;
+      background: linear-gradient(270deg, #0a0a0c, #1f1f21);
+      border-radius: 0 2px 2px 0;
+    }
+
+    /* Inner screen */
+    .nt-phone-screen {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.6);
+      transform: translateZ(0);
+    }
+    .nt-phone-screen img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      image-rendering: high-quality;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    /* Dynamic Island */
+    .nt-island {
+      position: absolute;
+      top: 8px; left: 50%;
+      transform: translateX(-50%);
+      width: 62px; height: 18px;
+      background: #000;
+      border-radius: 999px;
+      z-index: 5;
+      box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.05),
+        0 0 8px rgba(0,0,0,0.4);
+    }
+    .nt-island::after {
+      content: '';
+      position: absolute;
+      right: 8px; top: 50%;
+      transform: translateY(-50%);
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #1a4358 0%, #0a1a22 100%);
+      box-shadow: inset 0 0 1px rgba(255,255,255,0.3);
+    }
+
+    /* Screen reflection (very subtle gloss — corner only, doesn't haze the screen) */
+    .nt-phone-screen::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 60%; height: 30%;
+      background:
+        linear-gradient(135deg,
+          rgba(255,255,255,0.08) 0%,
+          rgba(255,255,255,0.02) 60%,
+          transparent 100%);
+      pointer-events: none;
+      z-index: 4;
+      border-radius: 24px 0 0 0;
+    }
+
+    /* Responsive: hero collapses to column on tablet */
+    @media (max-width: 1024px) {
+      .bento-card-hero { flex-direction: column; }
+      .bento-card-hero .body { max-width: 100%; padding: 1.5rem; }
+      .nt-phone-stage {
+        position: relative;
+        width: 100%;
+        height: 240px;
+        flex-shrink: 0;
+      }
+      .nt-phone {
+        top: 5%; right: 50%;
+        transform: translateX(50%) rotateY(-12deg) rotateX(6deg) rotate(-3deg);
+        width: 190px;
+      }
+      .bento-card-hero:hover .nt-phone {
+        transform: translateX(50%) rotateY(-7deg) rotateX(3deg) rotate(-2deg) translateY(-6px);
+      }
+    }
+    @media (max-width: 640px) {
+      .nt-phone { width: 170px; top: 3%; }
+    }
+
+    /* ════ WIDE CARDS (image left, content right) ════ */
+    .bento-card-wide {
+      flex-direction: row;
+    }
+    .bento-card-wide .media {
+      position: relative;
+      width: 42%;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-right: 1px solid var(--border);
+    }
+    .bento-card-wide .media img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: transform 0.7s var(--ease-spring);
+      padding: 0.85rem;
+    }
+    .bento-card-wide:hover .media img { transform: scale(1.05); }
+    /* no overlay needed — the mask handles the fade */
+    .bento-card-wide .media::after { content: none; }
+    .bento-card-wide .body {
+      flex: 1;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    /* ════ STD CARDS (icon + content, no image) ════ */
+    .bento-card-std {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    /* Subtle radial accent in corner */
+    .bento-card-std::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 160px; height: 160px;
+      background: radial-gradient(circle, rgba(var(--accent-rgb), 0.10), transparent 70%);
+      pointer-events: none;
+      opacity: 0.7;
+      transition: opacity 0.5s var(--ease-spring);
+    }
+    .bento-card-std:hover::after { opacity: 1; }
+
+    /* ════ ICON BUBBLE ════ */
+    .card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px; height: 38px;
+      border-radius: 11px;
+      background: rgba(var(--accent-rgb), 0.10);
+      color: var(--accent);
+      flex-shrink: 0;
+      border: 1px solid rgba(var(--accent-rgb), 0.18);
+      transition: transform 0.4s var(--ease-spring), background 0.3s;
+    }
+    .bento-card:hover .card-icon {
+      transform: scale(1.08) rotate(-3deg);
+      background: rgba(var(--accent-rgb), 0.16);
+    }
+
+    /* tag-glass removed */
+    /* tag-inline now consolidated with .tag-accent globally */
+
+    /* ════ BUTTONS ════ */
+    .btn-demo, .btn-gh {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 7px 12px;
+      border-radius: 9px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      font-family: var(--font-sans);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.25s var(--ease-spring), background 0.25s, border-color 0.25s;
+      width: 100%;
+    }
+    .btn-demo {
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+      box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.25);
+    }
+    [data-theme="dark"] .btn-demo { color: #09090b; }
+    .btn-demo:hover {
+      transform: translateY(-1px);
+      background: var(--accent-hover);
+      box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.4);
+    }
+    .btn-gh {
+      background: rgba(15,23,42,0.06);
+      color: var(--text);
+      border: 1px solid rgba(15,23,42,0.15);
+    }
+    [data-theme="dark"] .btn-gh {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.20);
+      color: #fafafa;
+    }
+    .btn-gh:hover {
+      transform: translateY(-1px);
+      border-color: rgba(var(--accent-rgb), 0.4);
+      background: rgba(15,23,42,0.1);
+      color: var(--accent);
+    }
+    [data-theme="dark"] .btn-gh:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+
+    /* ════ FEATURED BADGE ════ */
+    .badge-featured {
+      position: absolute;
+      top: 14px; left: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: 9999px;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px) saturate(160%);
+      border: 1px solid rgba(255,255,255,0.9);
+      color: var(--accent);
+      font-size: 0.62rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      z-index: 3;
+      box-shadow: 0 4px 16px rgba(15,23,42,0.08);
+    }
+    [data-theme="dark"] .badge-featured {
+      background: rgba(24,24,27,0.7);
+      border-color: rgba(255,255,255,0.12);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    /* ════ TYPO ════ */
+    .card-title { color: var(--fg1); line-height: 1.3; }
+    .card-desc  { color: var(--fg2); }
+
+    /* ════ THEME TOGGLE (demo only) ════ */
+    .theme-btn {
+      position: fixed;
+      top: 20px; right: 20px;
+      z-index: 100;
+      display: flex; align-items: center; gap: 8px;
+      padding: 9px 16px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      color: var(--fg1);
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(15,23,42,0.06);
+    }
+    [data-theme="dark"] .theme-btn {
+      background: rgba(24,24,27,0.7);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    .theme-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    .surface-bg { background-color: var(--surface); }
+
+    /* Scroll-in */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-on-scroll { opacity: 1; transform: none; transition: none; }
+      .bento-card, .bento-card *, .card-icon { transition: none !important; }
+    }
+
+/* ==========================================================================
+   HERO SAAS REVAMP ELEMENTS
+   ========================================================================== */
+
+/* Animated Text Gradient */
+.text-gradient-animated {
+  background: linear-gradient(to right, #2563eb, #06b6d4, #2563eb);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+  display: inline-block;
+}
+
+[data-theme="dark"] .text-gradient-animated {
+  background: linear-gradient(to right, #60a5fa, var(--accent), #60a5fa);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Hero Spotlight Glow */
+.hero-spotlight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+  opacity: 0.15;
+  filter: blur(40px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .hero-spotlight {
+  opacity: 0.1;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 60%);
+}
+
+/* Floating Badges */
+.glass-badge {
+  background: transparent;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 20;
+  animation: float 4s ease-in-out infinite;
+}
+
+[data-theme="dark"] .glass-badge {
+  background: transparent;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.delay-float-1 { animation-delay: 0.5s; }
+.delay-float-2 { animation-delay: 1.0s; }
+.delay-float-3 { animation-delay: 1.5s; }
+.delay-float-4 { animation-delay: 2.0s; }
