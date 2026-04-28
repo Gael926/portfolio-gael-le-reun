@@ -23,7 +23,8 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gael Le Reun | Ingenieur IA &amp; Data" />
-  <meta name="twitter:description" content="Apprenti Ingenieur IA &amp; Data (ESAIP). Je concois des solutions IA concretes et robustes. Recherche alternance Oct 2026." />
+  <meta name="twitter:description"
+    content="Apprenti Ingenieur IA &amp; Data (ESAIP). Je concois des solutions IA concretes et robustes. Recherche alternance Oct 2026." />
   <meta name="twitter:image" content="assets/img/og-banner.jpg" />
 
   <!-- Favicon -->
@@ -89,27 +90,30 @@
     <div id="heroGlow" class="hero-glow"></div>
 
 
-    <section id="home" class="min-h-screen flex items-center pt-28 lg:pt-32 pb-16 relative surface-dots">
+    <section id="home" class="min-h-screen flex items-center pt-20 lg:pt-24 pb-8 lg:pb-4 relative surface-dots">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 w-full relative z-10">
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-10">
           <!-- Content (Left Column) -->
-          <div class="flex-1 text-center lg:text-left animate-fade-in lg:w-7/12">
-            <p class="text-sm text-gray-700 font-medium mb-4" data-i18n="hero_subtitle">
+          <div class="flex-1 text-center lg:text-left animate-fade-in lg:w-7/12 lg:flex lg:flex-col lg:justify-between">
+            <p class="text-sm text-gray-700 font-semibold mb-6 tracking-wide uppercase" data-i18n="hero_subtitle">
               Etudiant ingenieur en Informatique (ESAIP) - <span class="text-gradient-animated">Specialisation IA</span>
             </p>
 
-            <h1 class="hero-name text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6 animate-fade-in delay-100">
+            <h1
+              class="hero-name text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-[1.1] mb-8 animate-fade-in delay-100">
               Gael <span class="text-blue-600">Le Reun</span>
             </h1>
 
-            <p class="text-lg text-gray-700 max-w-xl mb-8 leading-relaxed mx-auto lg:mx-0 animate-fade-in delay-200" data-i18n="hero_tagline">
+            <p class="text-lg text-gray-700 max-w-lg mb-0 leading-relaxed mx-auto lg:mx-0 animate-fade-in delay-200"
+              data-i18n="hero_tagline">
               Je concois des solutions IA concretes, du pipeline de donnees au
               modele en production. Toujours avec un objectif : simplicite,
               robustesse et impact reel.
             </p>
 
             <!-- CTAs -->
-            <div class="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-300">
+            <div
+              class="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-300">
               <a href="#contact" class="btn-accent py-3.5 px-10 text-base" data-i18n="button_contact">
                 Me contacter
               </a>
@@ -124,39 +128,74 @@
           <div class="relative flex-shrink-0 animate-fade-in lg:w-5/12 flex justify-center items-center mt-12 lg:mt-0">
             <!-- Hero Spotlight Glow -->
             <div class="hero-spotlight"></div>
-            
-            <!-- Photo -->
-            <div class="w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 relative z-10">
-              <img src="assets/img/photo_profil_optimized.webp" alt="Gael Le Reun"
-                class="w-full h-full object-cover rounded-full photo-ring shadow-2xl" width="320" height="320"
-                fetchpriority="high" />
+
+            <!-- Photo with Irregular Blob Fade -->
+            <div class="w-72 h-[28rem] sm:w-80 sm:h-[32rem] lg:w-[26rem] lg:h-[min(32rem,calc(100vh-15rem))] relative z-10 mx-auto">
+              <!-- Inline SVG defining the irregular mask -->
+              <svg width="0" height="0" style="position:absolute;">
+                <defs>
+                  <mask id="blobFadeMask" maskContentUnits="objectBoundingBox">
+                    <rect width="1" height="1" fill="black" />
+                    <filter id="maskBlur">
+                      <feGaussianBlur stdDeviation="0.04" />
+                    </filter>
+                    <path fill="white" filter="url(#maskBlur)" d="
+                      M 0.50,0.08
+                      C 0.56,0.05  0.62,0.06  0.65,0.12
+                      C 0.68,0.18  0.64,0.24  0.60,0.27
+                      C 0.72,0.28  0.94,0.34  0.94,0.48
+                      C 0.94,0.62  0.72,0.68  0.62,0.69
+                      C 0.70,0.72  0.72,0.78  0.68,0.84
+                      C 0.64,0.90  0.58,0.93  0.50,0.93
+                      C 0.42,0.93  0.36,0.90  0.32,0.84
+                      C 0.28,0.78  0.30,0.72  0.38,0.69
+                      C 0.28,0.68  0.06,0.62  0.06,0.48
+                      C 0.06,0.34  0.28,0.28  0.40,0.27
+                      C 0.36,0.24  0.32,0.18  0.35,0.12
+                      C 0.38,0.06  0.44,0.05  0.50,0.08
+                      Z
+                    " />
+                  </mask>
+                </defs>
+              </svg>
+              <img src="assets/img/photo_profil_optimized.webp" alt="Gael Le Reun" class="w-full h-full object-cover"
+                width="320" height="320" fetchpriority="high"
+                style="-webkit-mask: url(#blobFadeMask); mask: url(#blobFadeMask);" />
             </div>
 
-            <!-- Floating Badges -->
-            <div class="glass-badge delay-float-1" style="top: -5%; left: -10%;">
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="2" data-suffix="" data-i18n="stat_internships_number">2</span>
-              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest" data-i18n="stat_internships_label">Stages IA</span>
+            <!-- Floating Badges — positioned in the concave bites -->
+            <div class="glass-badge delay-float-1" style="top: 6%; left: 2%;">
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="2"
+                data-suffix="" data-i18n="stat_internships_number">2</span>
+              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest"
+                data-i18n="stat_internships_label">Stages IA</span>
             </div>
-            
-            <div class="glass-badge delay-float-2" style="top: 15%; right: -15%;">
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="7" data-suffix="+" data-i18n="stat_projects_number">7+</span>
-              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest" data-i18n="stat_projects_label">Projets ML</span>
+
+            <div class="glass-badge delay-float-2" style="top: 10%; right: 2%;">
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="7"
+                data-suffix="+" data-i18n="stat_projects_number">7+</span>
+              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest"
+                data-i18n="stat_projects_label">Projets ML</span>
             </div>
-            
-            <div class="glass-badge delay-float-3" style="bottom: 15%; left: -15%;">
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="3" data-suffix="" data-i18n="stat_countries_number">3</span>
-              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest" data-i18n="stat_countries_label">Pays</span>
+
+            <div class="glass-badge delay-float-3" style="bottom: 14%; left: 12%;">
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="3"
+                data-suffix="" data-i18n="stat_countries_number">3</span>
+              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest"
+                data-i18n="stat_countries_label">Pays</span>
             </div>
-            
-            <div class="glass-badge delay-float-4" style="bottom: -5%; right: -10%;">
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none" data-counter="905" data-suffix="" data-i18n="stat_toeic_number">905</span>
-              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest" data-i18n="stat_toeic_label">TOEIC</span>
+
+            <div class="glass-badge delay-float-4" style="bottom: 10%; right: 2%;">
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 tabular-nums leading-none"
+                data-counter="905" data-suffix="" data-i18n="stat_toeic_number">905</span>
+              <span class="text-xs sm:text-sm text-gray-900 font-bold mt-1 uppercase tracking-widest"
+                data-i18n="stat_toeic_label">TOEIC</span>
             </div>
           </div>
         </div>
-        
+
         <!-- ==================== WHAT I'M LOOKING FOR ==================== -->
-        <div class="mt-24 lg:mt-32 border-t border-b border-gray-400 py-5">
+        <div class="mt-10 lg:mt-10 border-t border-b border-gray-400 py-4">
           <div class="flex flex-col xl:flex-row items-center gap-4 lg:gap-8 justify-center">
             <h2 class="font-bold text-gray-900 text-base xl:text-lg whitespace-nowrap" data-i18n="search_heading">
               Ce que je recherche
@@ -183,11 +222,11 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
 
-        <!-- Search block moved into home -->
+    <!-- Search block moved into home -->
     </div>
     <!-- end heroGlowArea -->
 
@@ -342,277 +381,280 @@
 
     <!-- ==================== PROJECTS ==================== -->
     <section id="projects" class="surface-bg py-24 md:py-32 relative overflow-hidden">
-    <div class="max-w-[85rem] mx-auto px-6 sm:px-8 relative">
+      <div class="max-w-[85rem] mx-auto px-6 sm:px-8 relative">
 
-      <!-- Header -->
-      <div class="text-center mb-16">
-        <span class="section-label">02</span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight" style="color:var(--fg1)" data-i18n="projects_heading">
-          Mes Projets
-        </h2>
-        <p class="max-w-2xl mx-auto text-sm leading-relaxed" style="color:var(--fg2)" data-i18n="projects_intro">
-          Découvrez mes réalisations en Machine Learning, Data Science et développement.
-        </p>
-      </div>
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <span class="section-label">02</span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight" style="color:var(--fg1)"
+            data-i18n="projects_heading">
+            Mes Projets
+          </h2>
+          <p class="max-w-2xl mx-auto text-sm leading-relaxed" style="color:var(--fg2)" data-i18n="projects_intro">
+            Découvrez mes réalisations en Machine Learning, Data Science et développement.
+          </p>
+        </div>
 
-      <!-- Bento Grid -->
-      <div class="bento-grid grid-atmos">
+        <!-- Bento Grid -->
+        <div class="bento-grid grid-atmos">
 
-        <!-- ① NutriTracker — HERO 2×2 (SaaS Premium + Phone Mockup) -->
-        <article class="bento-card bento-card-hero bento-hero group animate-on-scroll">
-          <!-- LEFT — Content -->
-          <div class="body">
-            <h3 class="font-bold text-xl card-title leading-tight" data-i18n="project_nutritracker_title">
-              NutriTracker (PWA)
-            </h3>
-            <p class="text-xs leading-relaxed card-desc" data-i18n="project_nutritracker_desc">
-              Application de suivi nutritionnel intelligent. Dictée vocale hybride IA/CIQUAL, scan code-barres et optimisation macro-nutritionnelle.
-            </p>
+          <!-- ① NutriTracker — HERO 2×2 (SaaS Premium + Phone Mockup) -->
+          <article class="bento-card bento-card-hero bento-hero group animate-on-scroll">
+            <!-- LEFT — Content -->
+            <div class="body">
+              <h3 class="font-bold text-xl card-title leading-tight" data-i18n="project_nutritracker_title">
+                NutriTracker (PWA)
+              </h3>
+              <p class="text-xs leading-relaxed card-desc" data-i18n="project_nutritracker_desc">
+                Application de suivi nutritionnel intelligent. Dictée vocale hybride IA/CIQUAL, scan code-barres et
+                optimisation macro-nutritionnelle.
+              </p>
 
-            <div class="nt-tags">
-              <span class="tag-inline">n8n</span>
-              <span class="tag-inline">Supabase</span>
-              <span class="tag-inline">LLM</span>
-              <span class="tag-inline">TypeScript</span>
+              <div class="nt-tags">
+                <span class="tag-inline">n8n</span>
+                <span class="tag-inline">Supabase</span>
+                <span class="tag-inline">LLM</span>
+                <span class="tag-inline">TypeScript</span>
+              </div>
+
+              <a href="https://nutritracker.fr" target="_blank" rel="noopener" class="btn-demo mt-auto w-full"
+                data-i18n="project_button_demo">
+                <i data-lucide="external-link" class="w-4 h-4"></i>
+                Live Demo
+              </a>
             </div>
 
-            <a href="https://nutritracker.fr" target="_blank" rel="noopener"
-               class="btn-demo mt-auto w-full"
-               data-i18n="project_button_demo">
-              <i data-lucide="external-link" class="w-4 h-4"></i>
-              Live Demo
-            </a>
-          </div>
-
-          <!-- RIGHT — Phone mockup stage -->
-          <div class="nt-phone-stage" aria-hidden="true">
-            <div class="nt-phone">
-              <div class="nt-phone-body">
-                <div class="nt-phone-screen">
-                  <img src="assets/img/projects/dictee_&_dashboard.png" alt="Interface NutriTracker" loading="lazy" />
-                  <div class="nt-island"></div>
+            <!-- RIGHT — Phone mockup stage -->
+            <div class="nt-phone-stage" aria-hidden="true">
+              <div class="nt-phone">
+                <div class="nt-phone-body">
+                  <div class="nt-phone-screen">
+                    <img src="assets/img/projects/dictee_&_dashboard.png" alt="Interface NutriTracker" loading="lazy" />
+                    <div class="nt-island"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- ② SIVAL — wide -->
-        <article class="bento-card bento-card-wide bento-wide group animate-on-scroll" style="transition-delay:80ms">
-          <div class="media">
-            <img src="assets/img/projects/project-sival.webp"
-                 alt="Hackathon SIVAL"
-                 width="600" height="400" loading="lazy" />
-          </div>
-          <div class="body">
+          <!-- ② SIVAL — wide -->
+          <article class="bento-card bento-card-wide bento-wide group animate-on-scroll" style="transition-delay:80ms">
+            <div class="media hidden sm:block">
+              <img src="assets/img/projects/project-sival.webp" alt="Hackathon SIVAL" width="600" height="400"
+                loading="lazy" />
+            </div>
+            <div class="body">
+              <div class="flex items-center gap-2.5 mb-1">
+                <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                  <i data-lucide="sprout" class="w-4 h-4"></i>
+                </div>
+                <h3 class="font-bold text-base card-title" data-i18n="project_6_title">
+                  Hackathon SIVAL
+                </h3>
+              </div>
+              <p class="text-xs leading-relaxed card-desc line-clamp-3" data-i18n="project_6_desc">
+                Prédiction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + modèle physiologique
+                TOMSIM.
+              </p>
+              <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
+                <span class="tag-inline">ElasticNet</span>
+                <span class="tag-inline">TOMSIM</span>
+                <span class="tag-inline">Scikit-learn</span>
+              </div>
+              <div class="flex gap-2">
+                <a href="https://hackaton-sival-agreen-ctilf.streamlit.app/" target="_blank" rel="noopener"
+                  class="btn-demo" data-i18n="project_button_demo">
+                  <i data-lucide="external-link" class="w-3 h-3"></i> Demo
+                </a>
+                <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank" rel="noopener"
+                  class="btn-gh" data-i18n="project_button_github">
+                  <i data-lucide="github" class="w-3 h-3"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ③ Credit Scoring — std -->
+          <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:140ms">
             <div class="flex items-center gap-2.5 mb-1">
               <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-                <i data-lucide="sprout" class="w-4 h-4"></i>
+                <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
               </div>
-              <h3 class="font-bold text-base card-title" data-i18n="project_6_title">
-                Hackathon SIVAL
+              <h3 class="font-bold text-sm card-title" data-i18n="project_1_title">
+                Credit Scoring Pipeline
               </h3>
             </div>
-            <p class="text-xs leading-relaxed card-desc line-clamp-3" data-i18n="project_6_desc">
-              Prédiction de rendement de tomates sous serre. Approche hybride ML (ElasticNet) + modèle physiologique TOMSIM.
+            <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_1_desc">
+              Pipeline ML complet (30M+ lignes). Feature engineering avancé, SHAP explainability et dashboard
+              interactif.
             </p>
-            <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
-              <span class="tag-inline">ElasticNet</span>
-              <span class="tag-inline">TOMSIM</span>
-              <span class="tag-inline">Scikit-learn</span>
+            <div class="flex flex-wrap gap-1 my-1 mt-auto">
+              <span class="tag-inline">LightGBM</span>
+              <span class="tag-inline">SHAP</span>
+              <span class="tag-inline">MLflow</span>
             </div>
-            <div class="flex gap-2">
-              <a href="https://hackaton-sival-agreen-ctilf.streamlit.app/" target="_blank" rel="noopener"
-                 class="btn-demo" data-i18n="project_button_demo">
+            <div class="flex gap-1.5 mt-2">
+              <a href="https://credit-scoring-analysis-pipeline.streamlit.app/" target="_blank" rel="noopener"
+                class="btn-demo" data-i18n="project_button_demo">
                 <i data-lucide="external-link" class="w-3 h-3"></i> Demo
               </a>
-              <a href="https://github.com/Gael926/hackaton-sival-agreen-ctifl" target="_blank" rel="noopener"
-                 class="btn-gh" data-i18n="project_button_github">
+              <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank" rel="noopener"
+                class="btn-gh" data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- ④ Portfolio Optimization — std -->
+          <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:180ms">
+            <div class="flex items-center gap-2.5 mb-1">
+              <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                <i data-lucide="trending-up" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-sm card-title" data-i18n="project_4_title">
+                Optimisation Portefeuille
+              </h3>
+            </div>
+            <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_4_desc">
+              Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II. Front de Pareto 3D interactif.
+            </p>
+            <div class="flex flex-wrap gap-1 my-1 mt-auto">
+              <span class="tag-inline">NSGA-II</span>
+              <span class="tag-inline">pymoo</span>
+              <span class="tag-inline">Plotly</span>
+            </div>
+            <div class="flex gap-1.5 mt-2">
+              <a href="https://portfolio-optimization-multi-criteria.streamlit.app/" target="_blank" rel="noopener"
+                class="btn-demo" data-i18n="project_button_demo">
+                <i data-lucide="external-link" class="w-3 h-3"></i> Demo
+              </a>
+              <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank" rel="noopener"
+                class="btn-gh" data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- ⑤ Course Completion — std -->
+          <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:220ms">
+            <div class="flex items-center gap-2.5 mb-1">
+              <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-sm card-title" data-i18n="project_5_title">
+                Prédiction Complétion Cours
+              </h3>
+            </div>
+            <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_5_desc">
+              Modèle Deep Learning (TensorFlow) pour prédire la complétion de cours en ligne.
+            </p>
+            <div class="flex flex-wrap gap-1 my-1 mt-auto">
+              <span class="tag-inline">TensorFlow</span>
+              <span class="tag-inline">Keras</span>
+              <span class="tag-inline">DNN</span>
+            </div>
+            <div class="flex gap-1.5 mt-2">
+              <a href="https://dl-course-completion-prediction.streamlit.app/" target="_blank" rel="noopener"
+                class="btn-demo" data-i18n="project_button_demo">
+                <i data-lucide="external-link" class="w-3 h-3"></i> Demo
+              </a>
+              <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank" rel="noopener"
+                class="btn-gh" data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- ⑥ Retail Segmentation — std -->
+          <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:260ms">
+            <div class="flex items-center gap-2.5 mb-1">
+              <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                <i data-lucide="users-round" class="w-4 h-4"></i>
+              </div>
+              <h3 class="font-bold text-sm card-title" data-i18n="project_7_title">
+                Segmentation Client Retail
+              </h3>
+            </div>
+            <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_7_desc">
+              Pipeline non-supervisé (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
+            </p>
+            <div class="flex flex-wrap gap-1 my-1 mt-auto">
+              <span class="tag-inline">K-Means</span>
+              <span class="tag-inline">UMAP</span>
+              <span class="tag-inline">RFM</span>
+            </div>
+            <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank" rel="noopener"
+              class="btn-gh mt-2" data-i18n="project_button_github">
+              <i data-lucide="github" class="w-3 h-3"></i> GitHub
+            </a>
+          </article>
+
+          <!-- ⑦ Fraud Detection — wide -->
+          <article class="bento-card bento-card-wide bento-wide-low group animate-on-scroll"
+            style="transition-delay:300ms">
+            <div class="media hidden sm:block">
+              <img src="assets/img/projects/project-fraud.webp" alt="Fraud Detection" width="600" height="400"
+                loading="lazy" />
+            </div>
+            <div class="body">
+              <div class="flex items-center gap-2.5 mb-1">
+                <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                  <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                </div>
+                <h3 class="font-bold text-base card-title" data-i18n="project_2_title">
+                  Détection Fraude Bancaire
+                </h3>
+              </div>
+              <p class="text-xs leading-relaxed card-desc line-clamp-2" data-i18n="project_2_desc">
+                Détection de fraudes par carte de crédit. Benchmark LogReg, RandomForest et XGBoost sur données
+                déséquilibrées.
+              </p>
+              <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
+                <span class="tag-inline">XGBoost</span>
+                <span class="tag-inline">SMOTE</span>
+                <span class="tag-inline">Scikit-learn</span>
+              </div>
+              <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank" rel="noopener"
+                class="btn-gh" data-i18n="project_button_github">
                 <i data-lucide="github" class="w-3 h-3"></i> GitHub
               </a>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- ③ Credit Scoring — std -->
-        <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:140ms">
-          <div class="flex items-center gap-2.5 mb-1">
-            <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-              <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <!-- ⑧ House Prices — wide -->
+          <article class="bento-card bento-card-wide bento-wide-low group animate-on-scroll"
+            style="transition-delay:340ms">
+            <div class="media hidden sm:block">
+              <img src="assets/img/projects/project-house-pricing.webp" alt="House Price Prediction" width="600"
+                height="400" loading="lazy" />
             </div>
-            <h3 class="font-bold text-sm card-title" data-i18n="project_1_title">
-              Credit Scoring Pipeline
-            </h3>
-          </div>
-          <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_1_desc">
-            Pipeline ML complet (30M+ lignes). Feature engineering avancé, SHAP explainability et dashboard interactif.
-          </p>
-          <div class="flex flex-wrap gap-1 my-1 mt-auto">
-            <span class="tag-inline">LightGBM</span>
-            <span class="tag-inline">SHAP</span>
-            <span class="tag-inline">MLflow</span>
-          </div>
-          <div class="flex gap-1.5 mt-2">
-            <a href="https://credit-scoring-analysis-pipeline.streamlit.app/" target="_blank" rel="noopener"
-               class="btn-demo" data-i18n="project_button_demo">
-              <i data-lucide="external-link" class="w-3 h-3"></i> Demo
-            </a>
-            <a href="https://github.com/Gael926/credit-scoring-analysis-pipeline" target="_blank" rel="noopener"
-               class="btn-gh" data-i18n="project_button_github">
-              <i data-lucide="github" class="w-3 h-3"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- ④ Portfolio Optimization — std -->
-        <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:180ms">
-          <div class="flex items-center gap-2.5 mb-1">
-            <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-              <i data-lucide="trending-up" class="w-4 h-4"></i>
-            </div>
-            <h3 class="font-bold text-sm card-title" data-i18n="project_4_title">
-              Optimisation Portefeuille
-            </h3>
-          </div>
-          <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_4_desc">
-            Optimisation multi-objectifs (Rendement/Risque/Coûts) avec NSGA-II. Front de Pareto 3D interactif.
-          </p>
-          <div class="flex flex-wrap gap-1 my-1 mt-auto">
-            <span class="tag-inline">NSGA-II</span>
-            <span class="tag-inline">pymoo</span>
-            <span class="tag-inline">Plotly</span>
-          </div>
-          <div class="flex gap-1.5 mt-2">
-            <a href="https://portfolio-optimization-multi-criteria.streamlit.app/" target="_blank" rel="noopener"
-               class="btn-demo" data-i18n="project_button_demo">
-              <i data-lucide="external-link" class="w-3 h-3"></i> Demo
-            </a>
-            <a href="https://github.com/Gael926/portfolio-optimization-multi-criteria" target="_blank" rel="noopener"
-               class="btn-gh" data-i18n="project_button_github">
-              <i data-lucide="github" class="w-3 h-3"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- ⑤ Course Completion — std -->
-        <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:220ms">
-          <div class="flex items-center gap-2.5 mb-1">
-            <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
-            </div>
-            <h3 class="font-bold text-sm card-title" data-i18n="project_5_title">
-              Prédiction Complétion Cours
-            </h3>
-          </div>
-          <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_5_desc">
-            Modèle Deep Learning (TensorFlow) pour prédire la complétion de cours en ligne.
-          </p>
-          <div class="flex flex-wrap gap-1 my-1 mt-auto">
-            <span class="tag-inline">TensorFlow</span>
-            <span class="tag-inline">Keras</span>
-            <span class="tag-inline">DNN</span>
-          </div>
-          <div class="flex gap-1.5 mt-2">
-            <a href="https://dl-course-completion-prediction.streamlit.app/" target="_blank" rel="noopener"
-               class="btn-demo" data-i18n="project_button_demo">
-              <i data-lucide="external-link" class="w-3 h-3"></i> Demo
-            </a>
-            <a href="https://github.com/Gael926/dl-course-completion-prediction" target="_blank" rel="noopener"
-               class="btn-gh" data-i18n="project_button_github">
-              <i data-lucide="github" class="w-3 h-3"></i>
-            </a>
-          </div>
-        </article>
-
-        <!-- ⑥ Retail Segmentation — std -->
-        <article class="bento-card bento-card-std bento-std group animate-on-scroll" style="transition-delay:260ms">
-          <div class="flex items-center gap-2.5 mb-1">
-            <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-              <i data-lucide="users-round" class="w-4 h-4"></i>
-            </div>
-            <h3 class="font-bold text-sm card-title" data-i18n="project_7_title">
-              Segmentation Client Retail
-            </h3>
-          </div>
-          <p class="text-[11px] leading-relaxed card-desc line-clamp-3" data-i18n="project_7_desc">
-            Pipeline non-supervisé (RFM, UMAP, K-Means) pour segmenter 1M+ transactions en personas.
-          </p>
-          <div class="flex flex-wrap gap-1 my-1 mt-auto">
-            <span class="tag-inline">K-Means</span>
-            <span class="tag-inline">UMAP</span>
-            <span class="tag-inline">RFM</span>
-          </div>
-          <a href="https://github.com/Gael926/ml-advanced-retail-segmentation" target="_blank" rel="noopener"
-             class="btn-gh mt-2" data-i18n="project_button_github">
-            <i data-lucide="github" class="w-3 h-3"></i> GitHub
-          </a>
-        </article>
-
-        <!-- ⑦ Fraud Detection — wide -->
-        <article class="bento-card bento-card-wide bento-wide-low group animate-on-scroll" style="transition-delay:300ms">
-          <div class="media">
-            <img src="assets/img/projects/project-fraud.webp"
-                 alt="Fraud Detection"
-                 width="600" height="400" loading="lazy" />
-          </div>
-          <div class="body">
-            <div class="flex items-center gap-2.5 mb-1">
-              <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-                <i data-lucide="shield-alert" class="w-4 h-4"></i>
+            <div class="body">
+              <div class="flex items-center gap-2.5 mb-1">
+                <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
+                  <i data-lucide="home" class="w-4 h-4"></i>
+                </div>
+                <h3 class="font-bold text-base card-title" data-i18n="project_3_title">
+                  Prédiction Prix Immobilier
+                </h3>
               </div>
-              <h3 class="font-bold text-base card-title" data-i18n="project_2_title">
-                Détection Fraude Bancaire
-              </h3>
-            </div>
-            <p class="text-xs leading-relaxed card-desc line-clamp-2" data-i18n="project_2_desc">
-              Détection de fraudes par carte de crédit. Benchmark LogReg, RandomForest et XGBoost sur données déséquilibrées.
-            </p>
-            <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
-              <span class="tag-inline">XGBoost</span>
-              <span class="tag-inline">SMOTE</span>
-              <span class="tag-inline">Scikit-learn</span>
-            </div>
-            <a href="https://github.com/Gael926/ml-credit-card-fraud-classification" target="_blank" rel="noopener"
-               class="btn-gh" data-i18n="project_button_github">
-              <i data-lucide="github" class="w-3 h-3"></i> GitHub
-            </a>
-          </div>
-        </article>
-
-        <!-- ⑧ House Prices — wide -->
-        <article class="bento-card bento-card-wide bento-wide-low group animate-on-scroll" style="transition-delay:340ms">
-          <div class="media">
-            <img src="assets/img/projects/project-house-pricing.webp"
-                 alt="House Price Prediction"
-                 width="600" height="400" loading="lazy" />
-          </div>
-          <div class="body">
-            <div class="flex items-center gap-2.5 mb-1">
-              <div class="card-icon" style="width:34px;height:34px;border-radius:10px;">
-                <i data-lucide="home" class="w-4 h-4"></i>
+              <p class="text-xs leading-relaxed card-desc line-clamp-2" data-i18n="project_3_desc">
+                Pipeline complet de régression ML. Benchmark Linear Regression, RandomForest et XGBoost.
+              </p>
+              <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
+                <span class="tag-inline">XGBoost</span>
+                <span class="tag-inline">RandomForest</span>
+                <span class="tag-inline">EDA</span>
               </div>
-              <h3 class="font-bold text-base card-title" data-i18n="project_3_title">
-                Prédiction Prix Immobilier
-              </h3>
+              <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank" rel="noopener"
+                class="btn-gh" data-i18n="project_button_github">
+                <i data-lucide="github" class="w-3 h-3"></i> GitHub
+              </a>
             </div>
-            <p class="text-xs leading-relaxed card-desc line-clamp-2" data-i18n="project_3_desc">
-              Pipeline complet de régression ML. Benchmark Linear Regression, RandomForest et XGBoost.
-            </p>
-            <div class="flex flex-wrap gap-1.5 my-2 mt-auto">
-              <span class="tag-inline">XGBoost</span>
-              <span class="tag-inline">RandomForest</span>
-              <span class="tag-inline">EDA</span>
-            </div>
-            <a href="https://github.com/Gael926/ml-house-prices-regression" target="_blank" rel="noopener"
-               class="btn-gh" data-i18n="project_button_github">
-              <i data-lucide="github" class="w-3 h-3"></i> GitHub
-            </a>
-          </div>
-        </article>
+          </article>
 
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <!-- ==================== SKILLS ==================== -->
     <section id="skills" class="py-24 md:py-32">
