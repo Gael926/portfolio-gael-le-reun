@@ -48,9 +48,9 @@ const translations = {
 
     // Formation
     formation_heading: 'Formations',
-    formation_esaip_title: 'Cycle Ing\u00e9nieur Informatique - Majeure IA',
+    formation_esaip_title: 'Cycle Ing\u00e9nieur<br>Informatique et R\u00e9seaux<br>Majeure IA',
     formation_esaip_school: 'ESAIP, Angers',
-    formation_esaip_date: 'Depuis 2022 - Actuellement en 4\u00e8me ann\u00e9e',
+    formation_esaip_date: 'Depuis 2022<br>Actuellement en 4\u00e8me ann\u00e9e',
     formation_esaip_desc: 'Machine Learning, Deep Learning, Data Engineering, Optimisation multicrit\u00e8res, Traitement d\'images, Cybers\u00e9curit\u00e9, DevOps, D\u00e9veloppement Backend, R\u00e9seaux, Admin Windows, Gestion de projets agiles',
     formation_erasmus_title: 'Semestre Erasmus',
     formation_erasmus_school: 'Obuda University, Budapest',
@@ -59,6 +59,10 @@ const translations = {
     formation_unaj_title: 'Semestre Erasmus',
     formation_unaj_school: 'UNAJ, Buenos Aires',
     formation_unaj_date: 'Mars 2026 - Juillet 2026',
+    formation_details_label: 'D\u00e9tails',
+    formation_specialties_label: 'Sp\u00e9cialisations',
+    formation_modules_label: 'Modules cl\u00e9s',
+    formation_unaj_desc: 'Immersion acad\u00e9mique et culturelle en Argentine.',
 
     // Experiences
     experiences_heading: 'Exp\u00e9riences professionnelles',
@@ -72,7 +76,8 @@ const translations = {
     exp0_mission_2_page: 'D\u00e9ploiement de workflows d\'automatisation complexes avec n8n (Twilio, Resend, authentification Google).',
     exp0_mission_3_page: 'Int\u00e9gration d\'un parsing LLM en cascade (Groq/Cerebras) pour l\'analyse NLP des dict\u00e9es.',
     exp0_mission_4_page: 'Architecture Cloud et gestion de base de donn\u00e9es relationnelles sur Supabase.',
-    exp0_title: 'Stagiaire Automatisation & Int\u00e9gration IA',
+    exp0_title: 'Stagiaire Automatisation &<br>Int\u00e9gration IA',
+    exp0_location: 'La Roche-sur-Yon',
     exp0_date: 'Janvier 2026 - F\u00e9vrier 2026',
     exp0_mission_1: 'D\u00e9veloppement de A \u00e0 Z de l\'application full-stack NutriTracker (PWA) (saisie utilisateur 5x plus rapide gr\u00e2ce \u00e0 l\'IA)',
     exp0_mission_2: 'D\u00e9ploiement de workflows d\'automatisation complexes avec n8n (Twilio, Resend, API)',
@@ -81,7 +86,8 @@ const translations = {
 
     // Alitheia
     exp1_title: 'Stagiaire D\u00e9veloppement IA & Infrastructure',
-    exp1_date: 'Budapest \u00b7 Juin 2025 - Ao\u00fbt 2025',
+    exp1_location: 'Budapest',
+    exp1_date: 'Juin 2025 - Ao\u00fbt 2025',
     exp1_mission_1: 'D\u00e9veloppement d\'un pipeline Python pour le traitement automatis\u00e9 de <strong class="text-gray-900">40 000 pages manuscrites</strong>',
     exp1_mission_2: 'Fine-tuning de mod\u00e8les LLM (Hugging Face) et mise en production d\'outils d\'analyse textuelle',
     exp1_mission_3: 'Optimisation des performances : <strong class="text-gray-900">-40% de temps de traitement</strong> et automatisation des reprises',
@@ -91,7 +97,8 @@ const translations = {
     // Sakura (kept for backward compatibility with other pages)
     exp2_company: 'Restaurant Sakura',
     exp2_title: 'Serveur',
-    exp2_date: 'Angers \u00b7 Avril 2024 - Janvier 2025',
+    exp2_location: 'Angers',
+    exp2_date: 'Avril 2024 - Janvier 2025',
     exp2_mission_1: 'Service \u00e0 la client\u00e8le, prise de commandes, gestion des paiements et op\u00e9rations quotidiennes',
 
     // Tags
@@ -291,9 +298,9 @@ const translations = {
 
     // Formation
     formation_heading: 'Education',
-    formation_esaip_title: 'Computer Engineering - AI Major',
+    formation_esaip_title: 'Computer Engineering<br>& Networks<br>AI Major',
     formation_esaip_school: 'ESAIP, Angers',
-    formation_esaip_date: 'Since 2022 - Currently in 4th year',
+    formation_esaip_date: 'Since 2022<br>Currently in 4th year',
     formation_esaip_desc: 'Machine Learning, Deep Learning, Data Engineering, Multi-criteria optimization, Image processing, Cybersecurity, DevOps, Backend development, Networks, Windows Admin, Agile project management',
     formation_erasmus_title: 'Erasmus Semester',
     formation_erasmus_school: 'Obuda University, Budapest',
@@ -302,6 +309,10 @@ const translations = {
     formation_unaj_title: 'Erasmus Semester',
     formation_unaj_school: 'UNAJ, Buenos Aires',
     formation_unaj_date: 'March 2026 - July 2026',
+    formation_details_label: 'Details',
+    formation_specialties_label: 'Specialties',
+    formation_modules_label: 'Core Modules',
+    formation_unaj_desc: 'Academic and cultural immersion in Argentina.',
 
     // Experiences
     experiences_heading: 'Professional experience',
@@ -315,7 +326,8 @@ const translations = {
     exp0_mission_2_page: 'Deployment of complex automation workflows using n8n (Twilio, Resend, Google authentication).',
     exp0_mission_3_page: 'Integration of cascading LLM parsing (Groq/Cerebras) for NLP analysis of voice dictations.',
     exp0_mission_4_page: 'Cloud architecture and relational database management on Supabase.',
-    exp0_title: 'Automation & AI Integration Intern',
+    exp0_title: 'Automation &<br>AI Integration Intern',
+    exp0_location: 'La Roche-sur-Yon',
     exp0_date: 'January 2026 - February 2026',
     exp0_mission_1: 'End-to-end development of the full-stack NutriTracker application (PWA) (5x faster user input via AI)',
     exp0_mission_2: 'Deployment of complex automation workflows with n8n (Twilio, Resend, API)',
@@ -324,7 +336,8 @@ const translations = {
 
     // Alitheia
     exp1_title: 'AI & Infrastructure Development Intern',
-    exp1_date: 'Budapest \u00b7 June 2025 - August 2025',
+    exp1_location: 'Budapest',
+    exp1_date: 'June 2025 - August 2025',
     exp1_mission_1: 'Developed Python pipeline for automated processing of <strong class="text-gray-900">40,000 manuscript pages</strong>',
     exp1_mission_2: 'Fine-tuned LLM models (Hugging Face) and deployed text analysis tools',
     exp1_mission_3: 'Performance optimization: <strong class="text-gray-900">-40% processing time</strong> and automated error recovery',
@@ -334,7 +347,8 @@ const translations = {
     // Sakura (backward compat)
     exp2_company: 'Restaurant Sakura',
     exp2_title: 'Server',
-    exp2_date: 'Angers \u00b7 April 2024 - January 2025',
+    exp2_location: 'Angers',
+    exp2_date: 'April 2024 - January 2025',
     exp2_mission_1: 'Customer service, order taking, payment management and daily operations',
 
     // Tags

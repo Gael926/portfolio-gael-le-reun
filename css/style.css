@@ -29,14 +29,16 @@
 }
 
 /* Smooth theme transition */
-*,
-*::before,
-*::after {
-  transition: background-color 0.35s ease,
-              color 0.35s ease,
-              border-color 0.35s ease,
-              box-shadow 0.35s ease,
-              fill 0.35s ease;
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-delay: 0s !important;
 }
 
 /* ---- Base ---- */
@@ -395,6 +397,41 @@ body::after {
 
 /* ---- Project Items (separator borders removed) ---- */
 
+/* ---- Glass Card Skill ---- */
+.glass-card-skill {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1024px) {
+  .glass-card-skill {
+    padding: 2rem;
+  }
+}
+
+.glass-card-skill:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px -10px var(--accent-subtle);
+}
+
+[data-theme="dark"] .glass-card-skill {
+  background: rgba(24, 24, 27, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .glass-card-skill:hover {
+  background: rgba(24, 24, 27, 0.8);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px -10px var(--accent-subtle);
+}
+
 /* ---- Dot-grid surface pattern ---- */
 .surface-dots {
   background-color: var(--surface);
@@ -411,7 +448,6 @@ body::after {
 
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -1564,7 +1600,7 @@ html[data-theme="dark"] body {
 }
 
 [data-theme="dark"] .text-gradient-animated {
-  background: linear-gradient(to right, #60a5fa, var(--accent), #60a5fa);
+  background: linear-gradient(to right, #fbbf24, var(--accent), #f59e0b);
   background-size: 200% auto;
   color: transparent;
   -webkit-background-clip: text;
@@ -1693,3 +1729,378 @@ html[data-theme="dark"] body {
 .delay-float-4 {
   animation-delay: 2.0s;
 }
+
+/* ================================================
+       CONCEPT B — Sticky Editorial Layout (Polished)
+       ================================================ */
+
+    .exp-section-b {
+      position: relative;
+    }
+
+    /* ---- Experience Block (with connector line) ---- */
+    .exp-block {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .exp-block:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .exp-block {
+        flex-direction: row;
+        gap: 0;
+        padding-bottom: 5rem;
+        margin-bottom: 5rem;
+      }
+    }
+
+    /* ---- Subtle Vertical Connector Line ---- */
+    .exp-connector {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .exp-connector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 4rem;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      /* The vertical line */
+      .exp-connector::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: linear-gradient(180deg,
+            rgba(var(--accent-rgb), 0.15) 0%,
+            rgba(var(--accent-rgb), 0.08) 100%);
+      }
+
+      /* Glowing dot on the line */
+      .exp-connector-dot {
+        position: sticky;
+        top: 10rem;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.4),
+          0 0 20px rgba(var(--accent-rgb), 0.15);
+        z-index: 2;
+        flex-shrink: 0;
+      }
+
+      /* Extend line past last block */
+      .exp-block:last-child .exp-connector::before {
+        bottom: 2rem;
+      }
+    }
+
+    /* ---- Sticky Left Column ---- */
+    .exp-sticky-col {
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 1024px) {
+      .exp-sticky-col {
+        width: 320px;
+        position: sticky;
+        top: 8rem;
+        align-self: flex-start;
+        text-align: right;
+        padding-right: 0;
+      }
+    }
+
+    /* ---- Big Editorial Date ---- */
+    .editorial-year {
+      font-family: 'Sora', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      -webkit-text-stroke: 1.5px var(--accent);
+      color: transparent;
+      letter-spacing: -0.03em;
+      transition: all 0.4s ease;
+    }
+
+    /* Current year: animated gradient fill */
+    .editorial-year.year-current {
+      -webkit-text-stroke: 0;
+      background: linear-gradient(to right, #2563eb, #06b6d4, #2563eb);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shine 4s linear infinite;
+    }
+
+    [data-theme="dark"] .editorial-year.year-current {
+      background: linear-gradient(to right, #fbbf24, var(--accent), #f59e0b);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    /* Older years: hollow with accent stroke */
+    .editorial-year.year-past {
+      opacity: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--accent);
+    }
+
+    .exp-block:hover .editorial-year.year-past {
+      opacity: 1;
+      -webkit-text-stroke: 1.5px var(--accent);
+      color: rgba(var(--accent-rgb), 0.08);
+    }
+
+    [data-theme="dark"] .editorial-year.year-past {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--accent);
+      opacity: 0.6;
+    }
+    
+    [data-theme="dark"] .exp-block:hover .editorial-year.year-past {
+      opacity: 1;
+      -webkit-text-stroke: 1.5px var(--accent);
+      color: rgba(var(--accent-rgb), 0.1);
+    }
+
+    [data-theme="dark"] .editorial-year {
+      -webkit-text-stroke-color: var(--accent);
+    }
+
+    /* ---- Company Card ---- */
+    .company-card {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      background: transparent;
+      transition: all 0.35s ease;
+    }
+
+    .exp-block:hover .company-card {
+      border-color: var(--border, #e2e8f0);
+      background: rgba(var(--accent-rgb), 0.03);
+    }
+    
+    [data-theme="dark"] .exp-block:hover .company-card {
+      border-color: rgba(var(--accent-rgb), 0.3);
+      background: rgba(var(--accent-rgb), 0.06);
+    }
+
+    .company-name {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .company-role {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 0.25rem;
+    }
+
+    .company-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-3, #6b7280);
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 0.5rem;
+    }
+
+    .company-date i {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    @media (min-width: 1024px) {
+      .company-date {
+        justify-content: flex-end;
+      }
+    }
+
+    /* ---- Right Content Column ---- */
+    .exp-content-col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    /* ---- Hover Focus Container ---- */
+    .exp-content-inner {
+      padding: 1.75rem 2rem;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .exp-block:hover .exp-content-inner {
+      background: rgba(255, 255, 255, 0.5);
+      border-color: var(--border, #e2e8f0);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04),
+        0 1px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    [data-theme="dark"] .exp-block:hover .exp-content-inner {
+      background: rgba(24, 24, 27, 0.4);
+      border-color: var(--border);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+        0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Section divider inside content */
+    .content-section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text-3, #6b7280);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .content-section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border, #e2e8f0);
+    }
+
+    /* ---- Mission items with chevron icon ---- */
+    .mission-item {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 0.75rem 0;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      color: var(--text-2, #374151);
+      transition: all 0.3s ease;
+    }
+
+    .mission-item .mission-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+      opacity: 0.6;
+      margin-top: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .mission-item:hover .mission-icon {
+      opacity: 1;
+      transform: translateX(2px);
+    }
+
+    .mission-item:hover {
+      color: var(--text, #111827);
+    }
+
+    /* ---- Glassmorphism Tags ---- */
+    .tag-glass {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: rgba(var(--accent-rgb), 0.06);
+      border: 1px solid rgba(var(--accent-rgb), 0.15);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--accent);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+    }
+
+    .tag-glass:hover {
+      background: rgba(var(--accent-rgb), 0.12);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.1);
+    }
+
+    /* ---- Mobile adjustments ---- */
+    @media (max-width: 1023px) {
+      .editorial-year {
+        font-size: 3rem;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .exp-block {
+        padding-bottom: 2.5rem;
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid var(--border, #e2e8f0);
+      }
+
+      .exp-block:last-child {
+        border-bottom: none;
+      }
+
+      .exp-sticky-col {
+        margin-bottom: 1.5rem;
+        text-align: left;
+      }
+
+      .exp-content-inner {
+        padding: 0;
+      }
+
+      .exp-content-inner:hover {
+        background: transparent;
+        border-color: transparent;
+        backdrop-filter: none;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .mission-item {
+        font-size: 0.875rem;
+      }
+    }
+
+    /* ---- Scroll reveal ---- */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(1.5rem);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+
+@media (min-width: 1024px) { .editorial-year { font-size: 5rem; } }
