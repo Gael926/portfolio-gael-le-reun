@@ -22,11 +22,5 @@ Bienvenue sur le dépôt de mon portfolio professionnel. Ce site est conçu pour
 - **Typographie** : Sora (Display) & IBM Plex Mono (Labels).
 - **Déploiement** : GitHub Pages avec intégration continue.
 
-## Aperçu du Design
-
-| Mode Clair | Mode Sombre |
-| :---: | :---: |
-| ![Mode Clair](assets/img/light_mode_preview.png) | ![Mode Sombre](assets/img/dark_mode_preview.png) |
-
 ---
 © 2026 Gael Le Reun
